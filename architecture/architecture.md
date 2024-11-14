@@ -2,52 +2,23 @@
 
 ![C4 container Diagram](C4-Containers.png)
 
-# Description of Arrows in the Schema
+# Description of Relationships Between Services. (Blue Arrows)
 
-### 1. **Arrow from Angular Website to API Gateway**
+**Fetch Posts Concepts (U7)**
 
-- **Communication**: Synchronous (HTTP/HTTPS)
-- **Description**: The Angular frontend communicates with the API Gateway to send API requests for creating, updating, and deleting posts and comments. These actions are performed in real time so that users receive immediate feedback.
-- **Data**: Post and comment data, such as new posts, updates, or filtering existing posts (e.g., by author or category).
+When an editor wants to review submitted posts for approval or rejection, the post concepts are retrieved through synchronous communication with the Post Services. The status of a post (approved or rejected) is stored in the database of the Post Services.
 
-### 2. **Arrow from API Gateway to Post Service, Review Service, and Comment Service**
+**Update Status Post Concepts (U8)**
 
-- **Communication**: Synchronous (HTTP/HTTPS)
-- **Description**: The API Gateway forwards API requests from the Angular frontend to the appropriate microservices. This allows users (editors and end-users) to directly perform actions such as creating posts or posting comments.
-- **Data**:
-  - **Post Service**: Post data for creating, updating, and retrieving posts.
-  - **Review Service**: Requests for approving or rejecting posts.
-  - **Comment Service**: Comment data for adding, viewing, editing, or deleting comments.
+When a post is approved or rejected, its status is updated in the Post Services database via an asynchronous connection (RabbitMQ). Additionally, the Review Services sends an email to the editor to notify them of the approval or rejection.
 
-### 3. **Arrow from Post Service to Review Service**
+**Fetch Posts Remarks (U9)**
 
-- **Communication**: Asynchronous (Messaging)
-- **Description**: The Post Service sends a message to the Review Service when a post is ready for review. The communication is asynchronous because the approval process doesn’t need to happen immediately. The Review Service can process these messages at its own pace.
-- **Data**: Post information needed for the approval workflow, such as title, content, and metadata of the post.
+When an editor requests a post that has been rejected, the associated remarks are retrieved through synchronous communication with the Review Services. This allows the editor to read the feedback that led to the post’s rejection.
 
-### 4. **Arrow from Review Service to Post Service**
+**Fetch Post Comments (U11)**
 
-- **Communication**: Asynchronous (Messaging)
-- **Description**: After a post is approved or rejected, the Review Service sends a message back to the Post Service with the approval status. This is asynchronous.
-- **Data**: Approval status (approved or rejected) and any comments in case of rejection.
-
-### 5. **Arrow from Post Service to Comment Service**
-
-- **Communication**: Synchronous (HTTP/HTTPS)
-- **Description**: The Post Service and Comment Service communicate synchronously when a user views, adds, edits, or deletes comments on posts. This allows comments to load and be edited in real-time.
-- **Data**: References to the post linked to the comment, and the comment data itself, such as content, author, and edit status.
-
-### 6. **Arrows from Config Service to all other microservices**
-
-- **Communication**: Synchronous (HTTP/HTTPS)
-- **Description**: The Config Service provides configuration settings to all microservices. This is synchronous because services need to retrieve their settings before they can function properly.
-- **Data**: Configuration files such as application settings, port configurations, and API parameters.
-
-### 7. **Arrows from Discovery Service to all other microservices**
-
-- **Communication**: Synchronous (Eureka Service Discovery)
-- **Description**: The Discovery Service registers each microservice and ensures they can locate each other on the network. This is synchronous because each service must register itself before it can operate within the system.
-- **Data**: Service information such as name, location, and status.
+When a user requests a post, the comments on that post are also retrieved through synchronous communication with the Comment Services. This enables the user to read the comments associated with the post.
 
 # C4-Container Diagram Description
 
