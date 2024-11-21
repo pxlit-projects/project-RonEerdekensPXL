@@ -1,9 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AuthService } from '../../shared/services/auth/auth.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
+import { User } from '../../shared/models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  router: Router = inject(Router);
   authService: AuthService = inject(AuthService);
 
   usernameField: string = '';
@@ -20,9 +23,17 @@ export class LoginComponent {
 
   errorMessage: string = '';
 
+  ngOnInit(): void {
+    const user = this.authService.getCurrentUser();
+    if (user) {
+      this.router.navigate(['/dashboard']);
+    }
+  }
+
   onLogin(data: Object): void {
     try {
       this.authService.setCurrentUser(this.usernameField, this.passwordField);
+      this.router.navigate(['/dashboard']);
     } catch (error: any) {
       this.errorMessage = String(error).replace('Error: ', '');
     }

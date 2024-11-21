@@ -1,6 +1,6 @@
-<div>
-  <h2>Inloggen</h2>
+<div class="loginform">
   <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+    <h2>Inloggen</h2>
     <mat-form-field appearance="fill">
       <mat-label>Gebruikersnaam</mat-label>
       <input
@@ -15,12 +15,14 @@
       <mat-error>Gebruikersnaam is verplicht</mat-error>
       }
     </mat-form-field>
+    <span class="spacer"></span>
     <mat-form-field appearance="fill">
       <mat-label>Wachtwoord</mat-label>
       <input
         matInput
         name="password"
         placeholder="Wachtwoord"
+        type="password"
         [(ngModel)]="passwordField"
         required
         #password="ngModel"
@@ -29,7 +31,9 @@
       <mat-error>Wachtwoord is verplicht</mat-error>
       }
     </mat-form-field>
+    <span class="spacer"></span>
     <button mat-raised-button color="primary" type="submit">Inloggen</button>
+    <span class="spacer"></span>
     @if(errorMessage != ""){
     <mat-error>{{ errorMessage }}</mat-error>
     }
