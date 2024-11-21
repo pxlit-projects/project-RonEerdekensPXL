@@ -11,13 +11,13 @@ export class AuthService {
     { username: 'viewer', role: 'viewer', id: 3, password: 'password' },
   ];
 
-  private currentUser: User = this.users[0]; // Standaard de eerste gebruiker
+  private currentUser: User | null = null; // Standaard de eerste gebruiker
 
   getUsers(): User[] {
     return this.users;
   }
 
-  getCurrentUser(): User {
+  getCurrentUser(): User | null {
     return this.currentUser;
   }
 
