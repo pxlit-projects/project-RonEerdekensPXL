@@ -21,21 +21,21 @@ spring:
         - id: comment-service
           uri: lb://comment-service
           predicates:
-            - Path=/comment/**
+            - Path=/api/comment/**
           filters:
-            - RewritePath=/comment/(?<path>.*), /$\{path}
+            - RewritePath=/api/comment/(?<path>.*), /$\{path}
         - id: post-service
           uri: lb://post-service
           predicates:
-            - Path=/post/**
+            - Path=/api/post/**
           filters:
-            - RewritePath=/post/(?<path>.*), /$\{path}
+            - RewritePath=/api/post/(?<path>.*), /$\{path}
         - id: review-service
           uri: lb://review-service
           predicates:
-            - Path=/review/**
+            - Path=/api/review/**
           filters:
-            - RewritePath=/review/(?<path>.*), /$\{path}
+            - RewritePath=/api/review/(?<path>.*), /$\{path}
 
 
 eureka:
