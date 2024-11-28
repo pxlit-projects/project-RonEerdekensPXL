@@ -23,6 +23,12 @@ public class PostController {
         log.info("Fetching all posts");
         return new ResponseEntity(postServices.getAllPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
     }
+    @GetMapping("/published")
+    public ResponseEntity getAllPublishedPosts() {
+        log.info("Fetching all published posts");
+        return new ResponseEntity(postServices.getAllPublishedPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity getPostById(@PathVariable Long id) {
         log.info("Fetching post with id: {}", id);
@@ -41,8 +47,7 @@ public class PostController {
                 .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
-                .published(post.isPublished())
-                .concept(post.isConcept())
+                .state(post.getState())
                 .creationDate(post.getCreationDate())
                 .publicationDate(post.getPublicationDate())
                 .build();
@@ -51,6 +56,7 @@ public class PostController {
         return Post.builder()
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
+                .state(postRequest.getState())
                 .build();
     }
 }

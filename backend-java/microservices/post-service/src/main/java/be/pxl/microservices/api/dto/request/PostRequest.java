@@ -1,5 +1,6 @@
 package be.pxl.microservices.api.dto.request;
 
+import be.pxl.microservices.domain.PostState;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,5 +14,6 @@ public class PostRequest {
 
         private String title;
         private String content;
+        private PostState state;
 
 }

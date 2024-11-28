@@ -1,5 +1,6 @@
 package be.pxl.microservices.api.dto.response;
 
+import be.pxl.microservices.domain.PostState;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,8 +17,7 @@ public class PostResponse {
         private Long id;
         private String title;
         private String content;
-        private boolean published;
-        private boolean concept;
+        private PostState state;
         private LocalDateTime creationDate;
         private LocalDateTime publicationDate;
 }

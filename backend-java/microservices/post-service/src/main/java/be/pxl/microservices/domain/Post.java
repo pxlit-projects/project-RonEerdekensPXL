@@ -21,8 +21,8 @@ public class Post {
 
     private String title;
     private String content;
-    private  boolean published = false;
-    private boolean concept = true;
+    private PostState state = PostState.CONCEPT;
+
     private LocalDateTime creationDate = LocalDateTime.now();
     private LocalDateTime publicationDate;
 

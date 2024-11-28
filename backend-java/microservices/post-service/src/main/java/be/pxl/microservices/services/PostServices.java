@@ -1,6 +1,7 @@
 package be.pxl.microservices.services;
 
 import be.pxl.microservices.domain.Post;
+import be.pxl.microservices.domain.PostState;
 import be.pxl.microservices.exception.PostNotFoundException;
 import be.pxl.microservices.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
@@ -29,8 +30,6 @@ public class PostServices implements IPostServices {
 
     public Post createPost(Post post) {
         post.setCreationDate(LocalDateTime.now());
-        post.setConcept(true);
-        post.setPublished(false);
         return postRepository.save(post);
     }
 
@@ -39,20 +38,16 @@ public class PostServices implements IPostServices {
        Post postToUpdate = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post with id " + id + " not found"));
          postToUpdate.setTitle(post.getTitle());
          postToUpdate.setContent(post.getContent());
-         postToUpdate.setPublished(post.isPublished());
-         postToUpdate.setConcept(post.isConcept());
+         postToUpdate.setState(post.getState());
          postToUpdate.setCreationDate(post.getCreationDate());
          postToUpdate.setPublicationDate(post.getPublicationDate());
          return postRepository.save(postToUpdate);
     }
 
-
-    public List<Post> getPostsInConcept() {
-        return postRepository.findByConcept(true);
+    @Override
+    public List<Post> getAllPublishedPosts() {
+        return postRepository.findAllByState(PostState.PUBLISHED);
     }
 
 
-    public List<Post> getPublishedPosts() {
-        return postRepository.findByPublished(true);
-    }
 }
