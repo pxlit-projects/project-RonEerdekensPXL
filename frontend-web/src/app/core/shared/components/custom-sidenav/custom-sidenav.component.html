@@ -1,0 +1,14 @@
+<div class="sidenav-header">
+  @if(user) {
+  <h3>Welkom,</h3>
+  <h4>{{ user.username }}</h4>
+  <button mat-flat-button color="primary" type="submit" (click)="logout()">
+    Uitloggen
+  </button>
+  } @else {
+  <h3>Welkom</h3>
+  <button mat-flat-button color="primary" type="submit" (click)="login()">
+    Inloggen
+  </button>
+  }
+</div>

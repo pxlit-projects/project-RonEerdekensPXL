@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { AuthService } from '../../shared/services/auth/auth.service';
-import { User } from '../../shared/models/user.model';
+import { AuthService } from '../../../shared/services/auth/auth.service';
+import { User } from '../../../shared/models/user.model';
 import { Route, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 

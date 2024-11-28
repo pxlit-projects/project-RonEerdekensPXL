@@ -1,0 +1,49 @@
+<div class="login">
+  <mat-card class="loginform">
+    <mat-card-header>
+      <mat-card-title><h2>Inloggen</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+        <mat-form-field appearance="fill">
+          <mat-label>Gebruikersnaam</mat-label>
+          <input
+            matInput
+            name="username"
+            placeholder="Gebruikersnaam"
+            [(ngModel)]="usernameField"
+            required
+            #username="ngModel"
+          />
+          @if (username.invalid && username.dirty || username.touched) {
+          <mat-error>Gebruikersnaam is verplicht</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
+        <mat-form-field appearance="fill">
+          <mat-label>Wachtwoord</mat-label>
+          <input
+            matInput
+            name="password"
+            placeholder="Wachtwoord"
+            type="password"
+            [(ngModel)]="passwordField"
+            required
+            #password="ngModel"
+          />
+          @if(password.invalid && password.dirty || password.touched) {
+          <mat-error>Wachtwoord is verplicht</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
+        <button mat-raised-button color="primary" type="submit">
+          Inloggen
+        </button>
+        <span class="spacer"></span>
+        @if(errorMessage != ""){
+        <mat-error>{{ errorMessage }}</mat-error>
+        }
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
