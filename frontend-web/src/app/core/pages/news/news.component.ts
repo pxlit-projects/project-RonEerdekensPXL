@@ -4,11 +4,13 @@ import { AuthService } from '../../../shared/services/auth/auth.service';
 import { User } from '../../../shared/models/user.model';
 import { Post } from '../../../shared/models/post.model';
 import { PostService } from '../../../shared/services/postservice/post.service';
+import { MatCardModule } from '@angular/material/card';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-news',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule, DatePipe],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css',
 })
@@ -31,6 +33,12 @@ export class NewsComponent implements OnInit {
     this.postService.getPublishedPosts().subscribe({
       next: (data: Post[]) => {
         this.posts = data;
+        this.posts.sort((a, b) => {
+          return (
+            new Date(b.publicationDate).getTime() -
+            new Date(a.publicationDate).getTime()
+          );
+        });
       },
       error: (error) => {
         console.error(error);

@@ -1,0 +1,24 @@
+mat-card {
+  margin: 20px;
+  max-width: 400px;
+}
+mat-card-title {
+  color: rgb(35, 104, 207);
+}
+mat-card-subtitle {
+  color: rgb(148, 148, 148);
+}
+mat-card-content {
+  margin-top: 10px;
+}
+mat-card-content p {
+  word-wrap: break-word;
+}
+.postlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+h1 {
+  color: white;
+  margin-left: 20px;
+}
