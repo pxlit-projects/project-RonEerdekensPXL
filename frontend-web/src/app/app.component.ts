@@ -42,5 +42,5 @@ export class AppComponent {
   }
 
   collapsed = signal(false);
-  sidenavWidth = computed(() => (this.collapsed() ? '64px' : '250px'));
+  sidenavWidth = computed(() => (this.collapsed() ? '64px' : '300px'));
 }

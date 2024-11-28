@@ -26,12 +26,14 @@
   <a
     mat-list-item
     [routerLink]="['/nieuws']"
-    routerLinkActive
-    #rla="routerLinkActive"
-    [activated]="rla.isActive"
+    [routerLinkActive]="['is-active']"
   >
     <mat-icon
-      [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'"
+      [fontSet]="
+        router.isActive('/nieuws', true)
+          ? 'material-icons'
+          : 'material-icons-outlined'
+      "
       matListItemIcon
       >announcement</mat-icon
     >
@@ -39,4 +41,98 @@
     <span matListItemTitle>Nieuws</span>
     }
   </a>
+  <a
+    mat-list-item
+    [routerLink]="['/mijncomments']"
+    [routerLinkActive]="['is-active']"
+  >
+    <mat-icon
+      [fontSet]="
+        router.isActive('/mijncomments', true)
+          ? 'material-icons'
+          : 'material-icons-outlined'
+      "
+      matListItemIcon
+      >forum</mat-icon
+    >
+    @if(!sidNavCollapsed()) {
+    <span matListItemTitle>Mijn Comments</span>
+    }
+  </a>
+  @if(user?.role == 'editor') {
+  <hr />
+  <a
+    mat-list-item
+    [routerLink]="['/berichtaanmaken']"
+    [routerLinkActive]="['is-active']"
+  >
+    <mat-icon
+      [fontSet]="
+        router.isActive('/berichtaanmaken', true)
+          ? 'material-icons'
+          : 'material-icons-outlined'
+      "
+      matListItemIcon
+      >chat</mat-icon
+    >
+    @if(!sidNavCollapsed()) {
+    <span matListItemTitle>Bericht Aanmaken</span>
+    }
+  </a>
+  <a
+    mat-list-item
+    [routerLink]="['/mijnconcepten']"
+    [routerLinkActive]="['is-active']"
+  >
+    <mat-icon
+      [fontSet]="
+        router.isActive('/mijnconcepten', true)
+          ? 'material-icons'
+          : 'material-icons-outlined'
+      "
+      matListItemIcon
+      >create</mat-icon
+    >
+    @if(!sidNavCollapsed()) {
+    <span matListItemTitle>Mijn Concepten</span>
+    }
+  </a>
+  <a
+    mat-list-item
+    [routerLink]="['/mijningediendeberichten']"
+    [routerLinkActive]="['is-active']"
+  >
+    <mat-icon
+      [fontSet]="
+        router.isActive('/mijningediendeberichten', true)
+          ? 'material-icons'
+          : 'material-icons-outlined'
+      "
+      matListItemIcon
+      >send</mat-icon
+    >
+    @if(!sidNavCollapsed()) {
+    <span matListItemTitle>Mijn Ingediende Berichten</span>
+    }
+  </a>
+  <hr />
+  <a
+    mat-list-item
+    [routerLink]="['/berichtengoedkeuren']"
+    [routerLinkActive]="['is-active']"
+  >
+    <mat-icon
+      [fontSet]="
+        router.isActive('/berichtengoedkeuren', true)
+          ? 'material-icons'
+          : 'material-icons-outlined'
+      "
+      matListItemIcon
+      >done</mat-icon
+    >
+    @if(!sidNavCollapsed()) {
+    <span matListItemTitle>Berichten Goedkeuren</span>
+    }
+  </a>
+  }
 </mat-nav-list>

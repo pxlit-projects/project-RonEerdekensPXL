@@ -1,16 +1,16 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 import { User } from '../../../shared/models/user.model';
 
 @Component({
-  selector: 'app-posts',
+  selector: 'app-myconcepts',
   standalone: true,
   imports: [],
-  templateUrl: './posts.component.html',
-  styleUrl: './posts.component.css',
+  templateUrl: './myconcepts.component.html',
+  styleUrl: './myconcepts.component.css',
 })
-export class PostsComponent implements OnInit {
+export class MyconceptsComponent {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
     if (!this.user) {
