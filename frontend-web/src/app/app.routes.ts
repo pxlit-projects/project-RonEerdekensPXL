@@ -5,6 +5,6 @@ import { PostsComponent } from './core/pages/posts/posts.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'nieuws', component: PostsComponent },
+  { path: 'login', title: 'Inloggen', component: LoginComponent },
+  { path: 'nieuws', title: 'Nieuws', component: PostsComponent },
 ];

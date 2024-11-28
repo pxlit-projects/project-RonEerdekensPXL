@@ -1,11 +1,17 @@
-import { Component, computed, HostListener, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  HostListener,
+  inject,
+  signal,
+} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CustomSidenavComponent } from './core/shared/components/custom-sidenav/custom-sidenav.component';
-import { User } from './shared/models/user.model';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +28,8 @@ import { User } from './shared/models/user.model';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Frontend';
-
+  router: Router = inject(Router);
+  title = 'PXL Nieuws App';
   constructor() {
     this.getScreenSize();
   }

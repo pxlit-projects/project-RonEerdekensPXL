@@ -20,3 +20,6 @@ mat-sidenav {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
+.spacer {
+  width: 20px;
+}
