@@ -4,6 +4,9 @@
   align-items: center;
   width: 60%;
   padding: 50px;
+  background-color: rgba(252, 254, 255, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 form {
   display: flex;

@@ -2,12 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 import { User } from '../../../shared/models/user.model';
-import { NavigationComponent } from '../../shared/navigation/navigation.component';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [NavigationComponent],
+  imports: [],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css',
 })
