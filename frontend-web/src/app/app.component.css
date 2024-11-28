@@ -4,7 +4,19 @@
 mat-toolbar {
   position: relative;
   z-index: 5;
+  background-color: rgba(255, 255, 255, 0.39);
 }
 mat-sidenav-container {
   height: calc(100vh - 64px);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+mat-sidenav,
+mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+}
+mat-sidenav {
+  background-color: rgba(255, 255, 255, 0.39);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,4 +23,6 @@ import { User } from './shared/models/user.model';
 })
 export class AppComponent {
   title = 'Frontend';
+  collapsed = signal(false);
+  sidenavWidth = computed(() => (this.collapsed() ? '64px' : '250px'));
 }

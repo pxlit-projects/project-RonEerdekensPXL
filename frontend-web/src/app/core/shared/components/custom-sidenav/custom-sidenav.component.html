@@ -1,14 +1,42 @@
 <div class="sidenav-header">
-  @if(user) {
-  <h3>Welkom,</h3>
-  <h4>{{ user.username }}</h4>
+  @if(user) { @if(sidNavCollapsed()) {
+  <button mat-icon-button (click)="logout()">
+    <mat-icon color="primary">logout</mat-icon>
+    <p class="colorBlue username">{{ user.username }}</p>
+  </button>
+  } @else {
+  <h3>Welkom</h3>
+  <h5>{{ user.username }}</h5>
   <button mat-flat-button color="primary" type="submit" (click)="logout()">
     Uitloggen
+  </button>
+  } } @else {@if(sidNavCollapsed()) {
+  <button mat-icon-button (click)="login()">
+    <mat-icon color="primary">login</mat-icon>
   </button>
   } @else {
   <h3>Welkom</h3>
   <button mat-flat-button color="primary" type="submit" (click)="login()">
     Inloggen
   </button>
-  }
+  } }
 </div>
+<hr />
+<mat-nav-list>
+  <a
+    mat-list-item
+    [routerLink]="['/nieuws']"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [activated]="rla.isActive"
+  >
+    <mat-icon
+      [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'"
+      matListItemIcon
+      >announcement</mat-icon
+    >
+    @if(!sidNavCollapsed()) {
+    <span matListItemTitle>Nieuws</span>
+    }
+  </a>
+</mat-nav-list>

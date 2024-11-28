@@ -1,12 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, Input, input, OnInit, signal } from '@angular/core';
 import { AuthService } from '../../../../shared/services/auth/auth.service';
 import { User } from '../../../../shared/models/user.model';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-custom-sidenav',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule, MatListModule, MatIconModule, RouterModule],
   templateUrl: './custom-sidenav.component.html',
   styleUrl: './custom-sidenav.component.css',
 })
@@ -18,6 +21,10 @@ export class CustomSidenavComponent implements OnInit {
     this.router.events.subscribe(() => {
       this.user = this.authService.getCurrentUser();
     });
+  }
+  sidNavCollapsed = signal(false);
+  @Input() set collapsed(value: boolean) {
+    this.sidNavCollapsed.set(value);
   }
   router: Router = inject(Router);
   authService: AuthService = inject(AuthService);

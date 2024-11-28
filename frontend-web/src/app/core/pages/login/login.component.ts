@@ -33,14 +33,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     const user = this.authService.getCurrentUser();
     if (user) {
-      this.router.navigate(['/posts']);
+      this.router.navigate(['/nieuws']);
     }
   }
 
   onLogin(data: Object): void {
     try {
       this.authService.setCurrentUser(this.usernameField, this.passwordField);
-      this.router.navigate(['/posts']);
+      this.router.navigate(['/nieuws']);
     } catch (error: any) {
       this.errorMessage = String(error).replace('Error: ', '');
     }
