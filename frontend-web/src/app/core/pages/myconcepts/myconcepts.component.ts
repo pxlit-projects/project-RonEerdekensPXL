@@ -8,11 +8,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { Post } from '../../../shared/models/post.model';
 import { PostService } from '../../../shared/services/postservice/post.service';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-myconcepts',
   standalone: true,
-  imports: [MatCardModule, DatePipe, MatIconModule, MatChipsModule],
+  imports: [
+    MatCardModule,
+    DatePipe,
+    MatIconModule,
+    MatChipsModule,
+    MatButtonModule,
+  ],
   templateUrl: './myconcepts.component.html',
   styleUrl: './myconcepts.component.css',
 })
@@ -47,5 +54,8 @@ export class MyconceptsComponent {
           console.error(error);
         },
       });
+  }
+  onAddPost() {
+    this.router.navigate(['/berichtaanmaken']);
   }
 }

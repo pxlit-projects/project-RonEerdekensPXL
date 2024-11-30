@@ -3,6 +3,9 @@
   @for(post of posts; track post.id) {
   <mat-card>
     <mat-card-header>
+      <div class="floatingdiv">
+        <p>{{ post.author }}</p>
+      </div>
       <mat-card-title>
         <p class="title">{{ post.title }}</p>
       </mat-card-title>
@@ -16,9 +19,6 @@
     <mat-card-content>
       <p>{{ post.content }}</p>
     </mat-card-content>
-    <mat-card-footer>
-      <p class="author">{{ post.author }}</p></mat-card-footer
-    >
   </mat-card>
   }@empty {
   <p>Geen nieuwsberichten gevonden</p>

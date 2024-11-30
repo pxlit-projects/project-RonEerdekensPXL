@@ -30,3 +30,21 @@ h1 {
   text-align: right;
   margin-right: 20px;
 }
+.floatingdiv {
+  position: relative;
+  top: -30px;
+  right: -35px;
+  background-color: rgb(137, 127, 224);
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.floatingdiv p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
