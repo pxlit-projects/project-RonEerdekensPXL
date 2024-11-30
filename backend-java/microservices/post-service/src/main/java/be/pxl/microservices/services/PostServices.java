@@ -41,6 +41,8 @@ public class PostServices implements IPostServices {
          postToUpdate.setTitle(post.getTitle());
          postToUpdate.setContent(post.getContent());
          postToUpdate.setState(post.getState());
+         postToUpdate.setAuthor(post.getAuthor());
+         postToUpdate.setAuthorId(post.getAuthorId());
          postToUpdate.setCreationDate(post.getCreationDate());
          postToUpdate.setPublicationDate(post.getPublicationDate());
          return postRepository.save(postToUpdate);

@@ -7,6 +7,7 @@ import { AddPostComponent } from './core/pages/add-post/add-post.component';
 import { MyconceptsComponent } from './core/pages/myconcepts/myconcepts.component';
 import { MysubmittedpostsComponent } from './core/pages/mysubmittedposts/mysubmittedposts.component';
 import { ApprovingpostsComponent } from './core/pages/approvingposts/approvingposts.component';
+import { MyconceptbyidComponent } from './core/pages/myconceptbyid/myconceptbyid.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -26,6 +27,11 @@ export const routes: Routes = [
     path: 'mijnconcepten',
     title: 'Mijn Concepten',
     component: MyconceptsComponent,
+  },
+  {
+    path: 'mijnconcepten/:postId',
+    title: 'Mijn Concept',
+    component: MyconceptbyidComponent,
   },
   {
     path: 'mijningediendeberichten',

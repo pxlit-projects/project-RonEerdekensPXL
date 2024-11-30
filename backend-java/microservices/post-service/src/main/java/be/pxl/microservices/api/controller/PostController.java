@@ -1,6 +1,7 @@
 package be.pxl.microservices.api.controller;
 
 import be.pxl.microservices.api.dto.request.PostRequest;
+import be.pxl.microservices.api.dto.request.PostUpdateRequest;
 import be.pxl.microservices.api.dto.response.PostResponse;
 import be.pxl.microservices.domain.Post;
 import be.pxl.microservices.services.IPostServices;
@@ -52,6 +53,15 @@ public class PostController {
         Post post = mapToPost(postRequest);
         return new ResponseEntity(mapToPostResponse(postServices.createPost(post, username,id)), HttpStatus.CREATED);
     }
+    @PutMapping
+    public ResponseEntity updatePost(@RequestBody PostUpdateRequest postRequest, @RequestHeader String username, @RequestHeader int id) {
+        log.info("Updating post with id: {}", postRequest.getId());
+        if(postRequest.getAuthorId() != id) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        Post post = mapToPost(postRequest);
+        return ResponseEntity.ok(mapToPostResponse(postServices.updatePost(postRequest.getId(), post)));
+    }
 
     private PostResponse mapToPostResponse(Post post) {
         return PostResponse.builder()
@@ -70,6 +80,18 @@ public class PostController {
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
                 .state(postRequest.getState())
+                .build();
+    }
+    private Post mapToPost(PostUpdateRequest postRequest) {
+        return Post.builder()
+                .id(postRequest.getId())
+                .title(postRequest.getTitle())
+                .content(postRequest.getContent())
+                .state(postRequest.getState())
+                .author(postRequest.getAuthor())
+                .authorId(postRequest.getAuthorId())
+                .creationDate(postRequest.getCreationDate())
+                .publicationDate(postRequest.getPublicationDate())
                 .build();
     }
 }

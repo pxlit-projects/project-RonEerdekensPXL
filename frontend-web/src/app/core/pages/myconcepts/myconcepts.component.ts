@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 import { User } from '../../../shared/models/user.model';
 import { MatCardModule } from '@angular/material/card';
@@ -19,11 +19,12 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatChipsModule,
     MatButtonModule,
+    RouterModule,
   ],
   templateUrl: './myconcepts.component.html',
   styleUrl: './myconcepts.component.css',
 })
-export class MyconceptsComponent {
+export class MyconceptsComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
     if (!this.user) {

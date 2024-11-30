@@ -1,17 +1,18 @@
+@if(post != null){
 <div class="AddPostWindow">
-  <mat-card class="AddPost">
+  <mat-card class="post">
     <mat-card-header>
-      <mat-card-title><h2>Bericht aanmaken</h2></mat-card-title>
+      <mat-card-title><h2>Concept Bewerken</h2></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form #postForm="ngForm" (ngSubmit)="onAddPost(postForm)">
+      <form #postForm="ngForm">
         <mat-form-field appearance="fill">
           <mat-label>Titel:</mat-label>
           <input
             matInput
             name="title"
             placeholder="Titel"
-            [(ngModel)]="titleField"
+            [(ngModel)]="post.title"
             required
             #title="ngModel"
           />
@@ -26,7 +27,7 @@
             matInput
             name="content"
             placeholder="Bericht"
-            [(ngModel)]="contentField"
+            [(ngModel)]="post.content"
             required
             #content="ngModel"
           ></textarea>
@@ -36,32 +37,28 @@
           }
         </mat-form-field>
         <span class="spacer"></span>
-        <mat-form-field>
-          <mat-label>Concept of Inzenden</mat-label>
-          <mat-select
-            name="status"
-            [(ngModel)]="statusField"
-            required
-            #status="ngModel"
+
+        <div class="buttonRow">
+          <button
+            mat-flat-button
+            type="submit"
+            class="submitbutton"
+            [disabled]="postForm.invalid"
+            (click)="onSubmit()"
           >
-            <mat-option value="CONCEPT">Concept</mat-option>
-            <mat-option value="SUBMITTED">Inzenden</mat-option>
-          </mat-select>
-          @if(status.invalid && status.dirty || status.touched) {
-          <mat-error
-            >Je moet kiezen als je dit wilt opslaan als concept of
-            inzenden.</mat-error
+            Indienen
+          </button>
+          <button
+            mat-flat-button
+            color="primary"
+            type="submit"
+            [disabled]="postForm.invalid"
+            (click)="onSave()"
           >
-          }
-        </mat-form-field>
-        <button
-          mat-flat-button
-          color="primary"
-          type="submit"
-          [disabled]="postForm.invalid"
-        >
-          Opslaan
-        </button>
+            Opslaan
+          </button>
+        </div>
+
         <span class="spacer"></span>
         @if(errorMessage != ""){
         <mat-error>{{ errorMessage }}</mat-error>
@@ -70,3 +67,6 @@
     </mat-card-content>
   </mat-card>
 </div>
+}@else {
+<p>Geen bericht gevonden</p>
+}
