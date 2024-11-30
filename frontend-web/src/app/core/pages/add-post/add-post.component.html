@@ -1,1 +1,65 @@
-<p>add-post works!</p>
+<div class="AddPostWindow">
+  <mat-card class="AddPost">
+    <mat-card-header>
+      <mat-card-title><h2>Bericht aanmaken</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form #postForm="ngForm" (ngSubmit)="onAddPost(postForm)">
+        <mat-form-field appearance="fill">
+          <mat-label>Titel:</mat-label>
+          <input
+            matInput
+            name="title"
+            placeholder="Titel"
+            [(ngModel)]="titleField"
+            required
+            #title="ngModel"
+          />
+          @if (title.invalid && title.dirty || title.touched) {
+          <mat-error>Titel is verplicht</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
+        <mat-form-field appearance="fill">
+          <mat-label>Bericht</mat-label>
+          <textarea
+            matInput
+            name="content"
+            placeholder="Bericht"
+            [(ngModel)]="contentField"
+            required
+            #content="ngModel"
+          ></textarea>
+
+          @if(content.invalid && content.dirty || content.touched) {
+          <mat-error>Bericht is verplicht</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
+        <mat-form-field>
+          <mat-label>Concept of Inzenden</mat-label>
+          <mat-select
+            name="status"
+            [(ngModel)]="statusField"
+            required
+            #status="ngModel"
+          >
+            <mat-option value="CONCEPT">Concept</mat-option>
+            <mat-option value="SUBMITTED">Inzenden</mat-option>
+          </mat-select>
+          @if(status.invalid && status.dirty || status.touched) {
+          <mat-error
+            >Je moet kiezen als je dit wilt opslaan als concept of
+            inzenden.</mat-error
+          >
+          }
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit">Opslaan</button>
+        <span class="spacer"></span>
+        @if(errorMessage != ""){
+        <mat-error>{{ errorMessage }}</mat-error>
+        }
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
