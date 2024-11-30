@@ -11,5 +11,6 @@ import java.util.List;
 public interface PostRepository extends JpaRepository<Post, Long> {
     List<Post> findAllByState(PostState state);
     List<Post> findByAuthorIdAndState(int authorId, PostState state);
+    List<Post> findByAuthorIdAndStateNot( int authorId, PostState state);
 
 }

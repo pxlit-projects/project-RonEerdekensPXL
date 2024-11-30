@@ -23,4 +23,8 @@ export class PostService {
     const headers = { username: username, id: userid.toString() };
     return this.http.get<Post[]>(this.BASEAPIURL + 'concept', { headers });
   }
+  getNoConceptPosts(userid: number, username: string): Observable<Post[]> {
+    const headers = { username: username, id: userid.toString() };
+    return this.http.get<Post[]>(this.BASEAPIURL + 'noconcept', { headers });
+  }
 }

@@ -33,6 +33,11 @@ public class PostController {
         log.info("Fetching all concept posts");
         return new ResponseEntity(postServices.getAllConceptsPostsByAuthorId(id).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
     }
+    @GetMapping("/noconcept")
+    public ResponseEntity getAllSubmittedAndRejectedAndApprovedAndPublishedPosts(@RequestHeader String username, @RequestHeader int id) {
+        log.info("Fetching all concept posts");
+        return new ResponseEntity(postServices.getAllPostsByAuthorIdAndStateNotByConcept(id).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity getPostById(@PathVariable Long id) {

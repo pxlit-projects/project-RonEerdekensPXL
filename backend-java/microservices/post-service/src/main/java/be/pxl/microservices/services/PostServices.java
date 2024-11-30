@@ -56,5 +56,10 @@ public class PostServices implements IPostServices {
         return postRepository.findByAuthorIdAndState(authorId, PostState.CONCEPT);
     }
 
+    @Override
+    public List<Post> getAllPostsByAuthorIdAndStateNotByConcept(int authorId) {
+        return postRepository.findByAuthorIdAndStateNot(authorId, PostState.CONCEPT);
+    }
+
 
 }
