@@ -606,3 +606,21 @@
 2024-11-30T15:54:50.691+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
 2024-11-30T15:54:50.692+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
 2024-11-30T15:54:54.702+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 4.951 seconds (process running for 5.613)
+2024-11-30T15:55:22.764+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:29.923+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:31.755+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:33.003+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:33.771+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:37.743+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:38.653+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:39.392+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:40.016+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:42.443+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-11-30T15:55:45.058+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:49.734+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:55:53.877+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:56:00.795+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-11-30T15:56:03.672+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:56:09.021+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:56:11.089+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-11-30T15:56:49.816+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
