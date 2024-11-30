@@ -15,6 +15,6 @@ export class PostService {
     return this.http.get<Post[]>(this.BASEAPIURL + 'published');
   }
   addNewPost(post: PostAdd): Observable<Post> {
-    return this.http.post<Post>(this.BASEAPIURL, JSON.stringify(post));
+    return this.http.post<Post>(this.BASEAPIURL, post);
   }
 }
