@@ -51,13 +51,23 @@ export class AddPostComponent {
       state: this.statusField,
     };
 
-    this.postService.addNewPost(post).subscribe({
-      next: (data: Post) => {
-        this.router.navigate(['/mijnconcepten']);
-      },
-      error: (error) => {
-        this.errorMessage = String(error).replace('Error: ', '');
-      },
-    });
+    this.postService
+      .addNewPost(post, this.user!.username, this.user!.id)
+      .subscribe({
+        next: (data: Post) => {
+          if (this.user!.role === 'editor') {
+            if (data.state === 'CONCEPT') {
+              this.router.navigate(['/mijnconcepten']);
+            } else {
+              this.router.navigate(['/mijningediendeberichten']);
+            }
+          } else {
+            this.router.navigate(['/nieuws']);
+          }
+        },
+        error: (error) => {
+          this.errorMessage = String(error).replace('Error: ', '');
+        },
+      });
   }
 }

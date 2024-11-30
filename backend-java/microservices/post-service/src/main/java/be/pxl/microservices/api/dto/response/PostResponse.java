@@ -18,6 +18,8 @@ public class PostResponse {
         private String title;
         private String content;
         private PostState state;
+        private String author;
+        private int authorId;
         private LocalDateTime creationDate;
         private LocalDateTime publicationDate;
 }

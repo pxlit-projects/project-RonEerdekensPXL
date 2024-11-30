@@ -28,8 +28,10 @@ public class PostServices implements IPostServices {
     }
 
 
-    public Post createPost(Post post) {
+    public Post createPost(Post post, String username, int id) {
         post.setCreationDate(LocalDateTime.now());
+        post.setAuthor(username);
+        post.setAuthorId(id);
         return postRepository.save(post);
     }
 
@@ -47,6 +49,11 @@ public class PostServices implements IPostServices {
     @Override
     public List<Post> getAllPublishedPosts() {
         return postRepository.findAllByState(PostState.PUBLISHED);
+    }
+
+    @Override
+    public List<Post> getAllConceptsPostsByAuthorId(int authorId) {
+        return postRepository.findByAuthorIdAndState(authorId, PostState.CONCEPT);
     }
 
 

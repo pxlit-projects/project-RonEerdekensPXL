@@ -1,0 +1,49 @@
+mat-card {
+  margin: 20px;
+
+  max-width: 400px;
+}
+mat-card-title {
+  color: rgb(35, 104, 207);
+}
+mat-card-subtitle {
+  color: rgb(148, 148, 148);
+}
+mat-card-content {
+  margin-top: 10px;
+}
+mat-card-content p {
+  word-wrap: break-word;
+}
+.postlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+h1 {
+  color: white;
+  margin-left: 20px;
+}
+
+.author {
+  color: rgb(148, 148, 148);
+  font-size: 0.9em;
+  text-align: right;
+  margin-right: 20px;
+}
+.floatingdiv {
+  position: relative;
+  top: -30px;
+  right: -35px;
+  background-color: thistle;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+.floatingdiv p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+}

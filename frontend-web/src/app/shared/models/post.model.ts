@@ -5,4 +5,6 @@ export interface Post {
   state: string;
   creationDate: Date;
   publicationDate: Date;
+  author: string;
+  authorId: number;
 }

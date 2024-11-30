@@ -28,6 +28,11 @@ public class PostController {
         log.info("Fetching all published posts");
         return new ResponseEntity(postServices.getAllPublishedPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
     }
+    @GetMapping("/concept")
+    public ResponseEntity getAllConceptPosts(@RequestHeader String username, @RequestHeader int id) {
+        log.info("Fetching all concept posts");
+        return new ResponseEntity(postServices.getAllConceptsPostsByAuthorId(id).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity getPostById(@PathVariable Long id) {
@@ -36,10 +41,11 @@ public class PostController {
         return ResponseEntity.ok(mapToPostResponse(post));
     }
     @PostMapping
-    public ResponseEntity createPost(@RequestBody PostRequest postRequest) {
+    public ResponseEntity createPost(@RequestBody PostRequest postRequest, @RequestHeader String username, @RequestHeader int id) {
         log.info("Creating new post with title: {}", postRequest.getTitle());
+
         Post post = mapToPost(postRequest);
-        return new ResponseEntity(mapToPostResponse(postServices.createPost(post)), HttpStatus.CREATED);
+        return new ResponseEntity(mapToPostResponse(postServices.createPost(post, username,id)), HttpStatus.CREATED);
     }
 
     private PostResponse mapToPostResponse(Post post) {
@@ -50,6 +56,8 @@ public class PostController {
                 .state(post.getState())
                 .creationDate(post.getCreationDate())
                 .publicationDate(post.getPublicationDate())
+                .author(post.getAuthor())
+                .authorId(post.getAuthorId())
                 .build();
     }
     private Post mapToPost(PostRequest postRequest) {

@@ -6,11 +6,12 @@ import { Post } from '../../../shared/models/post.model';
 import { PostService } from '../../../shared/services/postservice/post.service';
 import { MatCardModule } from '@angular/material/card';
 import { DatePipe } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-news',
   standalone: true,
-  imports: [MatCardModule, DatePipe],
+  imports: [MatCardModule, DatePipe, MatIconModule],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css',
 })

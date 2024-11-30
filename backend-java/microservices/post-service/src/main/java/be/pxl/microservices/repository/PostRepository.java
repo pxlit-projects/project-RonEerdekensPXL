@@ -10,5 +10,6 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
     List<Post> findAllByState(PostState state);
+    List<Post> findByAuthorIdAndState(int authorId, PostState state);
 
 }

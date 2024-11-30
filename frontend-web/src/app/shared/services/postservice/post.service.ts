@@ -14,7 +14,13 @@ export class PostService {
   getPublishedPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.BASEAPIURL + 'published');
   }
-  addNewPost(post: PostAdd): Observable<Post> {
-    return this.http.post<Post>(this.BASEAPIURL, post);
+  addNewPost(post: PostAdd, username: string, id: number): Observable<Post> {
+    const headers = { username: username, id: id.toString() };
+    return this.http.post<Post>(this.BASEAPIURL, post, { headers });
+  }
+
+  getConceptPosts(userid: number, username: string): Observable<Post[]> {
+    const headers = { username: username, id: userid.toString() };
+    return this.http.get<Post[]>(this.BASEAPIURL + 'concept', { headers });
   }
 }

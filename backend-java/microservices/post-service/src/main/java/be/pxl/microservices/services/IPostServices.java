@@ -8,9 +8,10 @@ import java.util.List;
 public interface IPostServices {
     List<Post> getAllPosts();
     Post getPostById(Long id);
-    Post createPost(Post post);
+    Post createPost(Post post, String username, int id);
     Post updatePost(Long id, Post post);
 
 
     List<Post> getAllPublishedPosts();
+    List<Post> getAllConceptsPostsByAuthorId(int authorId);
 }
