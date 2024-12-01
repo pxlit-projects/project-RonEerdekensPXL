@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 import { User } from '../../../shared/models/user.model';
 import { MatCardModule } from '@angular/material/card';
@@ -18,6 +18,7 @@ import { Post } from '../../../shared/models/post.model';
     MatIconModule,
     MatChipsModule,
     CommonModule,
+    RouterModule,
   ],
   templateUrl: './mysubmittedposts.component.html',
   styleUrl: './mysubmittedposts.component.css',

@@ -65,3 +65,11 @@ h1 {
   background-color: rgb(248, 196, 99);
   color: white;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}

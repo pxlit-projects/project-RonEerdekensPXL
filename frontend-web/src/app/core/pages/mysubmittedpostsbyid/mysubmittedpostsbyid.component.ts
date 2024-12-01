@@ -11,9 +11,10 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-myconceptbyid',
+  selector: 'app-mysubmittedpostsbyid',
   standalone: true,
   imports: [
     MatFormFieldModule,
@@ -23,11 +24,12 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     MatSelectModule,
     CommonModule,
+    MatIconModule,
   ],
-  templateUrl: './myconceptbyid.component.html',
-  styleUrl: './myconceptbyid.component.css',
+  templateUrl: './mysubmittedpostsbyid.component.html',
+  styleUrl: './mysubmittedpostsbyid.component.css',
 })
-export class MyconceptbyidComponent implements OnInit {
+export class MysubmittedpostsbyidComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
     if (!this.user) {
@@ -38,16 +40,7 @@ export class MyconceptbyidComponent implements OnInit {
       this.fetchPostById(postId);
     });
   }
-  fetchPostById(postId: number) {
-    this.postService
-      .getPostById(postId, this.user!.id, this.user!.username)
-      .subscribe((post) => {
-        if (post.authorId != this.user!.id) {
-          this.router.navigate(['/mijnconcepten']);
-        }
-        this.post = post;
-      });
-  }
+
   router: Router = inject(Router);
   route: ActivatedRoute = inject(ActivatedRoute);
   authService: AuthService = inject(AuthService);
@@ -56,26 +49,20 @@ export class MyconceptbyidComponent implements OnInit {
 
   post!: Post;
   errorMessage: string = '';
+  isEditing: boolean = false;
 
-  onSave() {
-    this.savePost();
-  }
-  onSubmit() {
-    this.post.state = 'SUBMITTED';
-    this.savePost();
+  toggleEdit() {
+    this.isEditing = !this.isEditing;
   }
 
-  private savePost() {
+  fetchPostById(postId: number) {
     this.postService
-      .updatePost(this.post, this.user!.username, this.user!.id)
-      .subscribe({
-        next: () => {
-          this.errorMessage = '';
-          this.router.navigate(['/mijnconcepten']);
-        },
-        error: (error) => {
-          this.errorMessage = error.message;
-        },
+      .getPostById(postId, this.user!.id, this.user!.username)
+      .subscribe((post) => {
+        if (post.authorId != this.user!.id) {
+          this.router.navigate(['/mijningediendeberichten']);
+        }
+        this.post = post;
       });
   }
 }

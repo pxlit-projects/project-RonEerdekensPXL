@@ -13,7 +13,7 @@
       <p>{{ post.state }}</p>
     </div>
     <mat-card-header>
-      <mat-card-title><h2>Concept Bewerken</h2></mat-card-title>
+      <mat-card-title><h2>Bericht</h2></mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <form #postForm="ngForm">
@@ -26,6 +26,7 @@
             [(ngModel)]="post.title"
             required
             #title="ngModel"
+            [disabled]="!isEditing"
           />
           @if (title.invalid && title.dirty || title.touched) {
           <mat-error>Titel is verplicht</mat-error>
@@ -41,6 +42,7 @@
             [(ngModel)]="post.content"
             required
             #content="ngModel"
+            [disabled]="!isEditing"
           ></textarea>
 
           @if(content.invalid && content.dirty || content.touched) {
@@ -48,28 +50,47 @@
           }
         </mat-form-field>
         <span class="spacer"></span>
+        <span class="spacer"></span>
 
         <div class="buttonRow">
+          @if (isEditing) {
+          <button
+            mat-flat-button
+            type="submit"
+            class="submitbutton"
+            (click)="toggleEdit()"
+          >
+            Annuleer
+          </button>
           <button
             mat-flat-button
             type="submit"
             class="submitbutton"
             [disabled]="postForm.invalid"
-            (click)="onSubmit()"
-          >
-            Indienen
-          </button>
-          <button
-            mat-flat-button
-            color="primary"
-            type="submit"
-            [disabled]="postForm.invalid"
-            (click)="onSave()"
           >
             Opslaan
           </button>
+          } @if (!isEditing) { @if(post.state == 'APPROVED') {
+          <button mat-flat-button type="submit" class="submitbutton">
+            Publiseren
+          </button>
+          } @else if(post.state == 'PUBLISHED') {
+          <h6>Gepubliceerd op:</h6>
+          <mat-icon>calendar_today</mat-icon>
+          {{ post.creationDate | date : "dd MMMM yyyy" }}
+          <mat-icon>access_time</mat-icon>
+          {{ post.creationDate | date : "HH:mm" }}
+          } @else{
+          <button
+            mat-flat-button
+            type="submit"
+            class="submitbutton"
+            (click)="toggleEdit()"
+          >
+            Bewerken
+          </button>
+          } }
         </div>
-
         <span class="spacer"></span>
         @if(errorMessage != ""){
         <mat-error>{{ errorMessage }}</mat-error>

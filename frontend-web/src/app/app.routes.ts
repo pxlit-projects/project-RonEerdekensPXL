@@ -8,6 +8,7 @@ import { MyconceptsComponent } from './core/pages/myconcepts/myconcepts.componen
 import { MysubmittedpostsComponent } from './core/pages/mysubmittedposts/mysubmittedposts.component';
 import { ApprovingpostsComponent } from './core/pages/approvingposts/approvingposts.component';
 import { MyconceptbyidComponent } from './core/pages/myconceptbyid/myconceptbyid.component';
+import { MysubmittedpostsbyidComponent } from './core/pages/mysubmittedpostsbyid/mysubmittedpostsbyid.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -37,6 +38,11 @@ export const routes: Routes = [
     path: 'mijningediendeberichten',
     title: 'Mijn Ingediende Berichten',
     component: MysubmittedpostsComponent,
+  },
+  {
+    path: 'mijningediendeberichten/:postId',
+    title: 'Mijn Ingediende Berichten',
+    component: MysubmittedpostsbyidComponent,
   },
   {
     path: 'berichtengoedkeuren',

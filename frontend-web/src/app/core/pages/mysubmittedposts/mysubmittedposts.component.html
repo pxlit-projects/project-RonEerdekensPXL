@@ -1,33 +1,35 @@
 <h1>Mijn Ingediende Berichten</h1>
 <div class="postlist">
   @for(post of posts; track post.id) {
-  <mat-card>
-    <mat-card-header>
-      <div
-        class="floatingdiv"
-        [ngClass]="{
-          approved: post.state === 'APPROVED',
-          rejected: post.state === 'REJECTED',
-          submitted: post.state === 'SUBMITTED',
-          published: post.state === 'PUBLISHED'
-        }"
-      >
-        <p>{{ post.state }}</p>
-      </div>
-      <mat-card-title>
-        <p class="title">{{ post.title }}</p>
-      </mat-card-title>
-      <mat-card-subtitle>
-        <mat-icon>calendar_today</mat-icon>
-        {{ post.creationDate | date : "dd MMMM yyyy" }}
-        <mat-icon>access_time</mat-icon>
-        {{ post.creationDate | date : "HH:mm" }}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ post.content }}</p>
-    </mat-card-content>
-  </mat-card>
+  <a [routerLink]="['/mijningediendeberichten', post.id]">
+    <mat-card>
+      <mat-card-header>
+        <div
+          class="floatingdiv"
+          [ngClass]="{
+            approved: post.state === 'APPROVED',
+            rejected: post.state === 'REJECTED',
+            submitted: post.state === 'SUBMITTED',
+            published: post.state === 'PUBLISHED'
+          }"
+        >
+          <p>{{ post.state }}</p>
+        </div>
+        <mat-card-title>
+          <p class="title">{{ post.title }}</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <mat-icon>calendar_today</mat-icon>
+          {{ post.creationDate | date : "dd MMMM yyyy" }}
+          <mat-icon>access_time</mat-icon>
+          {{ post.creationDate | date : "HH:mm" }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.content }}</p>
+      </mat-card-content>
+    </mat-card>
+  </a>
   }@empty {
   <p>Geen concepten gevonden</p>
   }
