@@ -23,7 +23,7 @@
             matInput
             name="title"
             placeholder="Titel"
-            [(ngModel)]="post.title"
+            [(ngModel)]="titleField"
             required
             #title="ngModel"
             [disabled]="!isEditing"
@@ -39,7 +39,7 @@
             matInput
             name="content"
             placeholder="Bericht"
-            [(ngModel)]="post.content"
+            [(ngModel)]="contentField"
             required
             #content="ngModel"
             [disabled]="!isEditing"
@@ -58,7 +58,7 @@
             mat-flat-button
             type="submit"
             class="submitbutton"
-            (click)="toggleEdit()"
+            (click)="onCancelEdit()"
           >
             Annuleer
           </button>
@@ -67,6 +67,7 @@
             type="submit"
             class="submitbutton"
             [disabled]="postForm.invalid"
+            (click)="onSave()"
           >
             Opslaan
           </button>

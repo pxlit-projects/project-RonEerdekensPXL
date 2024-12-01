@@ -50,9 +50,21 @@ export class MysubmittedpostsbyidComponent implements OnInit {
   post!: Post;
   errorMessage: string = '';
   isEditing: boolean = false;
-
+  titleField: string = '';
+  contentField: string = '';
   toggleEdit() {
     this.isEditing = !this.isEditing;
+  }
+  onCancelEdit() {
+    this.titleField = this.post.title;
+    this.contentField = this.post.content;
+    this.toggleEdit();
+  }
+  onSave() {
+    this.post.title = this.titleField;
+    this.post.content = this.contentField;
+    this.post.state = 'SUBMITTED';
+    this.savePost();
   }
 
   fetchPostById(postId: number) {
@@ -63,6 +75,21 @@ export class MysubmittedpostsbyidComponent implements OnInit {
           this.router.navigate(['/mijningediendeberichten']);
         }
         this.post = post;
+        this.titleField = this.post.title;
+        this.contentField = this.post.content;
+      });
+  }
+  private savePost() {
+    this.postService
+      .updatePost(this.post, this.user!.username, this.user!.id)
+      .subscribe({
+        next: () => {
+          this.errorMessage = '';
+          this.router.navigate(['/mijningediendeberichten']);
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
       });
   }
 }
