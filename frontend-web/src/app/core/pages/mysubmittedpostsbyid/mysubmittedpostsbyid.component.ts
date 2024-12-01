@@ -66,6 +66,9 @@ export class MysubmittedpostsbyidComponent implements OnInit {
     this.post.state = 'SUBMITTED';
     this.savePost();
   }
+  onBack() {
+    this.router.navigate(['/mijningediendeberichten']);
+  }
 
   fetchPostById(postId: number) {
     this.postService

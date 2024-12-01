@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-myconceptbyid',
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     MatSelectModule,
     CommonModule,
+    MatIconModule,
   ],
   templateUrl: './myconceptbyid.component.html',
   styleUrl: './myconceptbyid.component.css',
@@ -63,6 +65,9 @@ export class MyconceptbyidComponent implements OnInit {
   onSubmit() {
     this.post.state = 'SUBMITTED';
     this.savePost();
+  }
+  onBack() {
+    this.router.navigate(['/mijnconcepten']);
   }
 
   private savePost() {

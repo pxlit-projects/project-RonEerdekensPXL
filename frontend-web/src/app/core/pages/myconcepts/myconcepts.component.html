@@ -9,6 +9,7 @@
     <mat-icon>add</mat-icon>
   </button>
 </div>
+
 <div class="postlist">
   @for(post of posts; track post.id) {
   <a [routerLink]="['/mijnconcepten', post.id]">
