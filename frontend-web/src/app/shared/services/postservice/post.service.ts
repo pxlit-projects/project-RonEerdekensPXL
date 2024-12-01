@@ -40,4 +40,18 @@ export class PostService {
     const headers = { username: username, id: userid.toString() };
     return this.http.put<Post>(this.BASEAPIURL, post, { headers });
   }
+  publishPost(
+    postId: number,
+    username: string,
+    userid: number
+  ): Observable<Post> {
+    const headers = { username: username, id: userid.toString() };
+    return this.http.post<Post>(
+      this.BASEAPIURL + postId + '/publish',
+      {},
+      {
+        headers,
+      }
+    );
+  }
 }

@@ -82,6 +82,19 @@ export class MysubmittedpostsbyidComponent implements OnInit {
         this.contentField = this.post.content;
       });
   }
+  publishPost() {
+    this.postService
+      .publishPost(this.post.id, this.user!.username, this.user!.id)
+      .subscribe({
+        next: () => {
+          this.errorMessage = '';
+          this.router.navigate(['/mijningediendeberichten']);
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
+      });
+  }
   private savePost() {
     this.postService
       .updatePost(this.post, this.user!.username, this.user!.id)

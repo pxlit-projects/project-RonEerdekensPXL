@@ -82,7 +82,12 @@
             Opslaan
           </button>
           } @if (!isEditing) { @if(post.state == 'APPROVED') {
-          <button mat-flat-button type="submit" class="submitbutton">
+          <button
+            mat-flat-button
+            type="submit"
+            class="submitbutton"
+            (click)="publishPost()"
+          >
             Publiseren
           </button>
           } @else if(post.state == 'PUBLISHED') {

@@ -62,6 +62,11 @@ public class PostController {
         Post post = mapToPost(postRequest);
         return ResponseEntity.ok(mapToPostResponse(postServices.updatePost(postRequest.getId(), post)));
     }
+    @PostMapping("/{postid}/publish")
+    public ResponseEntity publishPost(@PathVariable Long postid, @RequestHeader String username, @RequestHeader int id) {
+        log.info("Publishing post with id: {}", id);
+        return ResponseEntity.ok(mapToPostResponse(postServices.publishPost(postid, id)));
+    }
 
     private PostResponse mapToPostResponse(Post post) {
         return PostResponse.builder()

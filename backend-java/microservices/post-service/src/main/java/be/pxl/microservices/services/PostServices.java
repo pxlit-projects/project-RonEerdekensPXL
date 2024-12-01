@@ -2,6 +2,7 @@ package be.pxl.microservices.services;
 
 import be.pxl.microservices.domain.Post;
 import be.pxl.microservices.domain.PostState;
+import be.pxl.microservices.exception.PostEditForbiddenException;
 import be.pxl.microservices.exception.PostNotFoundException;
 import be.pxl.microservices.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
@@ -61,6 +62,20 @@ public class PostServices implements IPostServices {
     @Override
     public List<Post> getAllPostsByAuthorIdAndStateNotByConcept(int authorId) {
         return postRepository.findByAuthorIdAndStateNot(authorId, PostState.CONCEPT);
+    }
+
+    @Override
+    public Post publishPost(Long id, int authorId) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post with id " + id + " not found"));
+        if(post.getAuthorId() != authorId) {
+            throw new PostEditForbiddenException("Post with id " + id + " cannot be edited by user with id " + authorId);
+        }
+        if(post.getState() != PostState.APPROVED) {
+            throw new PostEditForbiddenException("Post with id " + id + " cannot be published because it is not in approved state");
+        }
+        post.setState(PostState.PUBLISHED);
+        post.setPublicationDate(LocalDateTime.now());
+        return postRepository.save(post);
     }
 
 
