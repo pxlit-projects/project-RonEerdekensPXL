@@ -1,4 +1,17 @@
 <h2 mat-dialog-title>Opmerking Toevoegen</h2>
 <mat-dialog-content>
-  <p>{{ postId }}</p>
+  <p>Als het veld leeg is, wordt er geen opmerking toegevoegd.</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Opmerking:</mat-label>
+    <textarea
+      matInput
+      name="content"
+      placeholder="(optioneel)"
+      matInput
+      [(ngModel)]="comment"
+    ></textarea>
+  </mat-form-field>
+  <button mat-flat-button class="button" type="submit" (click)="onReject()">
+    Afkeuren
+  </button>
 </mat-dialog-content>

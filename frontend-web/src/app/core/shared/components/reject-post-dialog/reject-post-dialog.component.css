@@ -1,0 +1,10 @@
+.button {
+  background-color: rgb(241, 50, 16);
+}
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+mat-form-field textarea {
+  height: 250px;
+}

@@ -19,4 +19,10 @@ public class QueueService {
         post.setState(PostState.APPROVED);
         postRepository.save(post);
     }
+    @RabbitListener(queues = "rejectPostQueue")
+    public void rejectPost(Long id) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post not found"));
+        post.setState(PostState.REJECTED);
+        postRepository.save(post);
+    }
 }

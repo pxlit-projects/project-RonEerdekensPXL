@@ -10,4 +10,8 @@ public class QueueConfiguration {
     public Queue myApprovePostQueue() {
         return new Queue("approvePostQueue", true);
     }
+    @Bean
+    public Queue myRejectPostQueue() {
+        return new Queue("rejectPostQueue", true);
+    }
 }

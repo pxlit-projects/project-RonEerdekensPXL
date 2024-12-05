@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Post } from '../../models/post.model';
 import { Observable } from 'rxjs';
+import { RemarkAdd } from '../../models/remarkAdd.model';
 
 @Injectable({
   providedIn: 'root',
@@ -15,5 +16,17 @@ export class ReviewService {
   }
   approvePost(postId: number): Observable<any> {
     return this.http.post(this.BASEAPIURL + 'posts/' + postId + '/approve', {});
+  }
+  rejectPost(
+    remark: RemarkAdd,
+    username: string,
+    userid: number
+  ): Observable<any> {
+    const headers = { username: username, id: userid.toString() };
+    return this.http.post(
+      this.BASEAPIURL + 'posts/' + remark.postId + '/reject',
+      remark,
+      { headers }
+    );
   }
 }
