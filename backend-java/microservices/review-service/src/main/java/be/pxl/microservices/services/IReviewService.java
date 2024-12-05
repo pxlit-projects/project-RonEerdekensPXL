@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IReviewService {
     public List<PostResponse> getReviewPosts();
+
+    void approvePost(Long id);
 }

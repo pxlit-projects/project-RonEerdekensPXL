@@ -19,6 +19,7 @@ import {
   MatDialogContent,
 } from '@angular/material/dialog';
 import { RejectPostDialogComponent } from '../../shared/components/reject-post-dialog/reject-post-dialog.component';
+import { ReviewService } from '../../../shared/services/reviewservice/review.service';
 
 @Component({
   selector: 'app-approvingpostsbyid',
@@ -41,6 +42,7 @@ export class ApprovingpostsbyidComponent implements OnInit {
   route: ActivatedRoute = inject(ActivatedRoute);
   authService: AuthService = inject(AuthService);
   postService: PostService = inject(PostService);
+  reviewService: ReviewService = inject(ReviewService);
   user: User | null | undefined;
 
   dialog = inject(MatDialog);
@@ -75,5 +77,12 @@ export class ApprovingpostsbyidComponent implements OnInit {
   }
   onBack() {
     this.router.navigate(['/berichtengoedkeuren']);
+  }
+  onApprove() {
+    this.reviewService.approvePost(this.post.id).subscribe((post) => {
+      setTimeout(() => {
+        this.router.navigate(['/berichtengoedkeuren']);
+      }, 1000);
+    });
   }
 }

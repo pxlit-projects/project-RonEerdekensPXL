@@ -13,4 +13,7 @@ export class ReviewService {
   getReviewPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.BASEAPIURL + 'posts');
   }
+  approvePost(postId: number): Observable<any> {
+    return this.http.post(this.BASEAPIURL + 'posts/' + postId + '/approve', {});
+  }
 }

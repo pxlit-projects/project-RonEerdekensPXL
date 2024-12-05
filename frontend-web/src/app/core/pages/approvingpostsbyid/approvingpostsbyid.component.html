@@ -70,7 +70,12 @@
           >
             Afkeuren
           </button>
-          <button mat-flat-button type="submit" class="ApproveButton">
+          <button
+            mat-flat-button
+            type="submit"
+            class="ApproveButton"
+            (click)="onApprove()"
+          >
             Goedkeuren
           </button>
         </div>

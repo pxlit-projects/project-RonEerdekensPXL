@@ -6,6 +6,8 @@ import be.pxl.microservices.repository.RemarkRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +19,16 @@ public class ReviewService implements IReviewService {
     private final RemarkRepository remarkRepository;
     private final PostClient postClient;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    @Override
     public List<PostResponse> getReviewPosts() {
         return postClient.getReviewPosts();
+    }
+
+    @Override
+    public void approvePost(Long id) {
+        rabbitTemplate.convertAndSend("approvePostQueue", id);
     }
 }
