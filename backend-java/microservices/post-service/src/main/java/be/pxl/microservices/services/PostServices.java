@@ -78,5 +78,10 @@ public class PostServices implements IPostServices {
         return postRepository.save(post);
     }
 
+    @Override
+    public List<Post> getAllReviewPosts() {
+        return postRepository.findByStateNotAndStateNotAndStateNot(PostState.PUBLISHED, PostState.CONCEPT, PostState.APPROVED);
+    }
+
 
 }

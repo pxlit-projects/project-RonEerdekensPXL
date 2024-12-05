@@ -17,4 +17,6 @@ public interface IPostServices {
     List<Post> getAllPostsByAuthorIdAndStateNotByConcept(int authorId);
 
     Post publishPost(Long id, int authorId);
+
+    List<Post> getAllReviewPosts();
 }

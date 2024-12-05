@@ -24,6 +24,11 @@ public class PostController {
         log.info("Fetching all posts");
         return new ResponseEntity(postServices.getAllPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
     }
+    @GetMapping("/review")
+    public ResponseEntity getAllReviewPosts() {
+        log.info("Fetching all review posts");
+        return new ResponseEntity(postServices.getAllReviewPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+    }
     @GetMapping("/published")
     public ResponseEntity getAllPublishedPosts() {
         log.info("Fetching all published posts");
