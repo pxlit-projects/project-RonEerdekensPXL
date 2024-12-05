@@ -1,0 +1,88 @@
+@if(post != null){
+<div>
+  <button
+    mat-fab
+    aria-label="Bericht aanmaken"
+    class="backgroundcolor"
+    (click)="onBack()"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</div>
+<div class="AddPostWindow">
+  <mat-card class="post">
+    <div
+      class="floatingdiv"
+      [ngClass]="{
+        approved: post.state === 'APPROVED',
+        rejected: post.state === 'REJECTED',
+        submitted: post.state === 'SUBMITTED',
+        published: post.state === 'PUBLISHED'
+      }"
+    >
+      <p>{{ post.state }}</p>
+    </div>
+    <mat-card-header>
+      <mat-card-title><h2>Bericht Goedkeuren</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form #postForm="ngForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Titel:</mat-label>
+          <input
+            matInput
+            name="title"
+            placeholder="Titel"
+            [(ngModel)]="post.title"
+            required
+            #title="ngModel"
+            disabled="true"
+          />
+          @if (title.invalid && title.dirty || title.touched) {
+          <mat-error>Titel is verplicht</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
+        <mat-form-field appearance="fill">
+          <mat-label>Bericht</mat-label>
+          <textarea
+            matInput
+            name="content"
+            placeholder="Bericht"
+            [(ngModel)]="post.content"
+            required
+            #content="ngModel"
+            disabled="true"
+          ></textarea>
+
+          @if(content.invalid && content.dirty || content.touched) {
+          <mat-error>Bericht is verplicht</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
+
+        <div class="buttonRow">
+          <button
+            mat-flat-button
+            (click)="openDialog()"
+            type="submit"
+            class="RejectButton"
+          >
+            Afkeuren
+          </button>
+          <button mat-flat-button type="submit" class="ApproveButton">
+            Goedkeuren
+          </button>
+        </div>
+
+        <span class="spacer"></span>
+        @if(errorMessage != ""){
+        <mat-error>{{ errorMessage }}</mat-error>
+        }
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+}@else {
+<p>Geen bericht gevonden</p>
+}

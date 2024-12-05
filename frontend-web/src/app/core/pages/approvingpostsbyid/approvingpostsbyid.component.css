@@ -1,0 +1,93 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding: 50px;
+  background-color: rgba(252, 254, 255, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  margin-bottom: 20px;
+  color: rgb(35, 104, 207);
+}
+.spacer {
+  margin-top: 2%;
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+input {
+  width: 100%;
+}
+mat-card-content {
+  width: 100%;
+}
+mat-form-field {
+  width: 100%;
+}
+mat-form-field textarea {
+  height: 300px;
+}
+.buttonRow {
+  display: flex;
+  justify-content: right;
+  gap: 30px;
+  width: 100%;
+}
+.RejectButton {
+  background-color: rgb(241, 50, 16);
+}
+.ApproveButton {
+  background-color: rgb(10, 121, 56);
+}
+.floatingdiv {
+  position: absolute;
+  top: -30px;
+  right: -35px;
+  background-color: thistle;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(102, 102, 102);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.floatingdiv p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+.approved {
+  background-color: rgb(51, 214, 187);
+  color: white;
+}
+
+.rejected {
+  background-color: rgb(231, 71, 146);
+  color: white;
+}
+.published {
+  background-color: rgb(115, 123, 233);
+  color: white;
+}
+.submitted {
+  background-color: rgb(248, 196, 99);
+  color: white;
+}

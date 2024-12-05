@@ -9,6 +9,7 @@ import { MysubmittedpostsComponent } from './core/pages/mysubmittedposts/mysubmi
 import { ApprovingpostsComponent } from './core/pages/approvingposts/approvingposts.component';
 import { MyconceptbyidComponent } from './core/pages/myconceptbyid/myconceptbyid.component';
 import { MysubmittedpostsbyidComponent } from './core/pages/mysubmittedpostsbyid/mysubmittedpostsbyid.component';
+import { ApprovingpostsbyidComponent } from './core/pages/approvingpostsbyid/approvingpostsbyid.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -48,5 +49,10 @@ export const routes: Routes = [
     path: 'berichtengoedkeuren',
     title: 'Berichten Goedkeuren',
     component: ApprovingpostsComponent,
+  },
+  {
+    path: 'berichtengoedkeuren/:postId',
+    title: 'Berichten Goedkeuren',
+    component: ApprovingpostsbyidComponent,
   },
 ];
