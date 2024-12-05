@@ -80,7 +80,7 @@ public class PostServices implements IPostServices {
 
     @Override
     public List<Post> getAllReviewPosts() {
-        return postRepository.findByStateNotAndStateNotAndStateNot(PostState.PUBLISHED, PostState.CONCEPT, PostState.APPROVED);
+        return postRepository.findAllByState(PostState.SUBMITTED);
     }
 
 

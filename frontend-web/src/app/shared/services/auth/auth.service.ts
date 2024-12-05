@@ -9,6 +9,10 @@ export class AuthService {
     { username: 'user1', role: 'user', id: 1, password: 'password' },
     { username: 'editor1', role: 'editor', id: 2, password: 'password' },
     { username: 'user2', role: 'user', id: 3, password: 'password' },
+    { username: 'user3', role: 'user', id: 4, password: 'password' },
+    { username: 'editor2', role: 'editor', id: 5, password: 'password' },
+    { username: 'user4', role: 'user', id: 6, password: 'password' },
+    { username: 'editor3', role: 'editor', id: 7, password: 'password' },
   ];
 
   private currentUser: User | null = null; // Standaard de eerste gebruiker
