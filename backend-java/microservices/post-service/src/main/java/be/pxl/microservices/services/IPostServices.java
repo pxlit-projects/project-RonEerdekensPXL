@@ -1,5 +1,6 @@
 package be.pxl.microservices.services;
 
+import be.pxl.microservices.api.dto.response.PostCommentResponse;
 import be.pxl.microservices.api.dto.response.PostRemarkResponse;
 import be.pxl.microservices.domain.Post;
 
@@ -22,4 +23,6 @@ public interface IPostServices {
     List<Post> getAllReviewPosts();
 
     PostRemarkResponse getPostByIdAndRemarks(Long id);
+
+    PostCommentResponse getPostByIdAndComments(Long id);
 }

@@ -10,11 +10,13 @@ import { ApprovingpostsComponent } from './core/pages/approvingposts/approvingpo
 import { MyconceptbyidComponent } from './core/pages/myconceptbyid/myconceptbyid.component';
 import { MysubmittedpostsbyidComponent } from './core/pages/mysubmittedpostsbyid/mysubmittedpostsbyid.component';
 import { ApprovingpostsbyidComponent } from './core/pages/approvingpostsbyid/approvingpostsbyid.component';
+import { NewsbyidComponent } from './core/pages/newsbyid/newsbyid.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', title: 'Inloggen', component: LoginComponent },
   { path: 'nieuws', title: 'Nieuws', component: NewsComponent },
+  { path: 'nieuws/:postId', title: 'Nieuws', component: NewsbyidComponent },
   {
     path: 'mijncomments',
     title: 'Mijn Comments',

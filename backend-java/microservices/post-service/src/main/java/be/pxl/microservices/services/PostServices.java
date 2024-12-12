@@ -1,8 +1,7 @@
 package be.pxl.microservices.services;
 
-import be.pxl.microservices.api.dto.response.PostRemarkResponse;
-import be.pxl.microservices.api.dto.response.PostResponse;
-import be.pxl.microservices.api.dto.response.RemarkResponse;
+import be.pxl.microservices.api.dto.response.*;
+import be.pxl.microservices.client.CommentClient;
 import be.pxl.microservices.client.ReviewClient;
 import be.pxl.microservices.domain.Post;
 import be.pxl.microservices.domain.PostState;
@@ -22,6 +21,7 @@ import java.util.List;
 public class PostServices implements IPostServices {
     private final PostRepository postRepository;
     private final ReviewClient reviewClient;
+    private final CommentClient commentClient;
     private static final Logger log = LoggerFactory.getLogger(PostServices.class);
 
     public List<Post> getAllPosts() {
@@ -98,6 +98,15 @@ public class PostServices implements IPostServices {
         return postRemarkResponse;
     }
 
+    @Override
+    public PostCommentResponse getPostByIdAndComments(Long id) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post with id " + id + " not found"));
+        PostCommentResponse postCommentResponse = mapToPostCommentResponse(post);
+        List<CommentResponse> comments = commentClient.getCommentsForPost(id);
+        postCommentResponse.setComments(comments);
+        return postCommentResponse;
+    }
+
     private PostRemarkResponse mapToPostRemarkResponse(Post post) {
         return PostRemarkResponse.builder()
                 .id(post.getId())
@@ -109,6 +118,19 @@ public class PostServices implements IPostServices {
                 .author(post.getAuthor())
                 .authorId(post.getAuthorId())
                 .remarks(List.of())
+                .build();
+    }
+    private PostCommentResponse mapToPostCommentResponse(Post post) {
+        return PostCommentResponse.builder()
+                .id(post.getId())
+                .title(post.getTitle())
+                .content(post.getContent())
+                .state(post.getState())
+                .creationDate(post.getCreationDate())
+                .publicationDate(post.getPublicationDate())
+                .author(post.getAuthor())
+                .authorId(post.getAuthorId())
+                .comments(List.of())
                 .build();
     }
 }

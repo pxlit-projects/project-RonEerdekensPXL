@@ -1,25 +1,27 @@
 <h1>Nieuws</h1>
 <div class="postlist">
   @for(post of posts; track post.id) {
-  <mat-card>
-    <mat-card-header>
-      <div class="floatingdiv">
-        <p>{{ post.author }}</p>
-      </div>
-      <mat-card-title>
-        <p class="title">{{ post.title }}</p>
-      </mat-card-title>
-      <mat-card-subtitle>
-        <mat-icon>calendar_today</mat-icon>
-        {{ post.publicationDate | date : "dd MMMM yyyy" }}
-        <mat-icon>access_time</mat-icon>
-        {{ post.publicationDate | date : "HH:mm" }}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ post.content }}</p>
-    </mat-card-content>
-  </mat-card>
+  <a [routerLink]="['/nieuws', post.id]">
+    <mat-card>
+      <mat-card-header>
+        <div class="floatingdiv">
+          <p>{{ post.author }}</p>
+        </div>
+        <mat-card-title>
+          <p class="title">{{ post.title }}</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <mat-icon>calendar_today</mat-icon>
+          {{ post.publicationDate | date : "dd MMMM yyyy" }}
+          <mat-icon>access_time</mat-icon>
+          {{ post.publicationDate | date : "HH:mm" }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.content }}</p>
+      </mat-card-content>
+    </mat-card>
+  </a>
   }@empty {
   <p>Geen nieuwsberichten gevonden</p>
   }

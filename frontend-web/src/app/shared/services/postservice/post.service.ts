@@ -4,6 +4,7 @@ import { catchError, Observable } from 'rxjs';
 import { Post } from '../../models/post.model';
 import { PostAdd } from '../../models/postAdd.model';
 import { PostWithRemarks } from '../../models/postWithRemarks.model';
+import { PostWithComments } from '../../models/postWithComments.model';
 
 @Injectable({
   providedIn: 'root',
@@ -46,6 +47,20 @@ export class PostService {
     const headers = { username: username, id: userid.toString() };
     return this.http.get<PostWithRemarks>(
       this.BASEAPIURL + postId + '/withremarks',
+      {
+        headers,
+      }
+    );
+  }
+
+  getPostByIdAndComments(
+    postId: number,
+    userid: number,
+    username: string
+  ): Observable<PostWithComments> {
+    const headers = { username: username, id: userid.toString() };
+    return this.http.get<PostWithComments>(
+      this.BASEAPIURL + postId + '/withcomments',
       {
         headers,
       }

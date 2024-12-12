@@ -1,0 +1,66 @@
+@if(post != null){
+<div>
+  <button mat-fab aria-label="Terug" class="backgroundcolor" (click)="onBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</div>
+<div class="AddPostWindow">
+  <mat-card class="post">
+    <div
+      class="floatingdiv"
+      [ngClass]="{
+        approved: post.state === 'APPROVED',
+        rejected: post.state === 'REJECTED',
+        submitted: post.state === 'SUBMITTED',
+        published: post.state === 'PUBLISHED'
+      }"
+    >
+      <p>{{ post.author }}</p>
+    </div>
+    <mat-card-header>
+      <mat-card-title><h2>Nieuws</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <h3>Titel</h3>
+
+        <p>{{ post.title }}</p>
+        <h3>Bericht</h3>
+        <p>{{ post.content }}</p>
+
+        <span class="spacer"></span>
+        @if(errorMessage != ""){
+        <mat-error>{{ errorMessage }}</mat-error>
+        }
+      </div>
+      <div class="remarks">
+        <h2 class="remarksTitle">Reacties</h2>
+        @if(post.comments.length > 0){ @for (comment of post.comments; track
+        comment.id) {
+        <mat-card class="remark">
+          <mat-card-header>
+            <mat-card-title
+              ><h2>{{ comment.author }}</h2>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <mat-icon>calendar_today</mat-icon>
+              {{ comment.creationDate | date : "dd MMMM yyyy" }}
+              <mat-icon>access_time</mat-icon>
+              {{ comment.creationDate | date : "HH:mm" }}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ comment.comment }}</p>
+          </mat-card-content>
+        </mat-card>
+        } }@else {
+        <p class="noremarks">Geen reacties gevonden</p>
+        }
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+}@else {
+<p>Geen bericht gevonden</p>
+}

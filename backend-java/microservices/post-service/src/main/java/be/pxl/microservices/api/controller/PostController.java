@@ -2,6 +2,7 @@ package be.pxl.microservices.api.controller;
 
 import be.pxl.microservices.api.dto.request.PostRequest;
 import be.pxl.microservices.api.dto.request.PostUpdateRequest;
+import be.pxl.microservices.api.dto.response.PostCommentResponse;
 import be.pxl.microservices.api.dto.response.PostRemarkResponse;
 import be.pxl.microservices.api.dto.response.PostResponse;
 import be.pxl.microservices.domain.Post;
@@ -56,6 +57,12 @@ public class PostController {
     public ResponseEntity getPostAndRemarks(@PathVariable Long id) {
         log.info("Fetching post with id: {} and remarks", id);
         PostRemarkResponse post = postServices.getPostByIdAndRemarks(id);
+        return ResponseEntity.ok(post);
+    }
+    @GetMapping("{id}/withcomments")
+    public ResponseEntity getPostAndComments(@PathVariable Long id) {
+        log.info("Fetching post with id: {} and comments", id);
+        PostCommentResponse post = postServices.getPostByIdAndComments(id);
         return ResponseEntity.ok(post);
     }
     @PostMapping
