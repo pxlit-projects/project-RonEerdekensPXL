@@ -4,7 +4,7 @@
     <mat-icon>arrow_back</mat-icon>
   </button>
 </div>
-<div class="AddPostWindow">
+<div class="PostWindow">
   <mat-card class="post">
     <div
       class="floatingdiv"
@@ -18,26 +18,32 @@
       <p>{{ post.author }}</p>
     </div>
     <mat-card-header>
-      <mat-card-title><h2>Nieuws</h2></mat-card-title>
+      <mat-card-title
+        ><h2>{{ post.title }}</h2></mat-card-title
+      >
     </mat-card-header>
     <mat-card-content>
-      <div>
-        <h3>Titel</h3>
-
-        <p>{{ post.title }}</p>
-        <h3>Bericht</h3>
-        <p>{{ post.content }}</p>
+      <div class="form">
+        <mat-card-subtitle>
+          <mat-icon>calendar_today</mat-icon>
+          {{ post.publicationDate | date : "dd MMMM yyyy" }}
+          <mat-icon>access_time</mat-icon>
+          {{ post.publicationDate | date : "HH:mm" }}
+        </mat-card-subtitle>
+        <div class="spacer"></div>
+        <p class="content">{{ post.content }}</p>
 
         <span class="spacer"></span>
         @if(errorMessage != ""){
         <mat-error>{{ errorMessage }}</mat-error>
         }
       </div>
-      <div class="remarks">
-        <h2 class="remarksTitle">Reacties</h2>
+      <div class="spacer"></div>
+      <div class="comments">
+        <h2 class="commentsTitle">Reacties</h2>
         @if(post.comments.length > 0){ @for (comment of post.comments; track
         comment.id) {
-        <mat-card class="remark">
+        <mat-card class="comment">
           <mat-card-header>
             <mat-card-title
               ><h2>{{ comment.author }}</h2>
@@ -54,7 +60,7 @@
           </mat-card-content>
         </mat-card>
         } }@else {
-        <p class="noremarks">Geen reacties gevonden</p>
+        <p class="nocomments">Geen reacties gevonden</p>
         }
       </div>
     </mat-card-content>

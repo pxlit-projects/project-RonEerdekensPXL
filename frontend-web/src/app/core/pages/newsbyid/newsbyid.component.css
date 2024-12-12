@@ -1,0 +1,99 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 60%;
+  padding: 50px;
+  background-color: rgba(252, 254, 255, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  margin-bottom: 100px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  margin-bottom: 20px;
+  color: rgb(35, 104, 207);
+}
+.spacer {
+  margin-top: 50px;
+}
+mat-card-content {
+  width: 100%;
+}
+.floatingdiv {
+  position: absolute;
+  top: -30px;
+  right: -35px;
+  background-color: thistle;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(102, 102, 102);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.floatingdiv p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+.approved {
+  background-color: rgb(51, 214, 187);
+  color: white;
+}
+
+.rejected {
+  background-color: rgb(231, 71, 146);
+  color: white;
+}
+.published {
+  background-color: rgb(115, 123, 233);
+  color: white;
+}
+.submitted {
+  background-color: rgb(248, 196, 99);
+  color: white;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+.comment {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(252, 254, 255, 0.178);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  width: 100%;
+}
+.comment h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+.comment mat-card-subtitle {
+  margin-bottom: 10px;
+}
+.commentsTitle {
+  text-align: center;
+}
+.nocomments {
+  text-align: center;
+  margin-top: 20px;
+}
+mat-card-subtitle {
+  text-align: center;
+}
+.content {
+  text-align: center;
+}
