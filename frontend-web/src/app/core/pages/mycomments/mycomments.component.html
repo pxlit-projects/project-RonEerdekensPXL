@@ -1,1 +1,28 @@
-<p>mycomments works!</p>
+<h1>Mijn reacties</h1>
+<div class="commentlist">
+  @for(com of comments; track com.id) {
+  <a [routerLink]="['/nieuws/', com.postId]">
+    <mat-card>
+      <mat-card-header>
+        <div class="floatingdiv">
+          <p>{{ com.author }}</p>
+        </div>
+        <mat-card-title>
+          <p class="title">{{ com.author }}</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <mat-icon>calendar_today</mat-icon>
+          {{ com.creationDate | date : "dd MMMM yyyy" }}
+          <mat-icon>access_time</mat-icon>
+          {{ com.creationDate | date : "HH:mm" }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ com.comment }}</p>
+      </mat-card-content>
+    </mat-card>
+  </a>
+  }@empty {
+  <p>Geen nieuwsberichten gevonden</p>
+  }
+</div>

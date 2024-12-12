@@ -25,6 +25,11 @@ public class CommentController {
         Comment comment = mapToComment(commentRequest);
         return new ResponseEntity(commentService.createComment(comment, username,id), HttpStatus.CREATED);
     }
+    @GetMapping
+    public ResponseEntity getAllCommentsByUser(@RequestHeader String username, @RequestHeader int id) {
+        log.info("Fetching all comments for user with id: {}", id);
+        return new ResponseEntity(commentService.getAllCommentsByUserId(id).stream().map(this::mapToCommentResponse).toList(), HttpStatus.OK);
+    }
 
     @GetMapping("/post/{postId}")
     public ResponseEntity getCommentsByPostId(@PathVariable Long postId) {

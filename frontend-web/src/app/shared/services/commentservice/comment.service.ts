@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CommentAdd } from '../../models/commentAdd.model';
+import { Comment } from '../../models/comment.model';
 
 @Injectable({
   providedIn: 'root',
@@ -38,5 +39,10 @@ export class CommentService {
     return this.http.put<any>(this.BASEAPIURL + commentId, comment, {
       headers,
     });
+  }
+
+  getCommentsOfUser(username: string, userId: number): Observable<Comment[]> {
+    const headers = { username: username, id: userId.toString() };
+    return this.http.get<Comment[]>(this.BASEAPIURL, { headers });
   }
 }

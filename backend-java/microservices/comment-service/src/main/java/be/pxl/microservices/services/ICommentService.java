@@ -3,6 +3,7 @@ package be.pxl.microservices.services;
 import be.pxl.microservices.api.dto.request.CommentRequest;
 import be.pxl.microservices.domain.Comment;
 
+import java.util.Arrays;
 import java.util.List;
 
 public interface ICommentService {
@@ -12,4 +13,6 @@ public interface ICommentService {
     void deleteComment(Long commentId, String username, int id);
 
     Comment updateComment(Long commentId, CommentRequest commentRequest, String username, int id);
+
+    List<Comment> getAllCommentsByUserId(int id);
 }

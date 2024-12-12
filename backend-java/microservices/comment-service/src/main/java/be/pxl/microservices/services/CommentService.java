@@ -49,4 +49,9 @@ public class CommentService implements ICommentService {
         commentRepository.save(comment);
         return comment;
     }
+
+    @Override
+    public List<Comment> getAllCommentsByUserId(int id) {
+        return commentRepository.findAllByAuthorId(id);
+    }
 }
