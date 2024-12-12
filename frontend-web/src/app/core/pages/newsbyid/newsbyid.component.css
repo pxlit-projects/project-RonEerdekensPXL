@@ -106,3 +106,10 @@ mat-card-subtitle {
 .commentsfield {
   width: 80%;
 }
+.deletebutton {
+  color: tomato;
+}
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+}

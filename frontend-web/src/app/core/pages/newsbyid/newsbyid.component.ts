@@ -78,6 +78,18 @@ export class NewsbyidComponent implements OnInit {
   onBack() {
     this.router.navigate(['/nieuws']);
   }
+  onDeleteComment(commentId: number) {
+    this.commentService
+      .deleteComment(commentId, this.user!.username, this.user!.id)
+      .subscribe({
+        next: () => {
+          this.fetchPostById(this.post.id);
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
+      });
+  }
   onSubmit() {
     if (this.commentForm.valid) {
       const comment: CommentAdd = {

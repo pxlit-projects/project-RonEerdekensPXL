@@ -75,6 +75,22 @@
             <mat-card-title
               ><h2>{{ comment.author }}</h2>
             </mat-card-title>
+            @if(comment.authorId == user?.id){
+            <div>
+              <button mat-icon-button aria-label="Bewerken" class="editbutton">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button
+                mat-icon-button
+                aria-label="Verwijderen"
+                class="deletebutton"
+                (click)="onDeleteComment(comment.id)"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            }
+
             <mat-card-subtitle>
               <mat-icon>calendar_today</mat-icon>
               {{ comment.creationDate | date : "dd MMMM yyyy" }}

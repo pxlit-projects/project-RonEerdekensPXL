@@ -18,4 +18,13 @@ export class CommentService {
     const headers = { username: username, id: id.toString() };
     return this.http.post<CommentAdd>(this.BASEAPIURL, comment, { headers });
   }
+
+  deleteComment(
+    commentId: number,
+    username: string,
+    id: number
+  ): Observable<any> {
+    const headers = { username: username, id: id.toString() };
+    return this.http.delete<any>(this.BASEAPIURL + commentId, { headers });
+  }
 }

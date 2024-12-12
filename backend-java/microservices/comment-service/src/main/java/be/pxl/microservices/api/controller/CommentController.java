@@ -32,6 +32,20 @@ public class CommentController {
         return new ResponseEntity(commentService.getCommentsByPostId(postId).stream().map(this::mapToCommentResponse).toList(), HttpStatus.OK);
     }
 
+    @DeleteMapping("/{commentId}")
+    public ResponseEntity deleteComment(@PathVariable Long commentId,@RequestHeader String username, @RequestHeader int id) {
+        log.info("Deleting comment with id: {}", id);
+        commentService.deleteComment(commentId, username, id);
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping("/{commentId}")
+    public ResponseEntity updateComment(@PathVariable Long commentId, @RequestBody CommentRequest commentRequest, @RequestHeader String username, @RequestHeader int id) {
+        log.info("Updating comment with id: {}", commentId);
+
+        return new ResponseEntity(commentService.updateComment(commentId,commentRequest, username, id), HttpStatus.OK);
+    }
+
     private Comment mapToComment(CommentRequest commentRequest) {
         return Comment.builder()
                 .postId(commentRequest.getPostId())

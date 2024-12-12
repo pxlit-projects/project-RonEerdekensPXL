@@ -1,7 +1,9 @@
 package be.pxl.microservices.services;
 
+import be.pxl.microservices.api.dto.request.CommentRequest;
 import be.pxl.microservices.api.dto.response.CommentResponse;
 import be.pxl.microservices.domain.Comment;
+import be.pxl.microservices.exception.CommentNotFoundException;
 import be.pxl.microservices.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -25,5 +27,26 @@ public class CommentService implements ICommentService {
     @Override
     public List<Comment> getCommentsByPostId(Long postId) {
         return commentRepository.findAllByPostId(postId);
+    }
+
+    @Override
+    public void deleteComment(Long commentId, String username, int id) {
+        Comment comment = commentRepository.findById(commentId).orElseThrow(() -> new CommentNotFoundException("Comment with id " + commentId + " not found"));
+        if (comment.getAuthorId() != id) {
+            throw new IllegalArgumentException("You are not the author of this comment");
+        }
+        commentRepository.delete(comment);
+
+    }
+
+    @Override
+    public Comment updateComment(Long commentId, CommentRequest commentRequest, String username, int id) {
+        Comment comment = commentRepository.findById(commentId).orElseThrow(() -> new CommentNotFoundException("Comment with id " + commentId + " not found"));
+        if (comment.getAuthorId() != id) {
+            throw new IllegalArgumentException("You are not the author of this comment");
+        }
+        comment.setComment(commentRequest.getComment());
+        commentRepository.save(comment);
+        return comment;
     }
 }
