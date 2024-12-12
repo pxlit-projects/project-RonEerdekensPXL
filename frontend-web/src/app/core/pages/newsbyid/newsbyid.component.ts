@@ -11,6 +11,10 @@ import { AuthService } from '../../../shared/services/auth/auth.service';
 import { PostService } from '../../../shared/services/postservice/post.service';
 import { PostWithComments } from '../../../shared/models/postWithComments.model';
 import { Comment } from '../../../shared/models/comment.model';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { CommentAdd } from '../../../shared/models/commentAdd.model';
+import { CommentService } from '../../../shared/services/commentservice/comment.service';
 
 @Component({
   selector: 'app-newsbyid',
@@ -22,6 +26,7 @@ import { Comment } from '../../../shared/models/comment.model';
     MatCardModule,
     CommonModule,
     MatIconModule,
+    ReactiveFormsModule,
   ],
   templateUrl: './newsbyid.component.html',
   styleUrl: './newsbyid.component.css',
@@ -36,16 +41,25 @@ export class NewsbyidComponent implements OnInit {
       let postId = params['postId'];
       this.fetchPostById(postId);
     });
+    this.commentForm = new FormGroup({
+      comment: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5),
+      ]),
+    });
   }
 
   router: Router = inject(Router);
   route: ActivatedRoute = inject(ActivatedRoute);
   authService: AuthService = inject(AuthService);
   postService: PostService = inject(PostService);
+  commentService: CommentService = inject(CommentService);
   user: User | null | undefined;
 
   post!: PostWithComments;
   errorMessage: string = '';
+
+  commentForm!: FormGroup;
 
   fetchPostById(postId: number) {
     this.postService
@@ -63,5 +77,26 @@ export class NewsbyidComponent implements OnInit {
 
   onBack() {
     this.router.navigate(['/nieuws']);
+  }
+  onSubmit() {
+    if (this.commentForm.valid) {
+      const comment: CommentAdd = {
+        postId: this.post.id,
+        comment: this.commentForm.get('comment')!.value,
+      };
+      this.commentService
+        .addComment(comment, this.user!.username, this.user!.id)
+        .subscribe({
+          next: () => {
+            this.commentForm.reset();
+            this.fetchPostById(this.post.id);
+          },
+          error: (error) => {
+            this.errorMessage = error.message;
+          },
+        });
+    } else {
+      this.errorMessage = 'Vul een commentaar in met minimaal 5 karakters.';
+    }
   }
 }

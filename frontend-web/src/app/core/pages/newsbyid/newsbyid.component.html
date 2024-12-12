@@ -41,6 +41,33 @@
       <div class="spacer"></div>
       <div class="comments">
         <h2 class="commentsTitle">Reacties</h2>
+        <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="fill" class="commentsfield">
+            <mat-label>Reactie</mat-label>
+            <textarea
+              matInput
+              formControlName="comment"
+              placeholder="Reactie"
+              required
+            ></textarea>
+            <mat-error
+              *ngIf="
+                commentForm.controls['comment'].invalid &&
+                commentForm.controls['comment'].dirty
+              "
+              >Reactie is verplicht</mat-error
+            >
+          </mat-form-field>
+          <button
+            class="commentButton"
+            mat-flat-button
+            type="submit"
+            [disabled]="commentForm.invalid"
+          >
+            Reactie plaatsen
+          </button>
+        </form>
+        <div class="spacer"></div>
         @if(post.comments.length > 0){ @for (comment of post.comments; track
         comment.id) {
         <mat-card class="comment">
