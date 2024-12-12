@@ -1,6 +1,7 @@
 package be.pxl.microservices.services;
 
 import be.pxl.microservices.api.dto.response.PostResponse;
+import be.pxl.microservices.api.dto.response.RemarkResponse;
 import be.pxl.microservices.domain.Remark;
 
 import java.util.List;
@@ -11,4 +12,6 @@ public interface IReviewService {
     void approvePost(Long id);
 
     void rejectPost(Long postId, String username, int id, Remark remark);
+
+    List<Remark> getRemarksByPostId(Long postId);
 }

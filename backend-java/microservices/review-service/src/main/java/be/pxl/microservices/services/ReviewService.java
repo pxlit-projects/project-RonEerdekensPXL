@@ -1,6 +1,7 @@
 package be.pxl.microservices.services;
 
 import be.pxl.microservices.api.dto.response.PostResponse;
+import be.pxl.microservices.api.dto.response.RemarkResponse;
 import be.pxl.microservices.client.PostClient;
 import be.pxl.microservices.domain.Remark;
 import be.pxl.microservices.repository.RemarkRepository;
@@ -43,5 +44,10 @@ public class ReviewService implements IReviewService {
             remark.setCreationDate(LocalDateTime.now());
             remarkRepository.save(remark);
         }
+    }
+
+    @Override
+    public List<Remark> getRemarksByPostId(Long postId) {
+        return remarkRepository.findAllByPostId(postId);
     }
 }

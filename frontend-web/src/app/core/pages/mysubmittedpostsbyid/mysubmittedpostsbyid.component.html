@@ -112,9 +112,34 @@
         <mat-error>{{ errorMessage }}</mat-error>
         }
       </form>
+      <div class="remarks">
+        <h2 class="remarksTitle">Opmerkingen</h2>
+        @if(post.remarks.length > 0){ @for (remark of post.remarks; track
+        remark.id) {
+        <mat-card class="remark">
+          <mat-card-header>
+            <mat-card-title
+              ><h2>{{ remark.reviewer }}</h2>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <mat-icon>calendar_today</mat-icon>
+              {{ remark.creationDate | date : "dd MMMM yyyy" }}
+              <mat-icon>access_time</mat-icon>
+              {{ remark.creationDate | date : "HH:mm" }}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ remark.content }}</p>
+          </mat-card-content>
+        </mat-card>
+        } }@else {
+        <p class="noremarks">Geen opmerkingen gevonden</p>
+        }
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
+
 }@else {
 <p>Geen bericht gevonden</p>
 }

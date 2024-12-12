@@ -1,5 +1,6 @@
 package be.pxl.microservices.services;
 
+import be.pxl.microservices.api.dto.response.PostRemarkResponse;
 import be.pxl.microservices.domain.Post;
 
 import java.util.Arrays;
@@ -19,4 +20,6 @@ public interface IPostServices {
     Post publishPost(Long id, int authorId);
 
     List<Post> getAllReviewPosts();
+
+    PostRemarkResponse getPostByIdAndRemarks(Long id);
 }

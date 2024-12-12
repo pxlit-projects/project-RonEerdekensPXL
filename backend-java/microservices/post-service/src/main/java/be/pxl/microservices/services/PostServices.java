@@ -1,5 +1,9 @@
 package be.pxl.microservices.services;
 
+import be.pxl.microservices.api.dto.response.PostRemarkResponse;
+import be.pxl.microservices.api.dto.response.PostResponse;
+import be.pxl.microservices.api.dto.response.RemarkResponse;
+import be.pxl.microservices.client.ReviewClient;
 import be.pxl.microservices.domain.Post;
 import be.pxl.microservices.domain.PostState;
 import be.pxl.microservices.exception.PostEditForbiddenException;
@@ -17,6 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PostServices implements IPostServices {
     private final PostRepository postRepository;
+    private final ReviewClient reviewClient;
     private static final Logger log = LoggerFactory.getLogger(PostServices.class);
 
     public List<Post> getAllPosts() {
@@ -83,5 +88,27 @@ public class PostServices implements IPostServices {
         return postRepository.findAllByState(PostState.SUBMITTED);
     }
 
+    @Override
+    public PostRemarkResponse getPostByIdAndRemarks(Long id) {
 
+        Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post with id " + id + " not found"));
+        PostRemarkResponse postRemarkResponse = mapToPostRemarkResponse(post);
+        List<RemarkResponse> remarks = reviewClient.getRemarksForPost(id);
+        postRemarkResponse.setRemarks(remarks);
+        return postRemarkResponse;
+    }
+
+    private PostRemarkResponse mapToPostRemarkResponse(Post post) {
+        return PostRemarkResponse.builder()
+                .id(post.getId())
+                .title(post.getTitle())
+                .content(post.getContent())
+                .state(post.getState())
+                .creationDate(post.getCreationDate())
+                .publicationDate(post.getPublicationDate())
+                .author(post.getAuthor())
+                .authorId(post.getAuthorId())
+                .remarks(List.of())
+                .build();
+    }
 }

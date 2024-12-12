@@ -2,6 +2,7 @@ package be.pxl.microservices.api.controller;
 
 import be.pxl.microservices.api.dto.request.PostRequest;
 import be.pxl.microservices.api.dto.request.PostUpdateRequest;
+import be.pxl.microservices.api.dto.response.PostRemarkResponse;
 import be.pxl.microservices.api.dto.response.PostResponse;
 import be.pxl.microservices.domain.Post;
 import be.pxl.microservices.services.IPostServices;
@@ -50,6 +51,12 @@ public class PostController {
         log.info("Fetching post with id: {}", id);
         Post post = postServices.getPostById(id);
         return ResponseEntity.ok(mapToPostResponse(post));
+    }
+    @GetMapping("{id}/remarks")
+    public ResponseEntity getPostRemarks(@PathVariable Long id) {
+        log.info("Fetching post with id: {} and remarks", id);
+        PostRemarkResponse post = postServices.getPostByIdAndRemarks(id);
+        return ResponseEntity.ok(post);
     }
     @PostMapping
     public ResponseEntity createPost(@RequestBody PostRequest postRequest, @RequestHeader String username, @RequestHeader int id) {

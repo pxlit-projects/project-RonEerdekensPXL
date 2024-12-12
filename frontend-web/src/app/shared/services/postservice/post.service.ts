@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { catchError, Observable } from 'rxjs';
 import { Post } from '../../models/post.model';
 import { PostAdd } from '../../models/postAdd.model';
+import { PostWithRemarks } from '../../models/postWithRemarks.model';
 
 @Injectable({
   providedIn: 'root',
@@ -36,6 +37,21 @@ export class PostService {
     const headers = { username: username, id: userid.toString() };
     return this.http.get<Post>(this.BASEAPIURL + postId, { headers });
   }
+
+  getPostByIdAndRemarks(
+    postId: number,
+    userid: number,
+    username: string
+  ): Observable<PostWithRemarks> {
+    const headers = { username: username, id: userid.toString() };
+    return this.http.get<PostWithRemarks>(
+      this.BASEAPIURL + postId + '/remarks',
+      {
+        headers,
+      }
+    );
+  }
+
   updatePost(post: Post, username: string, userid: number): Observable<Post> {
     const headers = { username: username, id: userid.toString() };
     return this.http.put<Post>(this.BASEAPIURL, post, { headers });

@@ -2,6 +2,7 @@ package be.pxl.microservices.api.controller;
 
 import be.pxl.microservices.api.dto.request.RemarkRequest;
 import be.pxl.microservices.api.dto.response.PostResponse;
+import be.pxl.microservices.api.dto.response.RemarkResponse;
 import be.pxl.microservices.domain.Remark;
 import be.pxl.microservices.services.IReviewService;
 import lombok.RequiredArgsConstructor;
@@ -42,10 +43,28 @@ public class ReviewController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @GetMapping("/posts/{postId}/remarks")
+    public ResponseEntity getRemarksByPostId(@PathVariable Long postId) {
+        log.info("Fetching remarks for post with id: {}", postId);
+        List<RemarkResponse> remarks = reviewService.getRemarksByPostId(postId).stream().map(this::mapToRemarkResponse).toList();
+        return new ResponseEntity(remarks, HttpStatus.OK);
+    }
+
     private Remark mapToRemark(RemarkRequest remarkRequest) {
         return Remark.builder()
                 .postId(remarkRequest.getPostId())
                 .content(remarkRequest.getContent())
+                .build();
+    }
+
+    private RemarkResponse mapToRemarkResponse(Remark remark) {
+        return RemarkResponse.builder()
+                .id(remark.getId())
+                .postId(remark.getPostId())
+                .content(remark.getContent())
+                .reviewer(remark.getReviewer())
+                .reviewerId(remark.getReviewerId())
+                .creationDate(remark.getCreationDate())
                 .build();
     }
 }

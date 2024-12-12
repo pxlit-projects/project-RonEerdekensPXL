@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { PostWithRemarks } from '../../../shared/models/postWithRemarks.model';
+import { Remark } from '../../../shared/models/remark.model';
 
 @Component({
   selector: 'app-mysubmittedpostsbyid',
@@ -47,7 +49,7 @@ export class MysubmittedpostsbyidComponent implements OnInit {
   postService: PostService = inject(PostService);
   user: User | null | undefined;
 
-  post!: Post;
+  post!: PostWithRemarks;
   errorMessage: string = '';
   isEditing: boolean = false;
   titleField: string = '';
@@ -72,7 +74,7 @@ export class MysubmittedpostsbyidComponent implements OnInit {
 
   fetchPostById(postId: number) {
     this.postService
-      .getPostById(postId, this.user!.id, this.user!.username)
+      .getPostByIdAndRemarks(postId, this.user!.id, this.user!.username)
       .subscribe((post) => {
         if (post.authorId != this.user!.id) {
           this.router.navigate(['/mijningediendeberichten']);
@@ -80,6 +82,12 @@ export class MysubmittedpostsbyidComponent implements OnInit {
         this.post = post;
         this.titleField = this.post.title;
         this.contentField = this.post.content;
+        this.post.remarks.sort((a: Remark, b: Remark) => {
+          return (
+            new Date(b.creationDate).getTime() -
+            new Date(a.creationDate).getTime()
+          );
+        });
       });
   }
   publishPost() {
