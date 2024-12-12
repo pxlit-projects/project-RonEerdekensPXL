@@ -52,8 +52,8 @@ public class PostController {
         Post post = postServices.getPostById(id);
         return ResponseEntity.ok(mapToPostResponse(post));
     }
-    @GetMapping("{id}/remarks")
-    public ResponseEntity getPostRemarks(@PathVariable Long id) {
+    @GetMapping("{id}/withremarks")
+    public ResponseEntity getPostAndRemarks(@PathVariable Long id) {
         log.info("Fetching post with id: {} and remarks", id);
         PostRemarkResponse post = postServices.getPostByIdAndRemarks(id);
         return ResponseEntity.ok(post);

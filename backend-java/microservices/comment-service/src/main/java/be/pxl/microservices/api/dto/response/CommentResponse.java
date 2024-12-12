@@ -1,6 +1,5 @@
-package be.pxl.microservices.domain;
+package be.pxl.microservices.api.dto.response;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,22 +7,15 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "comments")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Comment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class CommentResponse {
     private Long id;
-
     private Long postId;
-    @Column(columnDefinition = "TEXT")
     private String comment;
     private String author;
     private int authorId;
-
-    private LocalDateTime creationDate = LocalDateTime.now();
+    private LocalDateTime creationDate;
 }

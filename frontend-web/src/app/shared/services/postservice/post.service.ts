@@ -45,7 +45,7 @@ export class PostService {
   ): Observable<PostWithRemarks> {
     const headers = { username: username, id: userid.toString() };
     return this.http.get<PostWithRemarks>(
-      this.BASEAPIURL + postId + '/remarks',
+      this.BASEAPIURL + postId + '/withremarks',
       {
         headers,
       }
