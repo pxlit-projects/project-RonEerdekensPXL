@@ -77,7 +77,12 @@
             </mat-card-title>
             @if(comment.authorId == user?.id){
             <div>
-              <button mat-icon-button aria-label="Bewerken" class="editbutton">
+              <button
+                mat-icon-button
+                aria-label="Bewerken"
+                class="editbutton"
+                (click)="onEditCommentForm(comment.id)"
+              >
                 <mat-icon>edit</mat-icon>
               </button>
               <button
@@ -99,7 +104,57 @@
             </mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
+            @if(editCommentId == comment.id && isEditingComment){
+            <form
+              #editCommentForm="ngForm"
+              (ngSubmit)="onSaveComment()"
+              class="editform"
+            >
+              <mat-form-field appearance="fill" class="editcommentsfield">
+                <mat-label>Reactie</mat-label>
+                <textarea
+                  matInput
+                  name="editComment"
+                  class="editcommentTextField"
+                  matInput
+                  required
+                  minlength="5"
+                  [(ngModel)]="editcommentField"
+                  #editComment="ngModel"
+                ></textarea>
+                @if (editComment.invalid && editComment.dirty ||
+                editComment.touched) {
+                <mat-error>Reactie is verplicht</mat-error>
+                }
+              </mat-form-field>
+
+              @if(errorMessageEditComment != ""){
+              <mat-error>{{ errorMessageEditComment }}</mat-error>
+              }
+              <div class="buttonrow">
+                <button
+                  class="cancelbutton"
+                  type="button"
+                  mat-flat-button
+                  class="cancelbutton"
+                  (click)="onCancelEditComment()"
+                >
+                  Annuleer
+                </button>
+                <button
+                  class="editcommentButton"
+                  type="submit"
+                  mat-flat-button
+                  [disabled]="editCommentForm.invalid"
+                >
+                  Bewaar
+                </button>
+              </div>
+              <div class="spacer"></div>
+            </form>
+            } @else {
             <p>{{ comment.comment }}</p>
+            }
           </mat-card-content>
         </mat-card>
         } }@else {

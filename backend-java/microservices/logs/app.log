@@ -758,3 +758,16 @@
 2024-12-12T17:25:16.894+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
 2024-12-12T17:25:16.895+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
 2024-12-12T17:25:20.370+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 4.302 seconds (process running for 4.794)
+2024-12-12T17:26:10.564+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-12T17:26:10.757+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-12T17:27:37.652+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-12T17:27:37.667+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-12T17:27:40.563+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-12T17:27:41.725+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-12T17:27:41.740+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-12T17:27:44.086+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 2
+2024-12-12T17:27:44.166+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-12T17:27:44.175+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-12T17:27:47.880+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-12T17:27:48.859+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-12T17:27:48.872+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1

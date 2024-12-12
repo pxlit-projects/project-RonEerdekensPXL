@@ -11,7 +11,7 @@ import { AuthService } from '../../../shared/services/auth/auth.service';
 import { PostService } from '../../../shared/services/postservice/post.service';
 import { PostWithComments } from '../../../shared/models/postWithComments.model';
 import { Comment } from '../../../shared/models/comment.model';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { CommentAdd } from '../../../shared/models/commentAdd.model';
 import { CommentService } from '../../../shared/services/commentservice/comment.service';
@@ -27,6 +27,7 @@ import { CommentService } from '../../../shared/services/commentservice/comment.
     CommonModule,
     MatIconModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   templateUrl: './newsbyid.component.html',
   styleUrl: './newsbyid.component.css',
@@ -58,8 +59,22 @@ export class NewsbyidComponent implements OnInit {
 
   post!: PostWithComments;
   errorMessage: string = '';
+  errorMessageEditComment: string = '';
 
   commentForm!: FormGroup;
+
+  editcommentField!: string | null;
+  editCommentId?: number;
+  isEditingComment: boolean = false;
+  getCommentById(id: number): Comment {
+    return this.post.comments.find((comment) => comment.id === id)!;
+  }
+
+  onEditCommentForm(commentId: number) {
+    this.isEditingComment = true;
+    this.editCommentId = commentId;
+    this.editcommentField = this.getCommentById(commentId).comment;
+  }
 
   fetchPostById(postId: number) {
     this.postService
@@ -110,5 +125,33 @@ export class NewsbyidComponent implements OnInit {
     } else {
       this.errorMessage = 'Vul een commentaar in met minimaal 5 karakters.';
     }
+  }
+
+  onSaveComment() {
+    const commentupdate: CommentAdd = {
+      postId: this.post.id,
+      comment: this.editcommentField!,
+    };
+    this.commentService
+      .updateComment(
+        this.editCommentId!,
+        commentupdate,
+        this.user!.username,
+        this.user!.id
+      )
+      .subscribe({
+        next: () => {
+          this.fetchPostById(this.post.id);
+          this.onCancelEditComment();
+        },
+        error: (error) => {
+          this.errorMessageEditComment = error.message;
+        },
+      });
+  }
+  onCancelEditComment() {
+    this.isEditingComment = false;
+    this.editCommentId = undefined;
+    this.editcommentField = null;
   }
 }
