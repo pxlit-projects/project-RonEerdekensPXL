@@ -61,6 +61,11 @@ public class PostServices implements IPostServices {
     }
 
     @Override
+    public List<Post> getAllPublishedPostsWithFilter(String filter) {
+        return postRepository.findPublishedPostsWithFilter(PostState.PUBLISHED, filter);
+    }
+
+    @Override
     public List<Post> getAllConceptsPostsByAuthorId(int authorId) {
         return postRepository.findByAuthorIdAndState(authorId, PostState.CONCEPT);
     }
@@ -83,6 +88,8 @@ public class PostServices implements IPostServices {
         post.setPublicationDate(LocalDateTime.now());
         return postRepository.save(post);
     }
+
+
 
     @Override
     public List<Post> getAllReviewPosts() {
@@ -107,6 +114,8 @@ public class PostServices implements IPostServices {
         postCommentResponse.setComments(comments);
         return postCommentResponse;
     }
+
+
 
     private PostRemarkResponse mapToPostRemarkResponse(Post post) {
         return PostRemarkResponse.builder()

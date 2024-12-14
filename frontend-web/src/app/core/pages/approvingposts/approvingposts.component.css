@@ -97,3 +97,10 @@ a:visited {
   font-weight: 500;
   margin-top: -20px;
 }
+.spacer {
+  margin-top: 50px;
+}
+.noposts {
+  color: white;
+  margin-left: 20px;
+}

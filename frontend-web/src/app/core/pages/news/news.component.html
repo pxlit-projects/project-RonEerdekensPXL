@@ -1,4 +1,13 @@
 <h1>Nieuws</h1>
+<mat-form-field class="searchTerm" appearance="fill">
+  <mat-label>Filter (inhoud, auteur, categorie)</mat-label>
+  <input
+    type="text"
+    matInput
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="searchPosts()"
+  />
+</mat-form-field>
 <div class="postlist">
   @for(post of posts; track post.id) {
   <a [routerLink]="['/nieuws', post.id]">
@@ -24,6 +33,7 @@
     </mat-card>
   </a>
   }@empty {
-  <p>Geen nieuwsberichten gevonden</p>
+  <p class="noposts">Geen nieuwsberichten gevonden</p>
   }
 </div>
+<div class="spacer"></div>

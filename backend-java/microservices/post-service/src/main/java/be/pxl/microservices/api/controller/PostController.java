@@ -32,9 +32,15 @@ public class PostController {
         return new ResponseEntity(postServices.getAllReviewPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
     }
     @GetMapping("/published")
-    public ResponseEntity getAllPublishedPosts() {
-        log.info("Fetching all published posts");
-        return new ResponseEntity(postServices.getAllPublishedPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+    public ResponseEntity getAllPublishedPosts(@RequestParam(defaultValue = "") String filter) {
+        if(filter.isEmpty()){
+            log.info("Fetching all published posts");
+            return new ResponseEntity(postServices.getAllPublishedPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+        }else {
+            log.info("Fetching all published posts with filter {}", filter);
+            return new ResponseEntity(postServices.getAllPublishedPostsWithFilter(filter).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);
+        }
+
     }
     @GetMapping("/concept")
     public ResponseEntity getAllConceptPosts(@RequestHeader String username, @RequestHeader int id) {

@@ -22,9 +22,11 @@ public class Post {
     private String title;
     @Column(columnDefinition = "TEXT")
     private String content;
+    @Enumerated(EnumType.STRING)
     private PostState state = PostState.CONCEPT;
     private String author;
     private int authorId;
+    @Enumerated(EnumType.STRING)
     private Category category = Category.ALGEMEEN;
 
     private LocalDateTime creationDate = LocalDateTime.now();

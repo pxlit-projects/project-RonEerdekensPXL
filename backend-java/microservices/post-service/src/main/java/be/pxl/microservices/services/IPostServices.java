@@ -25,4 +25,6 @@ public interface IPostServices {
     PostRemarkResponse getPostByIdAndRemarks(Long id);
 
     PostCommentResponse getPostByIdAndComments(Long id);
+
+    List<Post> getAllPublishedPostsWithFilter(String filter);
 }

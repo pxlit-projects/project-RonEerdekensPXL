@@ -62,3 +62,14 @@ a:visited {
   font-weight: 500;
   margin-top: -20px;
 }
+.searchTerm {
+  margin-left: 20px;
+  width: 95%;
+}
+.spacer {
+  margin-top: 50px;
+}
+.noposts {
+  color: white;
+  margin-left: 20px;
+}

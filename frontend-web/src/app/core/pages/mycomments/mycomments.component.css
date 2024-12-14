@@ -56,3 +56,10 @@ a:link,
 a:visited {
   text-decoration: none;
 }
+.spacer {
+  margin-top: 50px;
+}
+.nocomments {
+  color: white;
+  margin-left: 20px;
+}

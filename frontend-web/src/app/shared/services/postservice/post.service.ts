@@ -16,6 +16,11 @@ export class PostService {
   getPublishedPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.BASEAPIURL + 'published');
   }
+  getPublishedPostsWithFilter(filter: string): Observable<Post[]> {
+    return this.http.get<Post[]>(
+      this.BASEAPIURL + 'published?filter=' + filter
+    );
+  }
   addNewPost(post: PostAdd, username: string, id: number): Observable<Post> {
     const headers = { username: username, id: id.toString() };
     return this.http.post<Post>(this.BASEAPIURL, post, { headers });
