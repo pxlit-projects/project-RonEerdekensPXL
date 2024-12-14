@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Comment } from '../../../shared/models/comment.model';
 import { CommentService } from '../../../shared/services/commentservice/comment.service';
+import { PostService } from '../../../shared/services/postservice/post.service';
 
 @Component({
   selector: 'app-mycomments',
