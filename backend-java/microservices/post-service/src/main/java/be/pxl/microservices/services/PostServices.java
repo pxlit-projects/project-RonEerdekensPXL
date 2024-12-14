@@ -80,9 +80,11 @@ public class PostServices implements IPostServices {
     public Post publishPost(Long id, int authorId) {
         Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post with id " + id + " not found"));
         if(post.getAuthorId() != authorId) {
+            log.warn("User with id {} tried to publish post with id {}", authorId, id);
             throw new PostEditForbiddenException("Post with id " + id + " cannot be edited by user with id " + authorId);
         }
         if(post.getState() != PostState.APPROVED) {
+            log.warn("User with id {} tried to publish post with id {}", authorId, id);
             throw new PostEditForbiddenException("Post with id " + id + " cannot be published because it is not in approved state");
         }
         post.setState(PostState.PUBLISHED);
