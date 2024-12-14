@@ -60,6 +60,33 @@
           }
         </mat-form-field>
         <span class="spacer"></span>
+        <mat-form-field>
+          <mat-label>Categorie</mat-label>
+          <mat-select
+            name="category"
+            [(ngModel)]="post.category"
+            required
+            #category="ngModel"
+            [disabled]="!isEditing"
+          >
+            <mat-option value="ALGEMEEN">Algemeen</mat-option>
+            <mat-option value="EVENEMENTEN">Evenementen</mat-option>
+            <mat-option value="STUDIE">Studie</mat-option>
+            <mat-option value="SPORT">Sport</mat-option>
+            <mat-option value="CLUBS">Clubs</mat-option>
+            <mat-option value="MEDEDELINGEN">Mededelingen</mat-option>
+            <mat-option value="DOCENTEN_UPDATES">Docenten updates</mat-option>
+            <mat-option value="LEERLINGENLEVEN">Leerlingenleven</mat-option>
+            <mat-option value="TIPS_EN_ADVIES">Tips en Advies</mat-option>
+            <mat-option value="OUDLEERLINGEN_NIEUWS"
+              >Oudleerlingen Nieuws</mat-option
+            >
+          </mat-select>
+          @if(category.invalid && category.dirty || category.touched) {
+          <mat-error>Je moet kiezen uit een categorie.</mat-error>
+          }
+        </mat-form-field>
+        <span class="spacer"></span>
         <span class="spacer"></span>
 
         <div class="buttonRow">

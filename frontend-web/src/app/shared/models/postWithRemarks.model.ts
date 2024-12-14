@@ -10,4 +10,5 @@ export interface PostWithRemarks {
   author: string;
   authorId: number;
   remarks: Remark[];
+  category: string;
 }

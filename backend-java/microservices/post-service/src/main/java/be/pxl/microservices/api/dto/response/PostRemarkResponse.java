@@ -1,5 +1,6 @@
 package be.pxl.microservices.api.dto.response;
 
+import be.pxl.microservices.domain.Category;
 import be.pxl.microservices.domain.PostState;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,4 +24,5 @@ public class PostRemarkResponse {
     private LocalDateTime creationDate;
     private LocalDateTime publicationDate;
     List<RemarkResponse> remarks;
+    private Category category;
 }

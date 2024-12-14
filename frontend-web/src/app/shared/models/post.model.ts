@@ -7,4 +7,5 @@ export interface Post {
   publicationDate: Date;
   author: string;
   authorId: number;
+  category: string;
 }

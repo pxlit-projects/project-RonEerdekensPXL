@@ -44,11 +44,13 @@ export class AddPostComponent {
   contentField: string = '';
   errorMessage: string = '';
   statusField: string = '';
+  categoryField: string = 'ALGEMEEN';
   onAddPost(arg0: any) {
     let post: PostAdd = {
       title: this.titleField,
       content: this.contentField,
       state: this.statusField,
+      category: this.categoryField,
     };
 
     this.postService

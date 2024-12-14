@@ -25,6 +25,7 @@ public class Post {
     private PostState state = PostState.CONCEPT;
     private String author;
     private int authorId;
+    private Category category = Category.ALGEMEEN;
 
     private LocalDateTime creationDate = LocalDateTime.now();
     private LocalDateTime publicationDate;

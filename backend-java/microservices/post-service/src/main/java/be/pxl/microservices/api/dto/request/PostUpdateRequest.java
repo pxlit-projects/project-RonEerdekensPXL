@@ -1,5 +1,6 @@
 package be.pxl.microservices.api.dto.request;
 
+import be.pxl.microservices.domain.Category;
 import be.pxl.microservices.domain.PostState;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,4 +21,5 @@ public class PostUpdateRequest {
     private int authorId;
     private LocalDateTime creationDate;
     private LocalDateTime publicationDate;
+    private Category category;
 }

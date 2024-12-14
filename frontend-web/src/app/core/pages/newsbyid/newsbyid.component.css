@@ -132,3 +132,13 @@ mat-card-header {
   gap: 30px;
   width: 100%;
 }
+.category {
+  font-size: 1.2em;
+  color: rgb(165, 64, 165);
+  font-weight: 500;
+  margin-top: -10px;
+  text-align: center;
+}
+.titlePost {
+  text-align: center;
+}

@@ -19,8 +19,11 @@
     </div>
     <mat-card-header>
       <mat-card-title
-        ><h2>{{ post.title }}</h2></mat-card-title
+        ><h2 class="titlePost">{{ post.title }}</h2></mat-card-title
       >
+      <mat-card-subtitle>
+        <p class="category">{{ post.category.toLowerCase() }}</p>
+      </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <div class="form">

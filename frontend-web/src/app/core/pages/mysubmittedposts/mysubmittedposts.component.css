@@ -73,3 +73,9 @@ a:link,
 a:visited {
   text-decoration: none;
 }
+.category {
+  font-size: 0.7em;
+  color: rgb(165, 64, 165);
+  font-weight: 500;
+  margin-top: -20px;
+}

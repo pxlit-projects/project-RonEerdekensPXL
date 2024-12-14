@@ -51,6 +51,7 @@ public class PostServices implements IPostServices {
          postToUpdate.setAuthorId(post.getAuthorId());
          postToUpdate.setCreationDate(post.getCreationDate());
          postToUpdate.setPublicationDate(post.getPublicationDate());
+         postToUpdate.setCategory(post.getCategory());
          return postRepository.save(postToUpdate);
     }
 
@@ -118,6 +119,7 @@ public class PostServices implements IPostServices {
                 .author(post.getAuthor())
                 .authorId(post.getAuthorId())
                 .remarks(List.of())
+                .category(post.getCategory())
                 .build();
     }
     private PostCommentResponse mapToPostCommentResponse(Post post) {
@@ -131,6 +133,7 @@ public class PostServices implements IPostServices {
                 .author(post.getAuthor())
                 .authorId(post.getAuthorId())
                 .comments(List.of())
+                .category(post.getCategory())
                 .build();
     }
 }

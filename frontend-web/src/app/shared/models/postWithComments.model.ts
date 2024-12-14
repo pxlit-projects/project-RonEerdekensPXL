@@ -10,4 +10,5 @@ export interface PostWithComments {
   author: string;
   authorId: number;
   comments: Comment[];
+  category: string;
 }

@@ -97,6 +97,7 @@ public class PostController {
                 .publicationDate(post.getPublicationDate())
                 .author(post.getAuthor())
                 .authorId(post.getAuthorId())
+                .category(post.getCategory())
                 .build();
     }
     private Post mapToPost(PostRequest postRequest) {
@@ -104,6 +105,7 @@ public class PostController {
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
                 .state(postRequest.getState())
+                .category(postRequest.getCategory())
                 .build();
     }
     private Post mapToPost(PostUpdateRequest postRequest) {
@@ -116,6 +118,7 @@ public class PostController {
                 .authorId(postRequest.getAuthorId())
                 .creationDate(postRequest.getCreationDate())
                 .publicationDate(postRequest.getPublicationDate())
+                .category(postRequest.getCategory())
                 .build();
     }
 }
