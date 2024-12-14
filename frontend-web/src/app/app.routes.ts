@@ -11,12 +11,19 @@ import { MyconceptbyidComponent } from './core/pages/myconceptbyid/myconceptbyid
 import { MysubmittedpostsbyidComponent } from './core/pages/mysubmittedpostsbyid/mysubmittedpostsbyid.component';
 import { ApprovingpostsbyidComponent } from './core/pages/approvingpostsbyid/approvingpostsbyid.component';
 import { NewsbyidComponent } from './core/pages/newsbyid/newsbyid.component';
+import { canDeactivateAddPostGuard } from './shared/guards/can-deactivate-add-post.guard';
+import { canDeactivateNewsByIdGuard } from './shared/guards/can-deactivate-news-by-id.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', title: 'Inloggen', component: LoginComponent },
   { path: 'nieuws', title: 'Nieuws', component: NewsComponent },
-  { path: 'nieuws/:postId', title: 'Nieuws', component: NewsbyidComponent },
+  {
+    path: 'nieuws/:postId',
+    title: 'Nieuws',
+    component: NewsbyidComponent,
+    canDeactivate: [canDeactivateNewsByIdGuard],
+  },
   {
     path: 'mijncomments',
     title: 'Mijn Comments',
@@ -26,6 +33,7 @@ export const routes: Routes = [
     path: 'berichtaanmaken',
     title: 'Bericht Aanmaken',
     component: AddPostComponent,
+    canDeactivate: [canDeactivateAddPostGuard],
   },
   {
     path: 'mijnconcepten',
