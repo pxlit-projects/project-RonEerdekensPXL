@@ -54,7 +54,7 @@ export class AddPostComponent {
     };
 
     this.postService
-      .addNewPost(post, this.user!.username, this.user!.id)
+      .addNewPost(post, this.user!.username, this.user!.id, this.user!.email)
       .subscribe({
         next: (data: Post) => {
           if (this.user!.role === 'editor') {

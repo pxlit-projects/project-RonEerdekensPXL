@@ -21,8 +21,13 @@ export class PostService {
       this.BASEAPIURL + 'published?filter=' + filter
     );
   }
-  addNewPost(post: PostAdd, username: string, id: number): Observable<Post> {
-    const headers = { username: username, id: id.toString() };
+  addNewPost(
+    post: PostAdd,
+    username: string,
+    id: number,
+    email: string
+  ): Observable<Post> {
+    const headers = { username: username, id: id.toString(), email: email };
     return this.http.post<Post>(this.BASEAPIURL, post, { headers });
   }
 

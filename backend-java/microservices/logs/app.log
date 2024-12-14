@@ -579,3 +579,599 @@
 2024-12-14T15:13:26.380+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Updating post with id: 153
 2024-12-14T15:13:26.415+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
 2024-12-14T15:13:27.645+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:14:35.838+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 24336 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T15:14:35.839+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T15:14:35.839+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T15:14:40.067+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 4.995 seconds (process running for 5.522)
+2024-12-14T15:14:41.958+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:14:44.773+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:14:47.012+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:14:47.504+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:14:48.264+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 53 and comments
+2024-12-14T15:14:48.355+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 53
+2024-12-14T15:14:49.641+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:14:50.390+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 53 and comments
+2024-12-14T15:14:50.401+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 53
+2024-12-14T15:14:50.958+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:14:54.562+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:14:55.656+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:15:06.763+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:15:08.897+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:15:10.664+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:15:11.226+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:15:20.049+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:15:20.129+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:15:32.961+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:15:33.779+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:15:35.441+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:15:36.209+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 53 and comments
+2024-12-14T15:15:36.222+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 53
+2024-12-14T15:15:37.003+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:15:37.681+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:15:37.693+0100 INFO               [http-nio-9092-exec-9]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:15:39.209+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:15:40.296+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:15:40.299+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:15:41.445+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:15:42.658+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:15:42.660+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:15:43.350+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 153
+2024-12-14T15:15:46.708+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 153
+2024-12-14T15:15:47.805+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:15:47.807+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:15:49.760+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:15:51.589+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:16:03.069+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:16:03.072+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:16:09.870+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:16:11.640+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:16:11.642+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:16:17.109+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:16:17.700+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:16:18.741+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:16:18.742+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:16:19.403+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 152
+2024-12-14T15:16:28.490+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 152
+2024-12-14T15:16:29.516+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:16:29.518+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:16:44.852+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:16:47.259+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:16:48.144+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 153 and remarks
+2024-12-14T15:16:48.170+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 153
+2024-12-14T15:16:49.670+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T15:16:49.715+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:16:51.252+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:16:55.638+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:16:55.641+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:16:58.199+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:16:59.272+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 152 and remarks
+2024-12-14T15:16:59.284+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 152
+2024-12-14T15:17:00.410+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T15:17:00.455+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:17:01.356+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 54 and remarks
+2024-12-14T15:17:01.367+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 54
+2024-12-14T15:17:05.765+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T15:17:05.803+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:17:07.137+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:17:09.195+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 54 and comments
+2024-12-14T15:17:09.208+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 54
+2024-12-14T15:17:33.118+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Creating new post with title: test bericht
+2024-12-14T15:17:33.178+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:17:34.745+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:17:35.333+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:17:37.979+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:17:37.993+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:17:38.793+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:17:39.734+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 153 and comments
+2024-12-14T15:17:39.746+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 153
+2024-12-14T15:17:40.624+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:17:41.303+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:17:41.878+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:17:41.890+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:17:43.160+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:17:45.216+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:17:46.618+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:18:01.104+0100 INFO               [http-nio-9092-exec-9]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:18:02.699+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:18:02.713+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:18:07.762+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:18:09.610+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:11.257+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:12.053+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 52 and remarks
+2024-12-14T15:18:12.064+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 52
+2024-12-14T15:18:13.904+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Updating post with id: 52
+2024-12-14T15:18:13.938+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:14.427+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-14T15:18:14.437+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 2
+2024-12-14T15:18:18.845+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Updating post with id: 2
+2024-12-14T15:18:18.889+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:20.159+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:18:20.163+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:18:21.984+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:22.838+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 202
+2024-12-14T15:18:24.485+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Updating post with id: 202
+2024-12-14T15:18:24.506+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:25.866+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 202
+2024-12-14T15:18:26.740+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Updating post with id: 202
+2024-12-14T15:18:26.778+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:27.899+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:32.969+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:18:40.413+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:18:41.918+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:18:44.117+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:44.708+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:47.028+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and remarks
+2024-12-14T15:18:47.041+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
+2024-12-14T15:18:50.638+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Updating post with id: 1
+2024-12-14T15:18:50.684+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:18:52.100+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:18:52.102+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:18:55.433+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 202
+2024-12-14T15:18:56.389+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 202
+2024-12-14T15:18:57.409+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:18:57.411+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:18:58.304+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 52
+2024-12-14T15:18:59.209+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 52
+2024-12-14T15:19:00.225+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:19:00.227+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:19:00.860+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2
+2024-12-14T15:19:01.841+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 2
+2024-12-14T15:19:02.856+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:19:02.860+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:19:03.312+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:19:04.372+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:05.339+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:06.112+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:07.492+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 102 and remarks
+2024-12-14T15:19:07.503+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 102
+2024-12-14T15:19:08.479+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 5
+2024-12-14T15:19:08.511+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:11.698+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and remarks
+2024-12-14T15:19:11.710+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
+2024-12-14T15:19:12.928+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:19:36.964+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:19:40.781+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:19:42.752+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:19:43.800+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:19:43.814+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:19:47.249+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:19:50.714+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:51.505+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:53.003+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 202 and remarks
+2024-12-14T15:19:53.015+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 202
+2024-12-14T15:19:53.983+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T15:19:54.029+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:19:55.782+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:20:01.808+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:20:01.810+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:20:02.856+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-14T15:20:06.714+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-14T15:20:07.823+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:20:07.825+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:20:09.426+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:10.748+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:11.497+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:12.629+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 52 and remarks
+2024-12-14T15:20:12.640+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 52
+2024-12-14T15:20:13.566+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T15:20:13.608+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:14.362+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-14T15:20:14.372+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 2
+2024-12-14T15:20:14.968+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T15:20:15.006+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:18.965+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:20:24.938+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and comments
+2024-12-14T15:20:24.949+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 2
+2024-12-14T15:20:28.738+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-14T15:20:28.817+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and comments
+2024-12-14T15:20:28.825+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 2
+2024-12-14T15:20:30.014+0100 INFO               [http-nio-9092-exec-9]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:20:31.200+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and comments
+2024-12-14T15:20:31.210+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 2
+2024-12-14T15:20:34.606+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:20:35.390+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and comments
+2024-12-14T15:20:35.401+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 2
+2024-12-14T15:20:36.871+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:20:36.873+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:20:44.416+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:20:46.350+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:20:46.905+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:20:46.916+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:20:48.305+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:20:50.318+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:51.059+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:20:52.229+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and remarks
+2024-12-14T15:20:52.239+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
+2024-12-14T15:20:58.429+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Updating post with id: 1
+2024-12-14T15:20:58.465+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:00.305+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:21:00.307+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:21:01.011+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:01.379+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:02.955+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:21:04.334+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:21:18.770+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:21:20.515+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:20.984+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:22.807+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:21:22.810+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:21:24.023+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-14T15:21:28.633+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-14T15:21:29.649+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:21:29.651+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:21:30.996+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:21:40.263+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:21:41.686+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:42.562+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:44.581+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and remarks
+2024-12-14T15:21:44.592+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
+2024-12-14T15:21:46.340+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 5
+2024-12-14T15:21:46.372+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:21:48.395+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:21:49.343+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:21:49.354+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:21:53.551+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:21:55.205+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:21:56.168+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:21:56.179+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:21:58.903+0100 INFO               [http-nio-9092-exec-9]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T15:21:59.910+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:21:59.920+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:22:02.188+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:22:30.171+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:22:37.893+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:22:39.685+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-14T15:22:41.068+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:22:41.655+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:22:41.667+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:22:44.863+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-14T15:22:44.897+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:22:44.906+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:22:46.213+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:22:46.761+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-14T15:22:47.497+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:22:47.507+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:23:04.655+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:23:05.958+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:23:05.970+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:23:13.883+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:23:15.581+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:23:15.584+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:23:16.214+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:17.851+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:26.384+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Creating new post with title: teste
+2024-12-14T15:23:26.415+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:35.353+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Creating new post with title: dfgdfshdfh
+2024-12-14T15:23:35.381+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:37.262+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:38.646+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:39.061+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:39.686+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 203
+2024-12-14T15:23:41.871+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Updating post with id: 203
+2024-12-14T15:23:41.905+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:42.667+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:44.271+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:23:44.273+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:23:44.933+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:23:56.728+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:24:46.756+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:24:46.769+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:24:48.136+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:24:48.139+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:24:49.087+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:24:49.859+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:24:49.870+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:24:50.916+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:24:51.584+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and comments
+2024-12-14T15:24:51.594+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 2
+2024-12-14T15:24:52.507+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:24:53.286+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:24:53.294+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:24:54.201+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:24:54.935+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T15:24:54.944+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T15:24:58.177+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:27:43.986+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:28:26.470+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:28:53.445+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:28:58.453+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:29:01.152+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:29:01.831+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:29:09.070+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:29:23.764+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:29:33.800+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:29:36.876+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:29:41.135+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:30:08.691+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:30:34.975+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:30:43.595+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:31:03.644+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:31:18.675+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:31:38.722+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:31:43.067+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:31:46.039+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:33:38.939+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:33:40.480+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:33:42.182+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:34:50.457+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:34:52.369+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter f
+2024-12-14T15:34:52.956+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ff
+2024-12-14T15:34:52.967+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ffg
+2024-12-14T15:34:53.957+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ff
+2024-12-14T15:34:54.123+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter f
+2024-12-14T15:34:54.273+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:34:57.409+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:34:57.770+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ed
+2024-12-14T15:34:58.671+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edi
+2024-12-14T15:34:58.922+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edit
+2024-12-14T15:34:59.120+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edito
+2024-12-14T15:34:59.522+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor
+2024-12-14T15:35:01.412+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor1
+2024-12-14T15:35:03.983+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor
+2024-12-14T15:35:05.239+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor2
+2024-12-14T15:35:07.146+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor
+2024-12-14T15:35:09.668+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edito
+2024-12-14T15:35:09.801+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edit
+2024-12-14T15:35:09.965+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edi
+2024-12-14T15:35:10.143+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ed
+2024-12-14T15:35:10.307+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:35:10.476+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:35:11.642+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter a
+2024-12-14T15:35:11.899+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter al
+2024-12-14T15:35:12.601+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter alg
+2024-12-14T15:35:13.132+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter al
+2024-12-14T15:35:13.385+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter a
+2024-12-14T15:35:13.551+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:35:14.957+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:35:15.260+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ev
+2024-12-14T15:35:16.802+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:35:17.840+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ev
+2024-12-14T15:35:18.768+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter eve
+2024-12-14T15:35:23.824+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter even
+2024-12-14T15:35:26.408+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter evene
+2024-12-14T15:35:27.291+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter even
+2024-12-14T15:35:27.486+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter eve
+2024-12-14T15:35:27.636+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ev
+2024-12-14T15:35:28.264+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:35:28.430+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:35:30.276+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter t
+2024-12-14T15:35:30.573+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter te
+2024-12-14T15:35:30.812+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter tes
+2024-12-14T15:35:32.059+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter te
+2024-12-14T15:35:34.779+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter t
+2024-12-14T15:35:34.908+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:36:17.193+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:36:27.141+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:36:38.241+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter g
+2024-12-14T15:36:38.462+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ge
+2024-12-14T15:36:38.659+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter gem
+2024-12-14T15:36:39.454+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ge
+2024-12-14T15:36:39.621+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter g
+2024-12-14T15:36:39.786+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:36:46.069+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:36:48.730+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ez
+2024-12-14T15:36:50.241+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ezt
+2024-12-14T15:36:50.511+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ezts
+2024-12-14T15:36:51.934+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter eztsf
+2024-12-14T15:36:53.061+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ezts
+2024-12-14T15:36:53.255+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ezt
+2024-12-14T15:36:53.402+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ez
+2024-12-14T15:36:53.567+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2024-12-14T15:36:53.703+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:37:02.180+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and comments
+2024-12-14T15:37:02.192+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 2
+2024-12-14T15:37:05.113+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:37:35.899+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:37:42.612+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:37:57.484+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:38:01.934+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:38:12.377+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:38:15.389+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:38:21.984+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:38:22.611+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:38:34.424+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:38:37.456+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:38:43.162+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:38:55.087+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter h
+2024-12-14T15:38:55.129+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hg
+2024-12-14T15:38:55.157+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hgh
+2024-12-14T15:38:55.263+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hghj
+2024-12-14T15:38:55.382+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hghjg
+2024-12-14T15:38:55.396+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hghjgh
+2024-12-14T15:38:56.284+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hghjg
+2024-12-14T15:38:56.497+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hghj
+2024-12-14T15:38:56.643+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hgh
+2024-12-14T15:38:56.926+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hg
+2024-12-14T15:38:57.063+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter h
+2024-12-14T15:38:57.200+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:38:57.831+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter j
+2024-12-14T15:38:57.856+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jh
+2024-12-14T15:38:57.963+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhk
+2024-12-14T15:38:58.068+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhkj
+2024-12-14T15:38:58.082+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhkjh
+2024-12-14T15:38:58.161+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhkjhg
+2024-12-14T15:38:58.187+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhkjhgl
+2024-12-14T15:38:58.323+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhkjhglj
+2024-12-14T15:38:58.331+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter jhkjhgljk
+2024-12-14T15:39:22.504+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:39:27.982+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:39:28.760+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter d
+2024-12-14T15:39:28.775+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter df
+2024-12-14T15:39:28.913+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dfg
+2024-12-14T15:39:29.059+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dfgf
+2024-12-14T15:39:29.061+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dfgfd
+2024-12-14T15:39:29.192+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dfgfdg
+2024-12-14T15:39:29.343+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dfgfdgd
+2024-12-14T15:39:29.345+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dfgfdgdf
+2024-12-14T15:39:32.887+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T15:39:34.530+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:39:59.361+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:40:05.118+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:40:07.344+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:40:22.599+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:40:31.783+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:40:51.434+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:41:04.469+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T15:41:05.035+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:41:23.266+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:41:27.978+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T15:41:30.107+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T15:41:30.111+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T15:42:20.665+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:06:06.542+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:25:21.833+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Starting ConfigServiceApplication using Java 22.0.1 with PID 2544 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\config-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:25:21.835+0100 DEBUG              [main]                         be.pxl.microservices.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:25:21.835+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - The following 1 profile is active: "native"
+2024-12-14T16:25:23.616+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Started ConfigServiceApplication in 2.235 seconds (process running for 2.74)
+2024-12-14T16:25:24.977+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 22.0.1 with PID 13836 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\discovery-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:25:24.978+0100 DEBUG              [main]                         be.pxl.microservices.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:25:24.978+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:25:27.891+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 3.832 seconds (process running for 4.542)
+2024-12-14T16:25:27.921+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Starting GatewayServiceApplication using Java 22.0.1 with PID 24224 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\gateway-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:25:27.922+0100 DEBUG              [main]                         be.pxl.microservices.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:25:27.923+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:25:30.385+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Started GatewayServiceApplication in 3.409 seconds (process running for 3.986)
+2024-12-14T16:25:33.407+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 28656 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:25:33.409+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:25:33.410+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:25:37.839+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 5.185 seconds (process running for 5.679)
+2024-12-14T16:25:42.998+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 26008 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:25:42.999+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:25:43.000+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:25:46.096+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 22668 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:25:46.097+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:25:46.097+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:25:47.087+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 4.872 seconds (process running for 5.368)
+2024-12-14T16:25:49.582+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 4.334 seconds (process running for 4.894)
+2024-12-14T16:26:01.117+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T16:26:01.433+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:26:06.382+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T16:26:07.233+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:26:10.250+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:26:13.043+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-14T16:26:13.141+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-14T16:26:14.956+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:27:42.240+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:27:43.888+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T16:27:45.925+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:27:47.332+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:27:49.576+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:27:49.653+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:27:50.924+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:29:30.512+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:31:04.200+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:31:04.860+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T16:31:05.315+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:32:05.215+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:32:17.812+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-14T16:32:26.490+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Creating new post with title: email
+2024-12-14T16:32:26.590+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:33:25.371+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 252
+2024-12-14T16:33:26.776+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Updating post with id: 252
+2024-12-14T16:33:26.832+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:33:27.832+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:33:31.407+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:33:31.413+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:33:38.306+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:33:39.826+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:33:39.828+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:33:42.069+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 252
+2024-12-14T16:33:43.221+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 252
+2024-12-14T16:33:44.332+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:33:44.337+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:33:47.063+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:33:47.925+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:33:47.927+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:33:48.850+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 204
+2024-12-14T16:33:55.533+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 204
+2024-12-14T16:33:56.643+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:33:56.646+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:34:14.386+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:34:15.876+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:34:18.200+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 252 and remarks
+2024-12-14T16:34:18.233+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 252
+2024-12-14T16:34:19.339+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-14T16:34:19.381+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:34:21.415+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:34:22.799+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 252 and comments
+2024-12-14T16:34:22.812+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 252
+2024-12-14T16:34:24.399+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:34:24.402+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:34:25.795+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:34:27.664+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 204 and remarks
+2024-12-14T16:34:27.678+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 204
+2024-12-14T16:34:32.818+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Updating post with id: 204
+2024-12-14T16:34:32.871+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:34:34.665+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:34:34.667+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:34:35.117+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:55:53.283+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Starting ConfigServiceApplication using Java 22.0.1 with PID 31476 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\config-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:55:53.284+0100 DEBUG              [main]                         be.pxl.microservices.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:55:53.285+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - The following 1 profile is active: "native"
+2024-12-14T16:55:54.619+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Started ConfigServiceApplication in 1.828 seconds (process running for 2.34)
+2024-12-14T16:56:05.112+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 22.0.1 with PID 13940 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\discovery-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:56:05.113+0100 DEBUG              [main]                         be.pxl.microservices.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:56:05.114+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:56:07.586+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 3.416 seconds (process running for 4.036)
+2024-12-14T16:56:12.229+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Starting GatewayServiceApplication using Java 22.0.1 with PID 9372 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\gateway-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:56:12.230+0100 DEBUG              [main]                         be.pxl.microservices.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:56:12.231+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:56:14.298+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Started GatewayServiceApplication in 2.908 seconds (process running for 3.432)
+2024-12-14T16:56:22.806+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 26876 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:56:22.807+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:56:22.808+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:56:27.530+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 5.586 seconds (process running for 6.18)
+2024-12-14T16:56:33.693+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 12388 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:56:33.694+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:56:33.695+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:56:37.212+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 4.318 seconds (process running for 4.836)
+2024-12-14T16:56:40.563+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 31568 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:56:40.564+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:56:40.565+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:56:44.214+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 4.441 seconds (process running for 4.995)
+2024-12-14T16:57:08.364+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:57:09.386+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:57:12.383+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:57:13.126+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:57:15.258+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:57:32.176+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Creating new post with title: test om email te sturen
+2024-12-14T16:57:32.287+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:57:33.698+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 302
+2024-12-14T16:57:34.742+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Updating post with id: 302
+2024-12-14T16:57:34.795+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:57:35.799+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T16:57:45.303+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T16:57:47.191+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:57:47.274+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:57:49.047+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 302
+2024-12-14T16:57:51.131+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 302
+2024-12-14T16:57:52.233+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T16:57:52.237+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T16:58:08.833+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 204
+2024-12-14T16:59:37.662+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 2148 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-14T16:59:37.663+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-14T16:59:37.664+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-14T16:59:42.221+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 5.323 seconds (process running for 5.856)
+2024-12-14T16:59:53.615+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T16:59:54.653+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T16:59:57.111+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T17:00:00.701+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T17:00:11.634+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T17:00:14.725+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T17:00:15.334+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T17:00:15.812+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 5
+2024-12-14T17:00:16.271+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-14T17:00:17.291+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T17:00:17.841+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T17:00:18.661+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T17:00:18.666+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T17:00:20.028+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 204
+2024-12-14T17:00:26.887+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 204
+2024-12-14T17:00:28.008+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T17:00:28.011+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T17:00:51.792+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 203
+2024-12-14T17:00:52.962+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 203
+2024-12-14T17:00:53.989+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-14T17:00:53.992+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-14T17:01:13.673+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-14T17:01:14.667+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts

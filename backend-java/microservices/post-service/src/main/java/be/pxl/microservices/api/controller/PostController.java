@@ -72,11 +72,11 @@ public class PostController {
         return ResponseEntity.ok(post);
     }
     @PostMapping
-    public ResponseEntity createPost(@RequestBody PostRequest postRequest, @RequestHeader String username, @RequestHeader int id) {
+    public ResponseEntity createPost(@RequestBody PostRequest postRequest, @RequestHeader String username, @RequestHeader int id, @RequestHeader String email) {
         log.info("Creating new post with title: {}", postRequest.getTitle());
 
         Post post = mapToPost(postRequest);
-        return new ResponseEntity(mapToPostResponse(postServices.createPost(post, username,id)), HttpStatus.CREATED);
+        return new ResponseEntity(mapToPostResponse(postServices.createPost(post, username,id, email)), HttpStatus.CREATED);
     }
     @PutMapping
     public ResponseEntity updatePost(@RequestBody PostUpdateRequest postRequest, @RequestHeader String username, @RequestHeader int id) {

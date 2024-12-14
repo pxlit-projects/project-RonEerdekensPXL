@@ -34,10 +34,11 @@ public class PostServices implements IPostServices {
     }
 
 
-    public Post createPost(Post post, String username, int id) {
+    public Post createPost(Post post, String username, int id, String email) {
         post.setCreationDate(LocalDateTime.now());
         post.setAuthor(username);
         post.setAuthorId(id);
+        post.setEmail(email);
         return postRepository.save(post);
     }
 

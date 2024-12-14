@@ -12,17 +12,21 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class QueueService {
     private final PostRepository postRepository;
+    private final MailSenderService mailSenderService;
 
     @RabbitListener(queues = "approvePostQueue")
     public void approvePost(Long id) {
         Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post not found"));
         post.setState(PostState.APPROVED);
         postRepository.save(post);
+        mailSenderService.sendNewMail(post.getEmail(), "Post approved with title: '" + post.getTitle() + "'", "Your post '"+ post.getTitle() + "' has been approved");
     }
     @RabbitListener(queues = "rejectPostQueue")
     public void rejectPost(Long id) {
         Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post not found"));
         post.setState(PostState.REJECTED);
         postRepository.save(post);
+        mailSenderService.sendNewMail(post.getEmail(), "Post rejected with title " + post.getTitle(), "Your post '"+ post.getTitle() + "' has been rejected" +
+                "\nPlease check the remarks in the review service");
     }
 }

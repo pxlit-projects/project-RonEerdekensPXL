@@ -29,6 +29,8 @@ public class Post {
     @Enumerated(EnumType.STRING)
     private Category category = Category.ALGEMEEN;
 
+    private String email;
+
     private LocalDateTime creationDate = LocalDateTime.now();
     private LocalDateTime publicationDate;
 

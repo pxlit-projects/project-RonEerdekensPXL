@@ -10,7 +10,7 @@ import java.util.List;
 public interface IPostServices {
     List<Post> getAllPosts();
     Post getPostById(Long id);
-    Post createPost(Post post, String username, int id);
+    Post createPost(Post post, String username, int id, String email);
     Post updatePost(Long id, Post post);
 
 
