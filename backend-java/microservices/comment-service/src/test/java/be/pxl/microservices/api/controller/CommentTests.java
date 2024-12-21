@@ -221,6 +221,6 @@ public class CommentTests {
                         .header("username", "Author 2")  // Wrong username
                         .header("id", 2))  // Wrong id
                 .andExpect(status().isBadRequest())  // Expect HTTP 400 Bad Request due to IllegalArgumentException
-                .andExpect(MockMvcResultMatchers.content().string("You are not the author of this comment"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("You are not the author of this comment"));
     }
 }
