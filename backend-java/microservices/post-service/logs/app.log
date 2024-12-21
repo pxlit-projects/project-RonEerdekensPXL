@@ -169,3 +169,168 @@
 2024-12-21T12:46:19.329+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
 2024-12-21T12:46:19.373+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
 2024-12-21T12:46:19.411+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T14:37:07.872+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 28236 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T14:37:07.873+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T14:37:07.873+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T14:37:16.567+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 9.683 seconds (process running for 32.941)
+2024-12-21T14:37:16.753+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T14:37:16.948+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T14:37:17.011+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T14:37:17.084+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:37:17.130+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T14:37:17.172+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T14:37:17.220+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:37:17.263+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T14:41:36.003+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 27348 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T14:41:36.003+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T14:41:36.003+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T14:41:42.699+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.49 seconds (process running for 20.24)
+2024-12-21T14:41:42.940+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T14:41:43.121+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T14:41:43.181+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T14:41:43.251+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:41:43.298+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T14:41:43.342+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T14:41:43.392+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 15 and comments
+2024-12-21T14:41:43.448+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:41:43.493+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T14:42:47.756+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 29148 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T14:42:47.757+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T14:42:47.757+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T14:42:54.502+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.531 seconds (process running for 20.339)
+2024-12-21T14:42:54.675+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T14:42:54.862+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T14:42:54.918+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T14:42:54.995+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:42:55.045+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T14:42:55.088+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T14:42:55.130+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 15 and comments
+2024-12-21T14:42:55.171+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:42:55.211+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T14:47:58.891+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 29224 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T14:47:58.892+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T14:47:58.892+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T14:48:05.772+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.696 seconds (process running for 21.168)
+2024-12-21T14:48:05.938+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T14:48:06.121+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T14:48:06.182+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T14:48:06.253+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:48:06.300+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T14:48:06.350+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T14:48:06.398+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 15 and comments
+2024-12-21T14:48:06.447+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Creating new post with title: New Post Title
+2024-12-21T14:48:06.553+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:48:06.588+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T14:56:09.005+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 29044 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T14:56:09.006+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T14:56:09.006+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T14:56:15.654+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.468 seconds (process running for 20.131)
+2024-12-21T14:56:15.822+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T14:56:15.998+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T14:56:16.055+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T14:56:16.123+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:56:16.180+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 11
+2024-12-21T14:56:16.245+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T14:56:16.282+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 14
+2024-12-21T14:56:16.331+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T14:56:16.376+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 17 and comments
+2024-12-21T14:56:16.406+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Creating new post with title: New Post Title
+2024-12-21T14:56:16.461+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T14:56:16.495+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T14:58:54.892+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 4460 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T14:58:54.892+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T14:58:54.893+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T14:59:01.509+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.4 seconds (process running for 19.924)
+2024-12-21T14:59:01.666+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 1
+2024-12-21T14:59:01.811+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 2
+2024-12-21T15:00:20.087+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 27340 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:00:20.088+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:00:20.088+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:00:26.778+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.52 seconds (process running for 20.196)
+2024-12-21T15:00:26.924+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 1
+2024-12-21T15:00:27.106+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 2
+2024-12-21T15:01:28.214+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 15428 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:01:28.215+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:01:28.215+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:01:35.017+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.597 seconds (process running for 20.387)
+2024-12-21T15:01:35.172+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 1
+2024-12-21T15:01:55.247+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 2532 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:01:55.248+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:01:55.248+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:02:01.810+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.354 seconds (process running for 19.721)
+2024-12-21T15:02:01.962+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 1
+2024-12-21T15:02:31.188+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 17120 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:02:31.189+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:02:31.189+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:02:37.852+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.432 seconds (process running for 21.086)
+2024-12-21T15:02:38.008+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T15:02:38.207+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T15:02:38.264+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T15:02:38.332+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:02:38.381+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 11
+2024-12-21T15:02:38.422+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T15:02:38.459+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 14
+2024-12-21T15:02:38.516+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T15:02:38.563+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 17 and comments
+2024-12-21T15:02:38.594+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Creating new post with title: New Post Title
+2024-12-21T15:02:38.646+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:02:38.686+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T15:05:28.259+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 12324 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:05:28.260+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:05:28.261+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:05:34.923+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.463 seconds (process running for 20.128)
+2024-12-21T15:05:35.104+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T15:05:35.276+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T15:05:35.337+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T15:05:35.416+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:05:35.468+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 11
+2024-12-21T15:05:35.504+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Publishing post with id: 1
+2024-12-21T15:05:35.565+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T15:05:35.602+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 15
+2024-12-21T15:05:35.654+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T15:05:35.696+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 18 and comments
+2024-12-21T15:05:35.728+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Creating new post with title: New Post Title
+2024-12-21T15:05:35.776+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:05:35.812+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T15:06:21.097+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 9868 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:06:21.099+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:06:21.099+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:06:28.010+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.694 seconds (process running for 20.17)
+2024-12-21T15:06:28.143+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Publishing post with id: 1
+2024-12-21T15:08:47.704+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 12364 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:08:47.705+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:08:47.706+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:08:54.399+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.505 seconds (process running for 20.25)
+2024-12-21T15:08:54.574+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T15:08:54.756+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T15:08:54.808+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T15:08:54.874+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:08:54.925+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 11
+2024-12-21T15:08:54.973+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Publishing post with id: 1
+2024-12-21T15:08:55.037+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T15:08:55.080+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 15
+2024-12-21T15:08:55.141+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T15:08:55.190+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 18 and comments
+2024-12-21T15:08:55.223+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Creating new post with title: New Post Title
+2024-12-21T15:08:55.265+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-21T15:08:55.312+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:08:55.348+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T15:09:42.894+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Starting PostTests using Java 22.0.1 with PID 21412 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service)
+2024-12-21T15:09:42.895+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.PostTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:09:42.896+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:09:49.630+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostTests - Started PostTests in 7.533 seconds (process running for 21.286)
+2024-12-21T15:09:49.822+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1
+2024-12-21T15:09:49.988+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 2 and remarks
+2024-12-21T15:09:50.039+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T15:09:50.106+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:09:50.156+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 11
+2024-12-21T15:09:50.199+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Publishing post with id: 1
+2024-12-21T15:09:50.268+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all posts
+2024-12-21T15:09:50.310+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Updating post with id: 15
+2024-12-21T15:09:50.369+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Another
+2024-12-21T15:09:50.418+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching post with id: 18 and comments
+2024-12-21T15:09:50.450+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Creating new post with title: New Post Title
+2024-12-21T15:09:50.495+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2024-12-21T15:09:50.500+0100 WARN               [main]                         be.pxl.microservices.services.PostServices - User with id 2 tried to publish post with id 20
+2024-12-21T15:09:50.539+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T15:09:50.574+0100 INFO               [main]                         be.pxl.microservices.api.controller.PostController - Fetching all published posts

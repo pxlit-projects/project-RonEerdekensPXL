@@ -1,8 +1,9 @@
 package be.pxl.microservices.api.controller;
 
-import be.pxl.microservices.api.dto.response.PostRemarkResponse;
-import be.pxl.microservices.api.dto.response.PostResponse;
-import be.pxl.microservices.api.dto.response.RemarkResponse;
+import be.pxl.microservices.api.dto.request.PostRequest;
+import be.pxl.microservices.api.dto.request.PostUpdateRequest;
+import be.pxl.microservices.api.dto.response.*;
+import be.pxl.microservices.client.CommentClient;
 import be.pxl.microservices.client.ReviewClient;
 import be.pxl.microservices.domain.Post;
 import be.pxl.microservices.domain.PostState;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.Matchers.hasSize;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -47,6 +49,9 @@ public class PostTests {
 
     @MockBean
     private ReviewClient reviewClient;
+
+    @MockBean
+    private CommentClient commentClient;
 
 
     @Container
@@ -235,7 +240,7 @@ public class PostTests {
 
         postRepository.saveAll(List.of(post1, post2, post3));
 
-        // Only posts for authorId 1 should be returned
+
         List<PostResponse> expectedResponses = List.of(post1, post2).stream()
                 .map(post -> PostResponse.builder()
                         .id(post.getId())
@@ -247,7 +252,7 @@ public class PostTests {
                         .build())
                 .toList();
 
-        // Act & Assert: Perform GET request with required headers
+
         mockMvc.perform(MockMvcRequestBuilders.get("/concept")
                         .header("username", "Author 1")
                         .header("id", 1)
@@ -334,7 +339,7 @@ public class PostTests {
 
     @Test
     public void testGetPostById() throws Exception {
-        // Arrange: Create and save a post
+
         Post post = Post.builder()
                 .id(1L)
                 .title("Test Post")
@@ -371,10 +376,6 @@ public class PostTests {
 
     @Test
     public void testGetPostAndRemarks() throws Exception {
-        // Arrange: Mock service and data
-
-
-
 
         Post postToSave = Post.builder()
                 .title("Test Post")
@@ -399,9 +400,7 @@ public class PostTests {
                 .build();
 
 
-
         when(reviewClient.getRemarksForPost(postsave.getId())).thenReturn(mockResponse.getRemarks());
-        //when(postServices.getPostByIdAndRemarks(postId)).thenReturn(mockResponse);
 
 
         mockMvc.perform(MockMvcRequestBuilders.get("/{id}/withremarks", postsave.getId())
@@ -418,5 +417,205 @@ public class PostTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.remarks[0].content").value("Remark 1"))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.remarks[1].id").value(102L))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.remarks[1].content").value("Remark 2"));
+    }
+
+    @Test
+    public void testGetPostAndComments() throws Exception {
+        Post postToSave = Post.builder()
+                .title("Test Post")
+                .content("This is a test post content.")
+                .state(PostState.PUBLISHED)
+                .author("Author 1")
+                .authorId(1)
+                .build();
+
+        Post postsave = postRepository.save(postToSave);
+
+        PostCommentResponse mockResponse = PostCommentResponse.builder()
+                .id(postsave.getId())
+                .title("Test Post")
+                .content("This is a test post content.")
+                .state(PostState.PUBLISHED)
+                .author("Author 1")
+                .authorId(1)
+                .comments(List.of(
+                        CommentResponse.builder().id(201L).comment("Comment 1").build(),
+                        CommentResponse.builder().id(202L).comment("Comment 2").build()
+                ))
+                .build();
+
+        when(commentClient.getCommentsForPost(postsave.getId())).thenReturn(mockResponse.getComments());
+
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/{id}/withcomments", postsave.getId())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(postsave.getId()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Test Post"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.content").value("This is a test post content."))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.state").value("PUBLISHED"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.author").value("Author 1"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.authorId").value(1))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.comments", hasSize(2)))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.comments[0].id").value(201L))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.comments[0].comment").value("Comment 1"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.comments[1].id").value(202L))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.comments[1].comment").value("Comment 2"));
+    }
+
+    @Test
+    public void testCreatePost() throws Exception {
+        PostRequest postRequest = PostRequest.builder()
+                .title("New Post Title")
+                .content("This is the content of the new post.")
+                .state(PostState.CONCEPT)
+                .build();
+
+        String postRequestJson = objectMapper.writeValueAsString(postRequest);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(postRequestJson)
+                        .header("username", "Author 1")
+                        .header("id", 1)
+                        .header("email", "author@example.com"))
+                .andExpect(MockMvcResultMatchers.status().isCreated())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("New Post Title"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.content").value("This is the content of the new post."))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.state").value("CONCEPT"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.author").value("Author 1"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.authorId").value(1));
+
+
+        assertEquals(1, postRepository.findAll().size(), "Post should be created in the database.");
+    }
+
+    @Test
+    public void testUpdatePost() throws Exception {
+
+        Post post = Post.builder()
+                .title("Original Post Title")
+                .content("Original content of the post.")
+                .state(PostState.CONCEPT)
+                .authorId(1)
+                .author("Author 1")
+                .email("auther1@email.com")
+                .build();
+        Post savedPost = postRepository.save(post);
+
+        PostUpdateRequest postUpdateRequest = PostUpdateRequest.builder()
+                .id(savedPost.getId())
+                .title("Updated Post Title")
+                .content("This is the updated content.")
+                .state(PostState.CONCEPT)
+                .authorId(1)
+                .author("Author 1")
+                .build();
+
+        String postUpdateRequestJson = objectMapper.writeValueAsString(postUpdateRequest);
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(postUpdateRequestJson)
+                        .header("username", "Author 1")
+                        .header("id", 1))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Updated Post Title"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.content").value("This is the updated content."))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.state").value("CONCEPT"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.author").value("Author 1"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.authorId").value(1));
+
+
+        Post updatedPost = postRepository.findById(savedPost.getId()).orElseThrow();
+        assertEquals("Updated Post Title", updatedPost.getTitle(), "Post title should be updated.");
+        assertEquals("This is the updated content.", updatedPost.getContent(), "Post content should be updated.");
+        assertEquals(PostState.CONCEPT, updatedPost.getState(), "Post state should be updated.");
+    }
+
+    @Test
+    public void testUpdatePostForbidden() throws Exception {
+
+        Post post = Post.builder()
+                .title("Original Post Title")
+                .content("Original content of the post.")
+                .state(PostState.CONCEPT)
+                .authorId(1)
+                .author("Author 1")
+                .build();
+        Post savedPost = postRepository.save(post);
+
+        PostUpdateRequest postUpdateRequest = PostUpdateRequest.builder()
+                .id(savedPost.getId())
+                .title("Updated Post Title")
+                .content("This is the updated content.")
+                .state(PostState.CONCEPT)
+                .authorId(1)
+                .build();
+
+        String postUpdateRequestJson = objectMapper.writeValueAsString(postUpdateRequest);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(postUpdateRequestJson)
+                        .header("username", "Author 2")
+                        .header("id", 2))
+                .andExpect(MockMvcResultMatchers.status().isForbidden());
+
+
+        Post unchangedPost = postRepository.findById(savedPost.getId()).orElseThrow();
+        assertEquals("Original Post Title", unchangedPost.getTitle(), "Post title should not be updated.");
+        assertEquals("Original content of the post.", unchangedPost.getContent(), "Post content should not be updated.");
+        assertEquals(PostState.CONCEPT, unchangedPost.getState(), "Post state should not be updated.");
+    }
+
+    @Test
+    public void testPublishPost() throws Exception {
+        Post post = Post.builder()
+                .title("Original Post Title")
+                .content("Original content of the post.")
+                .state(PostState.APPROVED)
+                .authorId(1)
+                .author("Author 1")
+                .build();
+        Post savedPost = postRepository.save(post);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/" + savedPost.getId() +"/publish")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .header("username", "Author 1")
+                        .header("id", 1))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Original Post Title"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.state").value("PUBLISHED"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.author").value("Author 1"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.authorId").value(1));
+
+
+        Post publishedPost = postRepository.findById(savedPost.getId()).orElseThrow();
+        assertEquals(PostState.PUBLISHED, publishedPost.getState(), "Post state should be updated to PUBLISHED.");
+    }
+
+    @Test
+    public void testPublishPostForbidden() throws Exception {
+        Post post = Post.builder()
+                .title("Original Post Title")
+                .content("Original content of the post.")
+                .state(PostState.APPROVED)
+                .authorId(1)
+                .author("Author 1")
+                .build();
+        Post savedPost = postRepository.save(post);
+
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/" + savedPost.getId() +"/publish")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .header("username", "Author 2")
+                        .header("id", 2))
+                .andExpect(MockMvcResultMatchers.status().isForbidden());
+        
+        Post unchangedPost = postRepository.findById(savedPost.getId()).orElseThrow();
+        assertEquals(PostState.APPROVED, unchangedPost.getState(), "Post state should remain APPROVED.");
     }
 }

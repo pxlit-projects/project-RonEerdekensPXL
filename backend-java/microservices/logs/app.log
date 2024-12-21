@@ -22,3 +22,5 @@
 2024-12-21T12:01:38.008+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 8.736 seconds (process running for 9.419)
 2024-12-21T12:01:39.491+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 7.589 seconds (process running for 8.224)
 2024-12-21T12:01:40.237+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 5.437 seconds (process running for 6.126)
+2024-12-21T12:25:31.843+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
+2024-12-21T12:28:00.867+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
