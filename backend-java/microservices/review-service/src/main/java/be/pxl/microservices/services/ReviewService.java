@@ -22,8 +22,8 @@ public class ReviewService implements IReviewService {
     private final RemarkRepository remarkRepository;
     private final PostClient postClient;
 
-    @Autowired
-    private RabbitTemplate rabbitTemplate;
+
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     public List<PostResponse> getReviewPosts() {
