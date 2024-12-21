@@ -614,7 +614,7 @@ public class PostTests {
                         .header("username", "Author 2")
                         .header("id", 2))
                 .andExpect(MockMvcResultMatchers.status().isForbidden());
-        
+
         Post unchangedPost = postRepository.findById(savedPost.getId()).orElseThrow();
         assertEquals(PostState.APPROVED, unchangedPost.getState(), "Post state should remain APPROVED.");
     }

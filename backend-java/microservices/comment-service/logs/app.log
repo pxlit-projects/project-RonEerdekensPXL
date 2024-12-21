@@ -1,0 +1,143 @@
+2024-12-21T15:19:55.535+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 18508 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:19:55.537+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:19:55.537+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:19:59.533+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.82 seconds (process running for 17.536)
+2024-12-21T15:21:31.928+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 24516 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:21:31.929+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:21:31.930+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:21:36.091+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.944 seconds (process running for 18.614)
+2024-12-21T15:21:36.587+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:28:50.454+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 27272 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:28:50.455+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:28:50.455+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:28:54.453+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.735 seconds (process running for 17.442)
+2024-12-21T15:28:55.047+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:29:39.725+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 11720 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:29:39.726+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:29:39.727+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:29:43.540+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.556 seconds (process running for 16.955)
+2024-12-21T15:29:44.227+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:30:26.328+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 18820 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:30:26.329+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:30:26.329+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:30:30.158+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 5.006 seconds (process running for 18.689)
+2024-12-21T15:30:30.889+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:33:13.326+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 15732 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:33:13.327+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:33:13.327+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:33:17.255+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.7 seconds (process running for 17.31)
+2024-12-21T15:33:17.796+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:33:18.006+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:34:25.438+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 26868 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:34:25.439+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:34:25.439+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:34:29.335+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.727 seconds (process running for 17.148)
+2024-12-21T15:34:29.817+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:34:30.083+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:35:12.450+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 28756 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:35:12.450+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:35:12.451+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:35:16.365+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.647 seconds (process running for 17.074)
+2024-12-21T15:35:16.834+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:35:17.156+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:37:51.575+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 28408 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:37:51.584+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:37:51.584+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:37:55.504+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.741 seconds (process running for 17.297)
+2024-12-21T15:37:56.024+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:37:56.210+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:37:56.282+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:39:59.180+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 26356 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:39:59.181+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:39:59.182+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:40:03.402+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 5.016 seconds (process running for 17.628)
+2024-12-21T15:40:04.257+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:40:04.365+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:40:04.433+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:41:06.174+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 12404 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:41:06.175+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:41:06.176+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:41:10.214+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.821 seconds (process running for 17.387)
+2024-12-21T15:41:10.897+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:41:11.003+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:41:11.066+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:41:46.463+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 29468 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:41:46.464+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:41:46.465+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:41:50.276+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.572 seconds (process running for 16.971)
+2024-12-21T15:41:50.827+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:41:51.202+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:41:51.314+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:41:51.387+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:44:42.495+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 3628 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:44:42.496+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:44:42.496+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:44:46.383+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.665 seconds (process running for 17.343)
+2024-12-21T15:44:46.914+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:44:47.288+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:44:47.366+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:44:47.426+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:45:22.884+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 3368 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:45:22.885+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:45:22.886+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:45:26.919+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.763 seconds (process running for 17.32)
+2024-12-21T15:45:27.469+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:45:27.862+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:45:27.956+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:45:28.012+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:45:28.047+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 7
+2024-12-21T15:47:11.868+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 17352 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:47:11.869+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:47:11.869+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:47:15.834+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.766 seconds (process running for 17.262)
+2024-12-21T15:47:16.409+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:47:16.802+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 2
+2024-12-21T15:47:16.809+0100 WARN               [main]                         be.pxl.microservices.services.CommentService - User with id 2 tried to update comment with id 2
+2024-12-21T15:47:16.855+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:47:16.932+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:47:16.988+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:47:17.021+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8
+2024-12-21T15:48:59.573+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 29164 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:48:59.574+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:48:59.574+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:49:03.675+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.894 seconds (process running for 17.582)
+2024-12-21T15:49:04.345+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:49:04.756+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 2
+2024-12-21T15:49:04.763+0100 WARN               [main]                         be.pxl.microservices.services.CommentService - User with id 2 tried to update comment with id 2
+2024-12-21T15:49:04.810+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:49:04.891+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:49:04.952+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:49:04.987+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8
+2024-12-21T15:53:16.503+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 27728 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:53:16.504+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:53:16.504+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:53:20.521+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.826 seconds (process running for 17.391)
+2024-12-21T15:53:21.077+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:53:21.459+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 2
+2024-12-21T15:53:21.465+0100 WARN               [main]                         be.pxl.microservices.services.CommentService - User with id 2 tried to update comment with id 2
+2024-12-21T15:53:21.542+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:53:21.591+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:53:21.646+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:53:21.677+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8
+2024-12-21T15:54:18.886+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 27332 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:54:18.887+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:54:18.887+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:54:22.867+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.871 seconds (process running for 17.5)
+2024-12-21T15:54:23.395+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:54:23.780+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 2
+2024-12-21T15:54:23.787+0100 WARN               [main]                         be.pxl.microservices.services.CommentService - User with id 2 tried to update comment with id 2
+2024-12-21T15:54:23.861+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:54:23.911+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:54:23.961+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:54:23.999+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8
+2024-12-21T15:56:20.266+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 26964 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T15:56:20.267+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T15:56:20.267+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T15:56:24.331+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.854 seconds (process running for 17.292)
+2024-12-21T15:56:24.953+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T15:56:25.343+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 2
+2024-12-21T15:56:25.350+0100 WARN               [main]                         be.pxl.microservices.services.CommentService - User with id 2 tried to update comment with id 2
+2024-12-21T15:56:25.395+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T15:56:25.472+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T15:56:25.526+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T15:56:25.559+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8
