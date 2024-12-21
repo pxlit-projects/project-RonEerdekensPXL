@@ -197,7 +197,6 @@ public class CommentTests {
 
     @Test
     void testUpdateCommentUnauthorized() throws Exception {
-        // Arrange: Create and save a comment with authorId = 1
         Comment comment = Comment.builder()
                 .author("Author 1")
                 .authorId(1)
@@ -208,19 +207,18 @@ public class CommentTests {
 
         Comment savedComment = commentRepository.save(comment);
 
-        // Prepare the CommentRequest for updating the comment
         CommentRequest commentRequest = CommentRequest.builder()
                 .comment("Updated comment")
                 .postId(1L)
                 .build();
 
-        // Act & Assert: Try to update the comment with a different user (wrong username or id)
+
         mockMvc.perform(MockMvcRequestBuilders.put("/{commentId}", savedComment.getId())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(commentRequest))
-                        .header("username", "Author 2")  // Wrong username
-                        .header("id", 2))  // Wrong id
-                .andExpect(status().isBadRequest())  // Expect HTTP 400 Bad Request due to IllegalArgumentException
+                        .header("username", "Author 2")
+                        .header("id", 2))
+                .andExpect(status().isBadRequest())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("You are not the author of this comment"));
     }
 }

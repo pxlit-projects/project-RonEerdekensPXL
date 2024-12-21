@@ -1,0 +1,85 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > IReviewService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">be.pxl.microservices.services</a>
+</div>
+
+<h1>Coverage Summary for Class: IReviewService (be.pxl.microservices.services)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">IReviewService</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.microservices.services;
+&nbsp;
+&nbsp;import be.pxl.microservices.api.dto.response.PostResponse;
+&nbsp;import be.pxl.microservices.api.dto.response.RemarkResponse;
+&nbsp;import be.pxl.microservices.domain.Remark;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;public interface IReviewService {
+&nbsp;    public List&lt;PostResponse&gt; getReviewPosts();
+&nbsp;
+&nbsp;    void approvePost(Long id);
+&nbsp;
+&nbsp;    void rejectPost(Long postId, String username, int id, Remark remark);
+&nbsp;
+&nbsp;    List&lt;Remark&gt; getRemarksByPostId(Long postId);
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-12-21 22:58</div>
+</div>
+</body>
+</html>

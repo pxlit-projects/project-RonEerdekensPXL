@@ -1,0 +1,98 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > IPostServices</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">be.pxl.microservices.services</a>
+</div>
+
+<h1>Coverage Summary for Class: IPostServices (be.pxl.microservices.services)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">IPostServices</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.microservices.services;
+&nbsp;
+&nbsp;import be.pxl.microservices.api.dto.response.PostCommentResponse;
+&nbsp;import be.pxl.microservices.api.dto.response.PostRemarkResponse;
+&nbsp;import be.pxl.microservices.domain.Post;
+&nbsp;
+&nbsp;import java.util.Arrays;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;public interface IPostServices {
+&nbsp;    List&lt;Post&gt; getAllPosts();
+&nbsp;    Post getPostById(Long id);
+&nbsp;    Post createPost(Post post, String username, int id, String email);
+&nbsp;    Post updatePost(Long id, Post post);
+&nbsp;
+&nbsp;
+&nbsp;    List&lt;Post&gt; getAllPublishedPosts();
+&nbsp;    List&lt;Post&gt; getAllConceptsPostsByAuthorId(int authorId);
+&nbsp;    List&lt;Post&gt; getAllPostsByAuthorIdAndStateNotByConcept(int authorId);
+&nbsp;
+&nbsp;    Post publishPost(Long id, int authorId);
+&nbsp;
+&nbsp;    List&lt;Post&gt; getAllReviewPosts();
+&nbsp;
+&nbsp;    PostRemarkResponse getPostByIdAndRemarks(Long id);
+&nbsp;
+&nbsp;    PostCommentResponse getPostByIdAndComments(Long id);
+&nbsp;
+&nbsp;    List&lt;Post&gt; getAllPublishedPostsWithFilter(String filter);
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-12-21 22:58</div>
+</div>
+</body>
+</html>

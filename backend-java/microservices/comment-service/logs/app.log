@@ -185,3 +185,14 @@
 2024-12-21T17:10:09.726+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
 2024-12-21T17:10:09.782+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
 2024-12-21T17:10:09.814+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8
+2024-12-21T22:56:18.408+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Starting CommentTests using Java 22.0.1 with PID 15908 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service)
+2024-12-21T22:56:18.409+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.CommentTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T22:56:18.410+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T22:56:22.411+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentTests - Started CommentTests in 4.804 seconds (process running for 18.279)
+2024-12-21T22:56:23.012+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2024-12-21T22:56:23.391+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 2
+2024-12-21T22:56:23.398+0100 WARN               [main]                         be.pxl.microservices.services.CommentService - User with id 2 tried to update comment with id 2
+2024-12-21T22:56:23.470+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T22:56:23.517+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2024-12-21T22:56:23.578+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2024-12-21T22:56:23.612+0100 INFO               [main]                         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 8

@@ -18,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,14 +58,12 @@ public class PostServicesTests {
 
     @Test
     public void getAllPosts_ShouldReturnPosts() {
-        // Arrange
         List<Post> posts = Arrays.asList(post);
         when(postRepository.findAll()).thenReturn(posts);
 
-        // Act
+
         List<Post> result = postServices.getAllPosts();
 
-        // Assert
         assertNotNull(result);
         assertEquals(1, result.size());
         verify(postRepository, times(1)).findAll();
@@ -72,13 +71,10 @@ public class PostServicesTests {
 
     @Test
     public void getPostById_ShouldReturnPost() {
-        // Arrange
         when(postRepository.findById(1L)).thenReturn(Optional.of(post));
 
-        // Act
         Post result = postServices.getPostById(1L);
 
-        // Assert
         assertNotNull(result);
         assertEquals(post.getTitle(), result.getTitle());
         verify(postRepository, times(1)).findById(1L);
@@ -86,10 +82,8 @@ public class PostServicesTests {
 
     @Test
     public void getPostById_ShouldThrowException_WhenPostNotFound() {
-        // Arrange
         when(postRepository.findById(1L)).thenReturn(Optional.empty());
 
-        // Act & Assert
         assertThrows(PostNotFoundException.class, () -> {
             postServices.getPostById(1L);
         });
@@ -97,13 +91,10 @@ public class PostServicesTests {
 
     @Test
     public void createPost_ShouldCreateAndReturnPost() {
-        // Arrange
         when(postRepository.save(post)).thenReturn(post);
 
-        // Act
         Post result = postServices.createPost(post, "user1", 100, "user1@example.com");
 
-        // Assert
         assertNotNull(result);
         assertEquals("user1", result.getAuthor());
         assertEquals(PostState.CONCEPT, result.getState());
@@ -112,7 +103,6 @@ public class PostServicesTests {
 
     @Test
     public void updatePost_ShouldUpdateAndReturnPost() {
-        // Arrange
         Post updatedPost = Post.builder()
                 .id(1L)
                 .title("Updated Post")
@@ -127,10 +117,8 @@ public class PostServicesTests {
         when(postRepository.findById(1L)).thenReturn(Optional.of(post));
         when(postRepository.save(any(Post.class))).thenReturn(updatedPost);
 
-        // Act
         Post result = postServices.updatePost(1L, updatedPost);
 
-        // Assert
         assertNotNull(result);
         assertEquals("Updated Post", result.getTitle());
         verify(postRepository, times(1)).save(updatedPost);
@@ -138,10 +126,8 @@ public class PostServicesTests {
 
     @Test
     public void updatePost_ShouldThrowException_WhenPostNotFound() {
-        // Arrange
         when(postRepository.findById(1L)).thenReturn(Optional.empty());
 
-        // Act & Assert
         assertThrows(PostNotFoundException.class, () -> {
             postServices.updatePost(1L, post);
         });
@@ -149,7 +135,6 @@ public class PostServicesTests {
 
     @Test
     public void publishPost_ShouldPublishAndReturnPost() {
-        // Arrange
         Post postToPublish = Post.builder()
                 .id(1L)
                 .state(PostState.APPROVED)
@@ -162,10 +147,8 @@ public class PostServicesTests {
         when(postRepository.findById(1L)).thenReturn(Optional.of(postToPublish));
         when(postRepository.save(any(Post.class))).thenReturn(postToPublish);
 
-        // Act
         Post result = postServices.publishPost(1L, 100);
 
-        // Assert
         assertNotNull(result);
         assertEquals(PostState.PUBLISHED, result.getState());
         verify(postRepository, times(1)).save(postToPublish);
@@ -173,10 +156,8 @@ public class PostServicesTests {
 
     @Test
     public void publishPost_ShouldThrowException_WhenPostNotFound() {
-        // Arrange
         when(postRepository.findById(1L)).thenReturn(Optional.empty());
 
-        // Act & Assert
         assertThrows(PostNotFoundException.class, () -> {
             postServices.publishPost(1L, 100);
         });
@@ -184,27 +165,36 @@ public class PostServicesTests {
 
     @Test
     public void publishPost_ShouldThrowException_WhenUserIsNotAuthor() {
-        // Arrange
         when(postRepository.findById(1L)).thenReturn(Optional.of(post));
 
-        // Act & Assert
         PostEditForbiddenException exception = assertThrows(PostEditForbiddenException.class, () -> {
             postServices.publishPost(1L, 200); // Different user ID
         });
         assertEquals("Post with id 1 cannot be edited by user with id 200", exception.getMessage());
     }
+    @Test
+    public void publishPost_ShouldThrowException_WhenPostNotApproved() {
+        Long postId = 1L;
+        int authorId = 123;
+        Post post = new Post();
+        post.setId(postId);
+        post.setAuthorId(authorId);
+        post.setState(PostState.CONCEPT);
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+
+        assertThrows(PostEditForbiddenException.class, () -> postServices.publishPost(postId, authorId));
+        verify(postRepository, never()).save(post);
+    }
 
     @Test
     public void getPostByIdAndRemarks_ShouldReturnPostWithRemarks() {
-        // Arrange
         PostRemarkResponse postRemarkResponse = PostRemarkResponse.builder().build();
         when(postRepository.findById(1L)).thenReturn(Optional.of(post));
         when(reviewClient.getRemarksForPost(1L)).thenReturn(Arrays.asList(new RemarkResponse()));
 
-        // Act
         PostRemarkResponse result = postServices.getPostByIdAndRemarks(1L);
 
-        // Assert
         assertNotNull(result);
         assertEquals(post.getTitle(), result.getTitle());
         verify(postRepository, times(1)).findById(1L);
@@ -213,18 +203,122 @@ public class PostServicesTests {
 
     @Test
     public void getPostByIdAndComments_ShouldReturnPostWithComments() {
-        // Arrange
         PostCommentResponse postCommentResponse = PostCommentResponse.builder().build();
         when(postRepository.findById(1L)).thenReturn(Optional.of(post));
         when(commentClient.getCommentsForPost(1L)).thenReturn(Arrays.asList(new CommentResponse()));
 
-        // Act
+
         PostCommentResponse result = postServices.getPostByIdAndComments(1L);
 
-        // Assert
         assertNotNull(result);
         assertEquals(post.getTitle(), result.getTitle());
         verify(postRepository, times(1)).findById(1L);
         verify(commentClient, times(1)).getCommentsForPost(1L);
     }
+    @Test
+    public void getAllPublishedPosts_ShouldReturnPublishedPosts() {
+
+        Post publishedPost = Post.builder().id(2L).state(PostState.PUBLISHED).build();
+        when(postRepository.findAllByState(PostState.PUBLISHED)).thenReturn(Arrays.asList(publishedPost));
+
+        List<Post> result = postServices.getAllPublishedPosts();
+
+        assertNotNull(result);
+        assertEquals(1, result.size());
+        verify(postRepository, times(1)).findAllByState(PostState.PUBLISHED);
+    }
+    @Test
+    public void getAllPublishedPostsWithFilter_ShouldReturnFilteredPosts() {
+        Post publishedPost = Post.builder().id(2L).state(PostState.PUBLISHED).build();
+        when(postRepository.findPublishedPostsWithFilter(PostState.PUBLISHED, "sample"))
+                .thenReturn(Arrays.asList(publishedPost));
+
+        List<Post> result = postServices.getAllPublishedPostsWithFilter("sample");
+
+        assertNotNull(result);
+        assertEquals(1, result.size());
+        verify(postRepository, times(1)).findPublishedPostsWithFilter(PostState.PUBLISHED, "sample");
+    }
+    @Test
+    public void getAllConceptsPostsByAuthorId_ShouldReturnConceptPosts() {
+        when(postRepository.findByAuthorIdAndState(100, PostState.CONCEPT)).thenReturn(Arrays.asList(post));
+
+        List<Post> result = postServices.getAllConceptsPostsByAuthorId(100);
+
+        assertNotNull(result);
+        assertEquals(1, result.size());
+        verify(postRepository, times(1)).findByAuthorIdAndState(100, PostState.CONCEPT);
+    }
+    @Test
+    public void getAllPostsByAuthorIdAndStateNotByConcept_ShouldReturnNonConceptPosts() {
+        Post nonConceptPost = Post.builder().id(2L).state(PostState.PUBLISHED).build();
+        when(postRepository.findByAuthorIdAndStateNot(100, PostState.CONCEPT))
+                .thenReturn(Arrays.asList(nonConceptPost));
+
+        List<Post> result = postServices.getAllPostsByAuthorIdAndStateNotByConcept(100);
+
+        assertNotNull(result);
+        assertEquals(1, result.size());
+        verify(postRepository, times(1)).findByAuthorIdAndStateNot(100, PostState.CONCEPT);
+    }
+
+    @Test
+    public void getAllPublishedPosts_ShouldReturnEmptyList_WhenNoPostsExist() {
+        when(postRepository.findAllByState(PostState.PUBLISHED)).thenReturn(Collections.emptyList());
+
+        List<Post> result = postServices.getAllPublishedPosts();
+
+        assertNotNull(result);
+        assertTrue(result.isEmpty());
+        verify(postRepository, times(1)).findAllByState(PostState.PUBLISHED);
+    }
+
+    @Test
+    public void getPostByIdAndRemarks_ShouldHandleEmptyRemarks() {
+        when(postRepository.findById(1L)).thenReturn(Optional.of(post));
+        when(reviewClient.getRemarksForPost(1L)).thenReturn(Collections.emptyList());
+
+        PostRemarkResponse result = postServices.getPostByIdAndRemarks(1L);
+
+        assertNotNull(result);
+        assertEquals(0, result.getRemarks().size());
+        verify(postRepository, times(1)).findById(1L);
+        verify(reviewClient, times(1)).getRemarksForPost(1L);
+    }
+    @Test
+    public void getAllReviewPosts_ShouldReturnSubmittedPosts() {
+        Post submittedPost1 = Post.builder()
+                .id(1L)
+                .state(PostState.SUBMITTED)
+                .title("Submitted Post 1")
+                .build();
+
+        Post submittedPost2 = Post.builder()
+                .id(2L)
+                .state(PostState.SUBMITTED)
+                .title("Submitted Post 2")
+                .build();
+
+        when(postRepository.findAllByState(PostState.SUBMITTED)).thenReturn(Arrays.asList(submittedPost1, submittedPost2));
+
+        List<Post> result = postServices.getAllReviewPosts();
+
+        assertNotNull(result);
+        assertEquals(2, result.size());
+        assertEquals(PostState.SUBMITTED, result.get(0).getState());
+        assertEquals(PostState.SUBMITTED, result.get(1).getState());
+        verify(postRepository, times(1)).findAllByState(PostState.SUBMITTED);
+    }
+
+    @Test
+    public void getAllReviewPosts_ShouldReturnEmptyList_WhenNoSubmittedPostsExist() {
+        when(postRepository.findAllByState(PostState.SUBMITTED)).thenReturn(Collections.emptyList());
+
+        List<Post> result = postServices.getAllReviewPosts();
+
+        assertNotNull(result);
+        assertTrue(result.isEmpty());
+        verify(postRepository, times(1)).findAllByState(PostState.SUBMITTED);
+    }
+
 }

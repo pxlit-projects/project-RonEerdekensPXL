@@ -117,3 +117,12 @@
 2024-12-21T18:59:11.378+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
 2024-12-21T18:59:11.595+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
 2024-12-21T18:59:11.654+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
+2024-12-21T22:57:42.538+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 20296 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T22:57:42.539+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T22:57:42.540+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T22:57:48.795+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 7.035 seconds (process running for 19.527)
+2024-12-21T22:57:48.888+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T22:57:49.122+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T22:57:49.192+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-21T22:57:49.439+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T22:57:49.502+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1

@@ -79,6 +79,8 @@ public class ReviewServiceTests {
         verify(rabbitTemplate, times(1)).convertAndSend("approvePostQueue", postId);
     }
 
+
+
     @Test
     public void rejectPost_ShouldSendMessageAndSaveRemark() {
 
@@ -97,6 +99,20 @@ public class ReviewServiceTests {
         assertEquals(reviewerId, remark.getReviewerId());
         assertNotNull(remark.getCreationDate());
     }
+
+    @Test
+    public void rejectPost_ShouldNotSaveRemark_WhenContentIsEmpty() {
+        Long postId = 1L;
+        String username = "user1";
+        int reviewerId = 100;
+        Remark remark = Remark.builder().content("").postId(postId).build();
+
+        reviewService.rejectPost(postId, username, reviewerId, remark);
+
+        verify(rabbitTemplate, times(1)).convertAndSend("rejectPostQueue", postId);
+        verify(remarkRepository, times(0)).save(any(Remark.class));
+    }
+
 
     @Test
     public void getRemarksByPostId_ShouldReturnRemarks() {
