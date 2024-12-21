@@ -210,3 +210,33 @@
 2024-12-21T18:58:21.589+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 15016 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
 2024-12-21T18:58:21.590+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
 2024-12-21T18:58:21.591+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T18:58:24.923+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 6948 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2024-12-21T18:58:24.924+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T18:58:24.925+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T18:58:26.071+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 7.607 seconds (process running for 8.218)
+2024-12-21T18:58:27.267+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 6.509 seconds (process running for 7.087)
+2024-12-21T18:58:28.634+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 4.641 seconds (process running for 5.247)
+2024-12-21T19:00:17.345+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T19:00:18.556+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-21T19:00:19.175+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T19:00:20.212+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 203 and comments
+2024-12-21T19:00:20.311+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 203
+2024-12-21T19:00:21.858+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2024-12-21T19:00:22.790+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 1 and comments
+2024-12-21T19:00:22.803+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 1
+2024-12-21T19:00:25.580+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 2
+2024-12-21T19:00:27.079+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T19:00:27.716+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T19:00:29.045+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 204 and remarks
+2024-12-21T19:00:29.134+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 204
+2024-12-21T19:00:31.513+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T19:00:31.599+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2024-12-21T19:00:32.304+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T19:00:33.378+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 202 and remarks
+2024-12-21T19:00:33.390+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 202
+2024-12-21T19:00:35.981+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T19:00:36.980+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 252 and remarks
+2024-12-21T19:00:36.995+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 252
+2024-12-21T19:00:37.975+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2024-12-21T19:00:38.516+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 204 and remarks
+2024-12-21T19:00:38.529+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 204
