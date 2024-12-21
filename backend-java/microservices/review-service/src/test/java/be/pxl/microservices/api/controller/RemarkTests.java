@@ -1,6 +1,6 @@
-package be.pxl.microservices;
+package be.pxl.microservices.api.controller;
 
-import be.pxl.microservices.repository.PostRepository;
+import be.pxl.microservices.repository.RemarkRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -15,7 +15,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @SpringBootTest
 @Testcontainers
 @AutoConfigureMockMvc
-public class PostTests {
+public class RemarkTests {
     @Autowired
     MockMvc mockMvc;
 
@@ -23,7 +23,7 @@ public class PostTests {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private PostRepository postRepository;
+    private RemarkRepository remarkRepository;
 
     @Container
     private static final MySQLContainer sglContainer = new MySQLContainer(
