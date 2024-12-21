@@ -1,0 +1,49 @@
+2024-12-21T16:39:08.015+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 20560 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:39:08.016+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:39:08.016+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:39:13.968+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 6.778 seconds (process running for 19.742)
+2024-12-21T16:39:14.066+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:42:04.854+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 16972 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:42:04.855+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:42:04.856+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:42:11.172+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 7.226 seconds (process running for 20.232)
+2024-12-21T16:42:11.255+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:42:35.513+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 17256 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:42:35.513+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:42:35.515+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:42:42.008+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 7.311 seconds (process running for 19.817)
+2024-12-21T16:42:42.080+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:42:42.272+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-21T16:48:36.949+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 28776 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:48:36.950+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:48:36.950+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:48:43.348+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 7.175 seconds (process running for 20.832)
+2024-12-21T16:48:43.445+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:48:43.669+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:48:43.727+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-21T16:48:43.742+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:51:56.945+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 28576 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:51:56.946+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:51:56.946+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:52:03.434+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 7.254 seconds (process running for 19.747)
+2024-12-21T16:52:03.525+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:52:03.776+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:52:03.875+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-21T16:52:03.894+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:54:23.148+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 17268 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:54:23.148+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:54:23.149+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:54:30.454+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 8.118 seconds (process running for 21.749)
+2024-12-21T16:54:30.557+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:54:30.795+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:54:30.870+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-21T16:54:31.125+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:56:52.012+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Starting RemarkTests using Java 22.0.1 with PID 4384 (started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service)
+2024-12-21T16:56:52.013+0100 DEBUG              [main]                         be.pxl.microservices.api.controller.RemarkTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-21T16:56:52.014+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-21T16:56:58.530+0100 INFO               [main]                         be.pxl.microservices.api.controller.RemarkTests - Started RemarkTests in 7.288 seconds (process running for 20.846)
+2024-12-21T16:56:58.622+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:56:58.870+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2024-12-21T16:56:58.953+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 1
+2024-12-21T16:56:59.166+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 1
+2024-12-21T16:56:59.215+0100 INFO               [main]                         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 1
