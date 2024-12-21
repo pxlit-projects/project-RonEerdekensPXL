@@ -1,0 +1,246 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > PostController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">be.pxl.microservices.api.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: PostController (be.pxl.microservices.api.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PostController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (15/15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (61/61)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.microservices.api.controller;
+&nbsp;
+&nbsp;import be.pxl.microservices.api.dto.request.PostRequest;
+&nbsp;import be.pxl.microservices.api.dto.request.PostUpdateRequest;
+&nbsp;import be.pxl.microservices.api.dto.response.PostCommentResponse;
+&nbsp;import be.pxl.microservices.api.dto.response.PostRemarkResponse;
+&nbsp;import be.pxl.microservices.api.dto.response.PostResponse;
+&nbsp;import be.pxl.microservices.domain.Post;
+&nbsp;import be.pxl.microservices.services.IPostServices;
+&nbsp;import lombok.RequiredArgsConstructor;
+&nbsp;import org.slf4j.Logger;
+&nbsp;import org.slf4j.LoggerFactory;
+&nbsp;import org.springframework.http.HttpStatus;
+&nbsp;import org.springframework.http.ResponseEntity;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;/&quot;)
+&nbsp;@RequiredArgsConstructor
+&nbsp;public class PostController {
+<b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(PostController.class);</b>
+&nbsp;    private final IPostServices postServices;
+&nbsp;
+&nbsp;    @GetMapping
+&nbsp;    public ResponseEntity getAllPosts() {
+<b class="fc">&nbsp;        log.info(&quot;Fetching all posts&quot;);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(postServices.getAllPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;    @GetMapping(&quot;/review&quot;)
+&nbsp;    public ResponseEntity getAllReviewPosts() {
+<b class="fc">&nbsp;        log.info(&quot;Fetching all review posts&quot;);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(postServices.getAllReviewPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;    @GetMapping(&quot;/published&quot;)
+&nbsp;    public ResponseEntity getAllPublishedPosts(@RequestParam(defaultValue = &quot;&quot;) String filter) {
+<b class="fc">&nbsp;        if(filter.isEmpty()){</b>
+<b class="fc">&nbsp;            log.info(&quot;Fetching all published posts&quot;);</b>
+<b class="fc">&nbsp;            return new ResponseEntity(postServices.getAllPublishedPosts().stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);</b>
+&nbsp;        }else {
+<b class="fc">&nbsp;            log.info(&quot;Fetching all published posts with filter {}&quot;, filter);</b>
+<b class="fc">&nbsp;            return new ResponseEntity(postServices.getAllPublishedPostsWithFilter(filter).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;    }
+&nbsp;    @GetMapping(&quot;/concept&quot;)
+&nbsp;    public ResponseEntity getAllConceptPosts(@RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching all concept posts&quot;);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(postServices.getAllConceptsPostsByAuthorId(id).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;    @GetMapping(&quot;/noconcept&quot;)
+&nbsp;    public ResponseEntity getAllSubmittedAndRejectedAndApprovedAndPublishedPosts(@RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching all concept posts&quot;);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(postServices.getAllPostsByAuthorIdAndStateNotByConcept(id).stream().map(this::mapToPostResponse).toList(), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @GetMapping(&quot;/{id}&quot;)
+&nbsp;    public ResponseEntity getPostById(@PathVariable Long id) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching post with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        Post post = postServices.getPostById(id);</b>
+<b class="fc">&nbsp;        return ResponseEntity.ok(mapToPostResponse(post));</b>
+&nbsp;    }
+&nbsp;    @GetMapping(&quot;{id}/withremarks&quot;)
+&nbsp;    public ResponseEntity getPostAndRemarks(@PathVariable Long id) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching post with id: {} and remarks&quot;, id);</b>
+<b class="fc">&nbsp;        PostRemarkResponse post = postServices.getPostByIdAndRemarks(id);</b>
+<b class="fc">&nbsp;        return ResponseEntity.ok(post);</b>
+&nbsp;    }
+&nbsp;    @GetMapping(&quot;{id}/withcomments&quot;)
+&nbsp;    public ResponseEntity getPostAndComments(@PathVariable Long id) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching post with id: {} and comments&quot;, id);</b>
+<b class="fc">&nbsp;        PostCommentResponse post = postServices.getPostByIdAndComments(id);</b>
+<b class="fc">&nbsp;        return ResponseEntity.ok(post);</b>
+&nbsp;    }
+&nbsp;    @PostMapping
+&nbsp;    public ResponseEntity createPost(@RequestBody PostRequest postRequest, @RequestHeader String username, @RequestHeader int id, @RequestHeader String email) {
+<b class="fc">&nbsp;        log.info(&quot;Creating new post with title: {}&quot;, postRequest.getTitle());</b>
+&nbsp;
+<b class="fc">&nbsp;        Post post = mapToPost(postRequest);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(mapToPostResponse(postServices.createPost(post, username,id, email)), HttpStatus.CREATED);</b>
+&nbsp;    }
+&nbsp;    @PutMapping
+&nbsp;    public ResponseEntity updatePost(@RequestBody PostUpdateRequest postRequest, @RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Updating post with id: {}&quot;, postRequest.getId());</b>
+<b class="fc">&nbsp;        if(postRequest.getAuthorId() != id) {</b>
+<b class="fc">&nbsp;            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();</b>
+&nbsp;        }
+<b class="fc">&nbsp;        Post post = mapToPost(postRequest);</b>
+<b class="fc">&nbsp;        return ResponseEntity.ok(mapToPostResponse(postServices.updatePost(postRequest.getId(), post)));</b>
+&nbsp;    }
+&nbsp;    @PostMapping(&quot;/{postid}/publish&quot;)
+&nbsp;    public ResponseEntity publishPost(@PathVariable Long postid, @RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Publishing post with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        return ResponseEntity.ok(mapToPostResponse(postServices.publishPost(postid, id)));</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private PostResponse mapToPostResponse(Post post) {
+<b class="fc">&nbsp;        return PostResponse.builder()</b>
+<b class="fc">&nbsp;                .id(post.getId())</b>
+<b class="fc">&nbsp;                .title(post.getTitle())</b>
+<b class="fc">&nbsp;                .content(post.getContent())</b>
+<b class="fc">&nbsp;                .state(post.getState())</b>
+<b class="fc">&nbsp;                .creationDate(post.getCreationDate())</b>
+<b class="fc">&nbsp;                .publicationDate(post.getPublicationDate())</b>
+<b class="fc">&nbsp;                .author(post.getAuthor())</b>
+<b class="fc">&nbsp;                .authorId(post.getAuthorId())</b>
+<b class="fc">&nbsp;                .category(post.getCategory())</b>
+<b class="fc">&nbsp;                .build();</b>
+&nbsp;    }
+&nbsp;    private Post mapToPost(PostRequest postRequest) {
+<b class="fc">&nbsp;        return Post.builder()</b>
+<b class="fc">&nbsp;                .title(postRequest.getTitle())</b>
+<b class="fc">&nbsp;                .content(postRequest.getContent())</b>
+<b class="fc">&nbsp;                .state(postRequest.getState())</b>
+<b class="fc">&nbsp;                .category(postRequest.getCategory())</b>
+<b class="fc">&nbsp;                .build();</b>
+&nbsp;    }
+&nbsp;    private Post mapToPost(PostUpdateRequest postRequest) {
+<b class="fc">&nbsp;        return Post.builder()</b>
+<b class="fc">&nbsp;                .id(postRequest.getId())</b>
+<b class="fc">&nbsp;                .title(postRequest.getTitle())</b>
+<b class="fc">&nbsp;                .content(postRequest.getContent())</b>
+<b class="fc">&nbsp;                .state(postRequest.getState())</b>
+<b class="fc">&nbsp;                .author(postRequest.getAuthor())</b>
+<b class="fc">&nbsp;                .authorId(postRequest.getAuthorId())</b>
+<b class="fc">&nbsp;                .creationDate(postRequest.getCreationDate())</b>
+<b class="fc">&nbsp;                .publicationDate(postRequest.getPublicationDate())</b>
+<b class="fc">&nbsp;                .category(postRequest.getCategory())</b>
+<b class="fc">&nbsp;                .build();</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-12-21 17:13</div>
+</div>
+</body>
+</html>

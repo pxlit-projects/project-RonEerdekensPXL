@@ -1,0 +1,174 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > CommentController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">be.pxl.microservices.api.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: CommentController (be.pxl.microservices.api.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CommentController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (25/25)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.microservices.api.controller;
+&nbsp;
+&nbsp;import be.pxl.microservices.api.dto.request.CommentRequest;
+&nbsp;import be.pxl.microservices.api.dto.response.CommentResponse;
+&nbsp;import be.pxl.microservices.domain.Comment;
+&nbsp;import lombok.RequiredArgsConstructor;
+&nbsp;import org.springframework.http.HttpStatus;
+&nbsp;import org.springframework.http.ResponseEntity;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;import org.slf4j.Logger;
+&nbsp;import org.slf4j.LoggerFactory;
+&nbsp;import be.pxl.microservices.services.ICommentService;
+&nbsp;
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;/&quot;)
+&nbsp;@RequiredArgsConstructor
+&nbsp;public class CommentController {
+<b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(CommentController.class);</b>
+&nbsp;    private final ICommentService commentService;
+&nbsp;
+&nbsp;
+&nbsp;    @PostMapping
+&nbsp;    public ResponseEntity createComment(@RequestBody CommentRequest commentRequest, @RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Creating new comment&quot;);</b>
+<b class="fc">&nbsp;        Comment comment = mapToComment(commentRequest);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(commentService.createComment(comment, username,id), HttpStatus.CREATED);</b>
+&nbsp;    }
+&nbsp;    @GetMapping
+&nbsp;    public ResponseEntity getAllCommentsByUser(@RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching all comments for user with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(commentService.getAllCommentsByUserId(id).stream().map(this::mapToCommentResponse).toList(), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @GetMapping(&quot;/post/{postId}&quot;)
+&nbsp;    public ResponseEntity getCommentsByPostId(@PathVariable Long postId) {
+<b class="fc">&nbsp;        log.info(&quot;Fetching comments for post with id: {}&quot;, postId);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(commentService.getCommentsByPostId(postId).stream().map(this::mapToCommentResponse).toList(), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @DeleteMapping(&quot;/{commentId}&quot;)
+&nbsp;    public ResponseEntity deleteComment(@PathVariable Long commentId,@RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Deleting comment with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        commentService.deleteComment(commentId, username, id);</b>
+<b class="fc">&nbsp;        return new ResponseEntity(HttpStatus.NO_CONTENT);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @PutMapping(&quot;/{commentId}&quot;)
+&nbsp;    public ResponseEntity updateComment(@PathVariable Long commentId, @RequestBody CommentRequest commentRequest, @RequestHeader String username, @RequestHeader int id) {
+<b class="fc">&nbsp;        log.info(&quot;Updating comment with id: {}&quot;, commentId);</b>
+&nbsp;
+<b class="fc">&nbsp;        return new ResponseEntity(commentService.updateComment(commentId,commentRequest, username, id), HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private Comment mapToComment(CommentRequest commentRequest) {
+<b class="fc">&nbsp;        return Comment.builder()</b>
+<b class="fc">&nbsp;                .postId(commentRequest.getPostId())</b>
+<b class="fc">&nbsp;                .comment(commentRequest.getComment())</b>
+<b class="fc">&nbsp;                .build();</b>
+&nbsp;    }
+&nbsp;    private CommentResponse mapToCommentResponse(Comment comment) {
+<b class="fc">&nbsp;        return CommentResponse.builder()</b>
+<b class="fc">&nbsp;                .id(comment.getId())</b>
+<b class="fc">&nbsp;                .postId(comment.getPostId())</b>
+<b class="fc">&nbsp;                .comment(comment.getComment())</b>
+<b class="fc">&nbsp;                .creationDate(comment.getCreationDate())</b>
+<b class="fc">&nbsp;                .authorId(comment.getAuthorId())</b>
+<b class="fc">&nbsp;                .author(comment.getAuthor())</b>
+<b class="fc">&nbsp;                .build();</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-12-21 17:13</div>
+</div>
+</body>
+</html>
