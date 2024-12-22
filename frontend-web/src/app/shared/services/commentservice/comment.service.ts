@@ -3,13 +3,14 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CommentAdd } from '../../models/commentAdd.model';
 import { Comment } from '../../models/comment.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommentService {
   http: HttpClient = inject(HttpClient);
-  BASEAPIURL = 'http://localhost:8083/api/comment/';
+  BASEAPIURL = environment.BASEAPIURL + 'comment/';
 
   addComment(
     comment: CommentAdd,

@@ -3,13 +3,14 @@ import { inject, Injectable } from '@angular/core';
 import { Post } from '../../models/post.model';
 import { Observable } from 'rxjs';
 import { RemarkAdd } from '../../models/remarkAdd.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ReviewService {
   http: HttpClient = inject(HttpClient);
-  BASEAPIURL = 'http://localhost:8083/api/review/';
+  BASEAPIURL = environment.BASEAPIURL + 'review/';
 
   getReviewPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.BASEAPIURL + 'posts');

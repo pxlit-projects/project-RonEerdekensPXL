@@ -5,13 +5,14 @@ import { Post } from '../../models/post.model';
 import { PostAdd } from '../../models/postAdd.model';
 import { PostWithRemarks } from '../../models/postWithRemarks.model';
 import { PostWithComments } from '../../models/postWithComments.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
   http: HttpClient = inject(HttpClient);
-  BASEAPIURL = 'http://localhost:8083/api/post/';
+  BASEAPIURL = environment.BASEAPIURL + 'post/';
 
   getPublishedPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.BASEAPIURL + 'published');
