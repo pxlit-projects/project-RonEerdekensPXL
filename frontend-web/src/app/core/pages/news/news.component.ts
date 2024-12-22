@@ -29,10 +29,12 @@ import { FormsModule } from '@angular/forms';
 export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+      return;
+    } else {
+      this.fetchPublishedPosts();
     }
-    this.fetchPublishedPosts();
   }
   router: Router = inject(Router);
   authService: AuthService = inject(AuthService);

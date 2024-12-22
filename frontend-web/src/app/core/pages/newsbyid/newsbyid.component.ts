@@ -35,8 +35,9 @@ import { CommentService } from '../../../shared/services/commentservice/comment.
 export class NewsbyidComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+      return;
     }
     this.route.params.subscribe((params) => {
       let postId = params['postId'];
@@ -79,14 +80,19 @@ export class NewsbyidComponent implements OnInit {
   fetchPostById(postId: number) {
     this.postService
       .getPostByIdAndComments(postId, this.user!.id, this.user!.username)
-      .subscribe((post) => {
-        this.post = post;
-        this.post.comments.sort((a: Comment, b: Comment) => {
-          return (
-            new Date(b.creationDate).getTime() -
-            new Date(a.creationDate).getTime()
-          );
-        });
+      .subscribe({
+        next: (post) => {
+          this.post = post;
+          this.post.comments.sort((a: Comment, b: Comment) => {
+            return (
+              new Date(b.creationDate).getTime() -
+              new Date(a.creationDate).getTime()
+            );
+          });
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
       });
   }
 
