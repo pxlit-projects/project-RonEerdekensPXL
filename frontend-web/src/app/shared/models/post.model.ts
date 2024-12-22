@@ -3,8 +3,8 @@ export interface Post {
   title: string;
   content: string;
   state: string;
-  creationDate: Date;
-  publicationDate: Date;
+  creationDate: Date | null;
+  publicationDate: Date | null;
   author: string;
   authorId: number;
   category: string;

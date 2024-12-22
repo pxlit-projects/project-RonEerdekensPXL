@@ -31,8 +31,7 @@ export class AddPostComponent {
     this.user = this.authService.getCurrentUser();
     if (!this.user) {
       this.router.navigate(['/login']);
-    }
-    if (this.user!.role !== 'editor') {
+    } else if (this.user!.role !== 'editor') {
       this.router.navigate(['/nieuws']);
     }
   }

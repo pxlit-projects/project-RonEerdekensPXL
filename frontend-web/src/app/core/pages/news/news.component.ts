@@ -49,8 +49,8 @@ export class NewsComponent implements OnInit {
         this.posts = data;
         this.posts.sort((a, b) => {
           return (
-            new Date(b.publicationDate).getTime() -
-            new Date(a.publicationDate).getTime()
+            new Date(b.publicationDate!).getTime() -
+            new Date(a.publicationDate!).getTime()
           );
         });
       },
@@ -65,8 +65,8 @@ export class NewsComponent implements OnInit {
         this.posts = data;
         this.posts.sort((a, b) => {
           return (
-            new Date(b.publicationDate).getTime() -
-            new Date(a.publicationDate).getTime()
+            new Date(b.publicationDate!).getTime() -
+            new Date(a.publicationDate!).getTime()
           );
         });
       },

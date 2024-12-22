@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth/auth.service';
 import { User } from '../../../shared/models/user.model';
@@ -16,13 +16,14 @@ import { PostService } from '../../../shared/services/postservice/post.service';
   templateUrl: './mycomments.component.html',
   styleUrl: './mycomments.component.css',
 })
-export class MycommentsComponent {
+export class MycommentsComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+    } else {
+      this.fetchUserComments();
     }
-    this.fetchUserComments();
   }
 
   router: Router = inject(Router);

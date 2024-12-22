@@ -46,8 +46,8 @@ export class MyconceptsComponent implements OnInit {
           this.posts = data;
           this.posts.sort((a, b) => {
             return (
-              new Date(b.creationDate).getTime() -
-              new Date(a.creationDate).getTime()
+              new Date(b.creationDate!).getTime() -
+              new Date(a.creationDate!).getTime()
             );
           });
         },

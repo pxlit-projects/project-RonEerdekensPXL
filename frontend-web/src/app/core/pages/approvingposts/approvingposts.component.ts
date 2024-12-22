@@ -26,7 +26,7 @@ import { ReviewService } from '../../../shared/services/reviewservice/review.ser
 export class ApprovingpostsComponent {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
     }
     this.fetchReviewPosts();
@@ -46,8 +46,8 @@ export class ApprovingpostsComponent {
         );
         this.posts.sort((a, b) => {
           return (
-            new Date(b.creationDate).getTime() -
-            new Date(a.creationDate).getTime()
+            new Date(b.creationDate!).getTime() -
+            new Date(a.creationDate!).getTime()
           );
         });
       },

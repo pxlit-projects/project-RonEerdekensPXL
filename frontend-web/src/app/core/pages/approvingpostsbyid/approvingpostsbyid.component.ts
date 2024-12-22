@@ -53,6 +53,7 @@ export class ApprovingpostsbyidComponent implements OnInit {
     this.user = this.authService.getCurrentUser();
     if (!this.user) {
       this.router.navigate(['/login']);
+      return;
     }
     this.route.params.subscribe((params) => {
       let postId = params['postId'];
@@ -71,8 +72,13 @@ export class ApprovingpostsbyidComponent implements OnInit {
   fetchPostById(postId: number) {
     this.postService
       .getPostById(postId, this.user!.id, this.user!.username)
-      .subscribe((post) => {
-        this.post = post;
+      .subscribe({
+        next: (post) => {
+          this.post = post;
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
       });
   }
   onBack() {
