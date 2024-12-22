@@ -27,8 +27,9 @@ import { MatButtonModule } from '@angular/material/button';
 export class MyconceptsComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+      return;
     }
     this.fetchConceptPosts();
   }

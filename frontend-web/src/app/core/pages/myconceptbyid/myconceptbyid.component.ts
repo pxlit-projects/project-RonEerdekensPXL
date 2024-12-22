@@ -32,8 +32,9 @@ import { MatIconModule } from '@angular/material/icon';
 export class MyconceptbyidComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+      return;
     }
     this.route.params.subscribe((params) => {
       let postId = params['postId'];
@@ -43,11 +44,16 @@ export class MyconceptbyidComponent implements OnInit {
   fetchPostById(postId: number) {
     this.postService
       .getPostById(postId, this.user!.id, this.user!.username)
-      .subscribe((post) => {
-        if (post.authorId != this.user!.id) {
-          this.router.navigate(['/mijnconcepten']);
-        }
-        this.post = post;
+      .subscribe({
+        next: (post: Post) => {
+          if (post.authorId != this.user!.id) {
+            this.router.navigate(['/mijnconcepten']);
+          }
+          this.post = post;
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
       });
   }
   router: Router = inject(Router);
@@ -70,7 +76,7 @@ export class MyconceptbyidComponent implements OnInit {
     this.router.navigate(['/mijnconcepten']);
   }
 
-  private savePost() {
+  savePost() {
     this.postService
       .updatePost(this.post, this.user!.username, this.user!.id)
       .subscribe({
