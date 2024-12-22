@@ -26,8 +26,9 @@ import { Post } from '../../../shared/models/post.model';
 export class MysubmittedpostsComponent {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+      return;
     }
     this.fetchNoConceptPosts();
   }

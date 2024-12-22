@@ -34,13 +34,15 @@ import { Remark } from '../../../shared/models/remark.model';
 export class MysubmittedpostsbyidComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.authService.getCurrentUser();
-    if (!this.user) {
+    if (this.user == null) {
       this.router.navigate(['/login']);
+      return;
+    } else {
+      this.route.params.subscribe((params) => {
+        let postId = params['postId'];
+        this.fetchPostById(postId);
+      });
     }
-    this.route.params.subscribe((params) => {
-      let postId = params['postId'];
-      this.fetchPostById(postId);
-    });
   }
 
   router: Router = inject(Router);
@@ -75,22 +77,32 @@ export class MysubmittedpostsbyidComponent implements OnInit {
   fetchPostById(postId: number) {
     this.postService
       .getPostByIdAndRemarks(postId, this.user!.id, this.user!.username)
-      .subscribe((post) => {
-        if (post.authorId != this.user!.id) {
-          this.router.navigate(['/mijningediendeberichten']);
-        }
-        this.post = post;
-        this.titleField = this.post.title;
-        this.contentField = this.post.content;
-        this.post.remarks.sort((a: Remark, b: Remark) => {
-          return (
-            new Date(b.creationDate).getTime() -
-            new Date(a.creationDate).getTime()
-          );
-        });
+      .subscribe({
+        next: (post) => {
+          if (post.authorId != this.user!.id) {
+            this.router.navigate(['/mijningediendeberichten']);
+          }
+          this.post = post;
+          this.titleField = this.post.title;
+          this.contentField = this.post.content;
+          this.post.remarks.sort((a: Remark, b: Remark) => {
+            return (
+              new Date(b.creationDate).getTime() -
+              new Date(a.creationDate).getTime()
+            );
+          });
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+        },
       });
   }
   publishPost() {
+    if (this.user == null) {
+      console.error('User is not authenticated');
+      this.router.navigate(['/login']);
+      return;
+    }
     this.postService
       .publishPost(this.post.id, this.user!.username, this.user!.id)
       .subscribe({
@@ -103,7 +115,7 @@ export class MysubmittedpostsbyidComponent implements OnInit {
         },
       });
   }
-  private savePost() {
+  savePost() {
     this.postService
       .updatePost(this.post, this.user!.username, this.user!.id)
       .subscribe({
