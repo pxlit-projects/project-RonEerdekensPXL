@@ -58,11 +58,23 @@ export class AddPostComponent {
         next: (data: Post) => {
           if (this.user!.role === 'editor') {
             if (data.state === 'CONCEPT') {
+              this.titleField = '';
+              this.contentField = '';
+              this.statusField = '';
+              this.categoryField = 'ALGEMEEN';
               this.router.navigate(['/mijnconcepten']);
             } else {
+              this.titleField = '';
+              this.contentField = '';
+              this.statusField = '';
+              this.categoryField = 'ALGEMEEN';
               this.router.navigate(['/mijningediendeberichten']);
             }
           } else {
+            this.titleField = '';
+            this.contentField = '';
+            this.statusField = '';
+            this.categoryField = 'ALGEMEEN';
             this.router.navigate(['/nieuws']);
           }
         },

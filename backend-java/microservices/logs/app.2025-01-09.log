@@ -1,0 +1,281 @@
+2025-01-09T13:45:24.290+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Starting ConfigServiceApplication using Java 22.0.1 with PID 16988 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\config-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T13:45:24.303+0100 DEBUG              [main]                         be.pxl.microservices.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T13:45:24.304+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - The following 1 profile is active: "native"
+2025-01-09T13:45:26.428+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Started ConfigServiceApplication in 3.018 seconds (process running for 6.44)
+2025-01-09T13:45:30.315+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 22.0.1 with PID 10204 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\discovery-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T13:45:30.319+0100 DEBUG              [main]                         be.pxl.microservices.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T13:45:30.320+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T13:45:31.487+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Starting GatewayServiceApplication using Java 22.0.1 with PID 336 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\gateway-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T13:45:31.488+0100 DEBUG              [main]                         be.pxl.microservices.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T13:45:31.489+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T13:45:34.244+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 5.129 seconds (process running for 10.506)
+2025-01-09T13:45:34.638+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Started GatewayServiceApplication in 4.224 seconds (process running for 6.443)
+2025-01-09T13:45:37.975+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 2280 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T13:45:37.976+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T13:45:37.977+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T13:45:37.983+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 22152 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T13:45:37.984+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T13:45:37.985+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T13:45:39.941+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 22728 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T13:45:39.942+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T13:45:39.944+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T13:45:44.582+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 5.73 seconds (process running for 6.514)
+2025-01-09T13:45:45.843+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 8.917 seconds (process running for 10.302)
+2025-01-09T13:45:46.846+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 9.931 seconds (process running for 13.568)
+2025-01-09T14:29:23.111+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:31:16.195+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:31:42.455+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Creating new post with title: een test
+2025-01-09T14:31:42.793+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:31:48.629+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602
+2025-01-09T14:31:57.218+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Updating post with id: 602
+2025-01-09T14:31:57.355+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:32:00.395+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602
+2025-01-09T14:32:03.029+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Updating post with id: 602
+2025-01-09T14:32:03.134+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:32:06.913+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:32:13.893+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T14:32:14.277+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T14:32:24.645+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:32:26.324+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T14:32:26.333+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T14:32:28.376+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602
+2025-01-09T14:32:38.541+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 602
+2025-01-09T14:32:38.964+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] be.pxl.microservices.services.QueueService - Post with id 602 has been rejected
+2025-01-09T14:32:38.965+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] be.pxl.microservices.services.MailSenderService - Sending email to: roneerdekenspxl@gmail.com
+2025-01-09T14:32:40.140+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T14:32:40.148+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T14:32:59.775+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:33:02.148+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:33:04.575+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and remarks
+2025-01-09T14:33:04.973+0100 INFO               [http-nio-9091-exec-7]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 602
+2025-01-09T14:33:15.094+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Updating post with id: 602
+2025-01-09T14:33:15.198+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:33:25.279+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:33:26.665+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T14:33:26.676+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T14:33:28.381+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602
+2025-01-09T14:33:29.613+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 602
+2025-01-09T14:33:29.697+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] be.pxl.microservices.services.QueueService - Post with id 602 has been approved
+2025-01-09T14:33:29.698+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] be.pxl.microservices.services.MailSenderService - Sending email to: roneerdekenspxl@gmail.com
+2025-01-09T14:33:30.645+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T14:33:30.649+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T14:33:47.611+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:33:54.504+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:33:56.689+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and remarks
+2025-01-09T14:33:56.718+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 602
+2025-01-09T14:33:59.163+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2025-01-09T14:33:59.257+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T14:34:01.268+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:34:16.420+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:34:20.213+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and comments
+2025-01-09T14:34:20.683+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 602
+2025-01-09T14:34:27.555+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2025-01-09T14:34:27.829+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and comments
+2025-01-09T14:34:27.862+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 602
+2025-01-09T14:34:32.426+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
+2025-01-09T14:34:35.800+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and comments
+2025-01-09T14:34:35.837+0100 INFO               [http-nio-9092-exec-9]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 602
+2025-01-09T14:34:45.125+0100 INFO               [http-nio-9092-exec-10]        be.pxl.microservices.api.controller.CommentController - Updating comment with id: 452
+2025-01-09T14:34:45.260+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and comments
+2025-01-09T14:34:45.287+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 602
+2025-01-09T14:34:49.099+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2025-01-09T14:34:49.199+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 602 and comments
+2025-01-09T14:34:49.226+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 602
+2025-01-09T14:35:06.224+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:35:15.091+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter t
+2025-01-09T14:35:15.375+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter te
+2025-01-09T14:35:16.909+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter tes
+2025-01-09T14:35:18.123+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter te
+2025-01-09T14:35:18.277+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter t
+2025-01-09T14:35:18.437+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:35:23.639+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter b
+2025-01-09T14:35:23.798+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter be
+2025-01-09T14:35:24.002+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ber
+2025-01-09T14:35:25.552+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter be
+2025-01-09T14:35:25.696+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter b
+2025-01-09T14:35:25.857+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:35:33.427+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2025-01-09T14:35:33.692+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ed
+2025-01-09T14:35:34.459+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edi
+2025-01-09T14:35:34.708+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edit
+2025-01-09T14:35:34.869+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edito
+2025-01-09T14:35:35.010+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor
+2025-01-09T14:35:35.860+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor1
+2025-01-09T14:35:36.748+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor
+2025-01-09T14:35:37.416+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor2
+2025-01-09T14:35:38.801+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter editor
+2025-01-09T14:35:38.965+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edito
+2025-01-09T14:35:39.107+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edit
+2025-01-09T14:35:39.278+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter edi
+2025-01-09T14:35:39.453+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ed
+2025-01-09T14:35:39.591+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2025-01-09T14:35:39.744+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:35:41.657+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 552 and comments
+2025-01-09T14:35:41.682+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 552
+2025-01-09T14:35:43.918+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T14:35:50.019+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter a
+2025-01-09T14:35:50.285+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter az
+2025-01-09T14:35:53.123+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter a
+2025-01-09T14:35:53.299+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:10:11.007+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:36:40.654+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Starting ConfigServiceApplication using Java 22.0.1 with PID 20496 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\config-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:36:40.655+0100 DEBUG              [main]                         be.pxl.microservices.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:36:40.656+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - The following 1 profile is active: "native"
+2025-01-09T15:36:42.325+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Started ConfigServiceApplication in 2.09 seconds (process running for 2.616)
+2025-01-09T15:36:42.528+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 22.0.1 with PID 10292 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\discovery-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:36:42.530+0100 DEBUG              [main]                         be.pxl.microservices.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:36:42.531+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:36:44.395+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Starting GatewayServiceApplication using Java 22.0.1 with PID 9876 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\gateway-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:36:44.396+0100 DEBUG              [main]                         be.pxl.microservices.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:36:44.397+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:36:46.439+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 4.798 seconds (process running for 5.418)
+2025-01-09T15:36:46.985+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 18360 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:36:46.986+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:36:46.988+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:36:47.397+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Started GatewayServiceApplication in 4.01 seconds (process running for 4.93)
+2025-01-09T15:36:48.837+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 21740 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:36:48.838+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:36:48.839+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:36:50.891+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 7212 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:36:50.892+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:36:50.893+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:36:54.044+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 8.465 seconds (process running for 9.122)
+2025-01-09T15:36:54.793+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 6.844 seconds (process running for 7.513)
+2025-01-09T15:36:54.988+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 5.025 seconds (process running for 5.627)
+2025-01-09T15:38:19.326+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Starting ConfigServiceApplication using Java 22.0.1 with PID 18420 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\config-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:38:19.327+0100 DEBUG              [main]                         be.pxl.microservices.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:38:19.328+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - The following 1 profile is active: "native"
+2025-01-09T15:38:20.970+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Started ConfigServiceApplication in 2.08 seconds (process running for 2.54)
+2025-01-09T15:38:21.131+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 22.0.1 with PID 12972 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\discovery-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:38:21.132+0100 DEBUG              [main]                         be.pxl.microservices.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:38:21.133+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:38:23.379+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Starting GatewayServiceApplication using Java 22.0.1 with PID 11368 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\gateway-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:38:23.380+0100 DEBUG              [main]                         be.pxl.microservices.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:38:23.381+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:38:24.721+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 23336 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:38:24.722+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:38:24.723+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:38:24.793+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 4.544 seconds (process running for 5.123)
+2025-01-09T15:38:26.347+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Started GatewayServiceApplication in 4.223 seconds (process running for 4.769)
+2025-01-09T15:38:26.964+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 11968 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:38:26.965+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:38:26.966+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:38:28.627+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 20776 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:38:28.629+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:38:28.630+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:38:31.961+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 8.179 seconds (process running for 8.983)
+2025-01-09T15:38:32.527+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 4.775 seconds (process running for 5.387)
+2025-01-09T15:38:32.552+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 6.591 seconds (process running for 7.438)
+2025-01-09T15:42:18.826+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Starting ConfigServiceApplication using Java 22.0.1 with PID 12572 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\config-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:42:18.826+0100 DEBUG              [main]                         be.pxl.microservices.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:42:18.826+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - The following 1 profile is active: "native"
+2025-01-09T15:42:20.556+0100 INFO               [main]                         be.pxl.microservices.ConfigServiceApplication - Started ConfigServiceApplication in 2.475 seconds (process running for 5.371)
+2025-01-09T15:42:23.378+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 22.0.1 with PID 18820 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\discovery-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:42:23.378+0100 DEBUG              [main]                         be.pxl.microservices.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:42:23.378+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:42:26.124+0100 INFO               [main]                         be.pxl.microservices.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 3.654 seconds (process running for 7.735)
+2025-01-09T15:42:31.647+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Starting GatewayServiceApplication using Java 22.0.1 with PID 16568 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\gateway-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:42:31.647+0100 DEBUG              [main]                         be.pxl.microservices.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:42:31.647+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:42:33.898+0100 INFO               [main]                         be.pxl.microservices.GatewayServiceApplication - Started GatewayServiceApplication in 3.039 seconds (process running for 4.806)
+2025-01-09T15:42:53.927+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Starting PostServiceApplication using Java 22.0.1 with PID 7096 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\post-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:42:53.927+0100 DEBUG              [main]                         be.pxl.microservices.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:42:53.927+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:43:00.213+0100 INFO               [main]                         be.pxl.microservices.PostServiceApplication - Started PostServiceApplication in 6.975 seconds (process running for 9.695)
+2025-01-09T15:43:06.089+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Starting ReviewServiceApplication using Java 22.0.1 with PID 14284 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\review-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:43:06.090+0100 DEBUG              [main]                         be.pxl.microservices.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:43:06.091+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:43:11.140+0100 INFO               [main]                         be.pxl.microservices.ReviewServiceApplication - Started ReviewServiceApplication in 5.904 seconds (process running for 6.482)
+2025-01-09T15:43:20.758+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Starting CommentServiceApplication using Java 22.0.1 with PID 14120 (C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices\comment-service\target\classes started by ronee in C:\JavaProjects\School\Project\project-RonEerdekensPXL\backend-java\microservices)
+2025-01-09T15:43:20.759+0100 DEBUG              [main]                         be.pxl.microservices.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T15:43:20.760+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T15:43:24.150+0100 INFO               [main]                         be.pxl.microservices.CommentServiceApplication - Started CommentServiceApplication in 4.19 seconds (process running for 4.761)
+2025-01-09T15:44:36.257+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:47:07.444+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:47:29.692+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Creating new post with title: dries
+2025-01-09T15:47:30.143+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:47:33.897+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652
+2025-01-09T15:47:46.157+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Updating post with id: 652
+2025-01-09T15:47:46.424+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:47:48.644+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652
+2025-01-09T15:47:51.188+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Updating post with id: 652
+2025-01-09T15:47:51.278+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:47:54.482+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:48:00.051+0100 INFO               [http-nio-9091-exec-1]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T15:48:00.434+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T15:48:10.871+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:48:12.854+0100 INFO               [http-nio-9091-exec-2]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T15:48:12.867+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T15:48:17.570+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652
+2025-01-09T15:48:25.816+0100 INFO               [http-nio-9091-exec-3]         be.pxl.microservices.api.controller.ReviewController - Rejecting post with id: 652
+2025-01-09T15:48:26.281+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] be.pxl.microservices.services.QueueService - Post with id 652 has been rejected
+2025-01-09T15:48:26.282+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] be.pxl.microservices.services.MailSenderService - Sending email to: roneerdekenspxl@gmail.com
+2025-01-09T15:48:27.481+0100 INFO               [http-nio-9091-exec-4]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T15:48:27.488+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T15:48:51.351+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:48:53.592+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:48:55.967+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652 and remarks
+2025-01-09T15:48:56.385+0100 INFO               [http-nio-9091-exec-5]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 652
+2025-01-09T15:49:12.265+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Updating post with id: 652
+2025-01-09T15:49:12.349+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:49:23.144+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:49:26.118+0100 INFO               [http-nio-9091-exec-6]         be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T15:49:26.128+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T15:49:27.542+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652
+2025-01-09T15:49:29.455+0100 INFO               [http-nio-9091-exec-9]         be.pxl.microservices.api.controller.ReviewController - Approving post with id: 652
+2025-01-09T15:49:29.538+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] be.pxl.microservices.services.QueueService - Post with id 652 has been approved
+2025-01-09T15:49:29.539+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] be.pxl.microservices.services.MailSenderService - Sending email to: roneerdekenspxl@gmail.com
+2025-01-09T15:49:30.495+0100 INFO               [http-nio-9091-exec-10]        be.pxl.microservices.api.controller.ReviewController - Fetching all review posts
+2025-01-09T15:49:30.503+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all review posts
+2025-01-09T15:49:47.426+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:49:49.594+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:49:51.686+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652 and remarks
+2025-01-09T15:49:51.713+0100 INFO               [http-nio-9091-exec-8]         be.pxl.microservices.api.controller.ReviewController - Fetching remarks for post with id: 652
+2025-01-09T15:49:54.062+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Publishing post with id: 2
+2025-01-09T15:49:54.146+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all concept posts
+2025-01-09T15:49:55.777+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:11.687+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:19.082+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter d
+2025-01-09T15:50:19.312+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dr
+2025-01-09T15:50:19.511+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dri
+2025-01-09T15:50:20.232+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter dr
+2025-01-09T15:50:20.407+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter d
+2025-01-09T15:50:20.563+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:26.198+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2025-01-09T15:50:26.445+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ev
+2025-01-09T15:50:28.708+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter e
+2025-01-09T15:50:28.876+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:31.553+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter h
+2025-01-09T15:50:31.761+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter ha
+2025-01-09T15:50:32.577+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter h
+2025-01-09T15:50:32.750+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:37.783+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter h
+2025-01-09T15:50:38.129+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hh
+2025-01-09T15:50:38.854+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hhh
+2025-01-09T15:50:39.976+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter hh
+2025-01-09T15:50:40.331+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter h
+2025-01-09T15:50:40.482+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:41.677+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter P
+2025-01-09T15:50:41.961+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Po
+2025-01-09T15:50:42.096+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Pon
+2025-01-09T15:50:42.713+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter Po
+2025-01-09T15:50:42.884+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter P
+2025-01-09T15:50:43.024+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:46.894+0100 INFO               [http-nio-9090-exec-1]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter a
+2025-01-09T15:50:47.296+0100 INFO               [http-nio-9090-exec-2]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter az
+2025-01-09T15:50:47.579+0100 INFO               [http-nio-9090-exec-3]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter aze
+2025-01-09T15:50:48.608+0100 INFO               [http-nio-9090-exec-6]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter az
+2025-01-09T15:50:48.780+0100 INFO               [http-nio-9090-exec-4]         be.pxl.microservices.api.controller.PostController - Fetching all published posts with filter a
+2025-01-09T15:50:48.938+0100 INFO               [http-nio-9090-exec-7]         be.pxl.microservices.api.controller.PostController - Fetching all published posts
+2025-01-09T15:50:51.356+0100 INFO               [http-nio-9090-exec-5]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652 and comments
+2025-01-09T15:50:51.792+0100 INFO               [http-nio-9092-exec-1]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 652
+2025-01-09T15:51:06.258+0100 INFO               [http-nio-9092-exec-2]         be.pxl.microservices.api.controller.CommentController - Creating new comment
+2025-01-09T15:51:06.510+0100 INFO               [http-nio-9090-exec-10]        be.pxl.microservices.api.controller.PostController - Fetching post with id: 652 and comments
+2025-01-09T15:51:06.548+0100 INFO               [http-nio-9092-exec-3]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 652
+2025-01-09T15:51:18.179+0100 INFO               [http-nio-9092-exec-4]         be.pxl.microservices.api.controller.CommentController - Updating comment with id: 502
+2025-01-09T15:51:18.322+0100 INFO               [http-nio-9090-exec-8]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652 and comments
+2025-01-09T15:51:18.349+0100 INFO               [http-nio-9092-exec-6]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 652
+2025-01-09T15:51:21.633+0100 INFO               [http-nio-9092-exec-7]         be.pxl.microservices.api.controller.CommentController - Deleting comment with id: 1
+2025-01-09T15:51:21.722+0100 INFO               [http-nio-9090-exec-9]         be.pxl.microservices.api.controller.PostController - Fetching post with id: 652 and comments
+2025-01-09T15:51:21.751+0100 INFO               [http-nio-9092-exec-5]         be.pxl.microservices.api.controller.CommentController - Fetching comments for post with id: 652
+2025-01-09T15:51:27.318+0100 INFO               [http-nio-9092-exec-8]         be.pxl.microservices.api.controller.CommentController - Fetching all comments for user with id: 1
